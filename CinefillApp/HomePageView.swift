@@ -9,12 +9,19 @@ import SwiftUI
 
 struct HomePageView: View {
     var body: some View {
-        Text("HomePageView")
+        HStack() {
+            
+            Text("Les films à l'affiche")
+                .fontWeight(.semibold)
+                .padding()
+                Spacer()
+        }
     }
 }
 
 struct HomePageView_Previews: PreviewProvider {
     static var previews: some View {
         HomePageView()
+            .preferredColorScheme(.dark)
     }
 }
