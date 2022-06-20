@@ -25,7 +25,10 @@ var eventsArray: [Events] = [
     
     Events (eventsName: "Up' Colomiers, c'est parti !", eventsPictures: "colombier", eventsDescription: "Conférences, échanges, ateliers linguistiques, culinaires, ciné-débat... Le programme sera riche en rencontres et en connaissances. Autant d'occasions propices aux échanges et au développement du lien social.", eventsDateStart: "03/07/2022", eventsDateEnd: "05/07/2022", eventsLocation: "Mairie de Toulouse"),
     
-    Events (eventsName: <#T##String#>, eventsPictures: <#T##String#>, eventsDescription: <#T##String#>, eventsDateStart: <#T##String#>, eventsDateEnd: <#T##String#>, eventsLocation: <#T##String#>)
+    Events (eventsName: "Le cinéma fait sa fête de la musique", eventsPictures: "elvis", eventsDescription: "À partir de 19h : bistrot concert au Central Club avec le groupe Archer qui jouera les classiques de la musique Pop-Rock des années 60 à nos jours. L'évenement débutera à 20h.", eventsDateStart: "21/06/2022", eventsDateEnd: "21/06/2022", eventsLocation: "Cinéma Le Grand Central"),
     
-
+    Events (eventsName: "Cinéma : Vente d'affiches", eventsPictures: "ventedaffiche", eventsDescription: "Venez fouiller dans les stocks d’affiches de films programmés depuis l’ouverture du Grand Central et repartez avec vos préférées ! Début des ventes à 18h.", eventsDateStart: "10/07/2022", eventsDateEnd: "10/07/2022", eventsLocation: "Cinéma Le Grand Central"),
+    
+    Events (eventsName: "Cinéma sous les étoiles : Le Roi Lion", eventsPictures: "roilion", eventsDescription: "Pour cette première séance de Ciné sous les étoiles, découvrez en famille le film à partir de 20h. Un film de Jon Favreau. Avec les voix de Rayane Bensetti, Anne Sila, Jean Reno...\n Synopsis : le jour se lève sur la savane africaine. Les animaux de toutes sorte engagent un périple vers un piton rocheux. C’est le jour de la présentation aux animaux de Simba, fils du roi lion Mufasa et de la reine lionne Sarabi. Mufasa rend ensuite visite à son frère Scar, qui n’est pas venu à la cérémonie. Ce dernier est jaloux de son frère et convoite son trône. Avec les hyènes, il va échafauder un plan pour le débarrasser de son frère et de Simba, pour s’en emparer.", eventsDateStart: "28/06/2022", eventsDateEnd: "29/06/2022", eventsLocation: "Parc De La Tête D'or")
+    
 ]
