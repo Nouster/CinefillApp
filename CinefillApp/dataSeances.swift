@@ -34,7 +34,7 @@ var seancesArray: [Seances] = [
     
     Seances(seanceLocation: "Cinémathèque De Toulouse", seanceMovie: "Jurassic World : Le Monde D'Après", seanceTime: "10h", seanceDate: "28/06/2022", seancePrice: 6.20, seanceLanguageVersion: "VF", seanceAccessibilityInfos: ["Sous-Titres Sourds et Malentendants": true, "Personnes à mobilité réduite": true]),
     
-    Seances(seanceLocation: "Pathé Bellecours", seanceMovie: "Irréductible", seanceTime: "13h30", seanceDate: "25/06/2022", seancePrice: 9.75, seanceLanguageVersion: "VF", seanceAccessibilityInfos: ["Sous-Titres Sourds et Malentendants": true, "Personnes à mobilité réduite": true]),
+    Seances(seanceLocation: "Pathé Bellecour", seanceMovie: "Irréductible", seanceTime: "13h30", seanceDate: "25/06/2022", seancePrice: 9.75, seanceLanguageVersion: "VF", seanceAccessibilityInfos: ["Sous-Titres Sourds et Malentendants": true, "Personnes à mobilité réduite": true]),
     Seances(seanceLocation: "Cinéma Comoedia", seanceMovie: "Decision To Leave", seanceTime: "20h30", seanceDate: "22/06/2022", seancePrice: 9.85, seanceLanguageVersion: "VOSFR", seanceAccessibilityInfos: ["Sous-Titres Sourds et Malentendants": false, "Personnes à mobilité réduite": false]),
     
     Seances(seanceLocation: "Cinema Comoedia", seanceMovie: "En Roue Libre", seanceTime: "16h30", seanceDate: "30/06/2022", seancePrice: 8.10, seanceLanguageVersion: "VF", seanceAccessibilityInfos: ["Sous-Titres Sourds et Malentendants": false, "Peronnes à mobilité réduite": false]),
