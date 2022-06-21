@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		9FB1D7572860B39F00A44E0F /* dataProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB1D7562860B39F00A44E0F /* dataProfile.swift */; };
-		9FF043F6285CCCC800E9BB95 /* ThibaultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF043F5285CCCC800E9BB95 /* ThibaultView.swift */; };
 		EC823AF8285CC85F00CDCAB2 /* CinefillAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC823AF7285CC85F00CDCAB2 /* CinefillAppApp.swift */; };
 		EC823AFA285CC85F00CDCAB2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC823AF9285CC85F00CDCAB2 /* ContentView.swift */; };
 		EC823AFC285CC85F00CDCAB2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC823AFB285CC85F00CDCAB2 /* Assets.xcassets */; };
@@ -17,7 +16,6 @@
 
 /* Begin PBXFileReference section */
 		9FB1D7562860B39F00A44E0F /* dataProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dataProfile.swift; sourceTree = "<group>"; };
-		9FF043F5285CCCC800E9BB95 /* ThibaultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThibaultView.swift; sourceTree = "<group>"; };
 		EC823AF4285CC85F00CDCAB2 /* CinefillApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CinefillApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC823AF7285CC85F00CDCAB2 /* CinefillAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CinefillAppApp.swift; sourceTree = "<group>"; };
 		EC823AF9285CC85F00CDCAB2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -58,7 +56,6 @@
 			children = (
 				EC823AF7285CC85F00CDCAB2 /* CinefillAppApp.swift */,
 				EC823AF9285CC85F00CDCAB2 /* ContentView.swift */,
-				9FF043F5285CCCC800E9BB95 /* ThibaultView.swift */,
 				EC823AFB285CC85F00CDCAB2 /* Assets.xcassets */,
 				EC823AFD285CC85F00CDCAB2 /* Preview Content */,
 			);
@@ -145,7 +142,6 @@
 			files = (
 				EC823AFA285CC85F00CDCAB2 /* ContentView.swift in Sources */,
 				EC823AF8285CC85F00CDCAB2 /* CinefillAppApp.swift in Sources */,
-				9FF043F6285CCCC800E9BB95 /* ThibaultView.swift in Sources */,
 				9FB1D7572860B39F00A44E0F /* dataProfile.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
