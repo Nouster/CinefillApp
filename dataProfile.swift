@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct dataProfile: Identifiable{
+struct DataProfile: Identifiable{
         var id = UUID()
         var userPseudo : String
         var userEmail : String
@@ -17,3 +17,4 @@ struct dataProfile: Identifiable{
         var userEvents: [String]
         var userLocation : String
 }
+var profileArray = [DataProfile(userPseudo : "Julie", userEmail : "julie.salvo@gmail.com", userPassword : "juliesalvo", userPicture : "picture", userSubscriptions : ["Pass UGC"], userEvents : ["Like"], userLocation : "Toulouse")]
