@@ -16,20 +16,42 @@ struct HomePageView: View {
             Button {
                 print("Some text")
             } label: {
+                HStack{
                 Image(systemName: "location.fill")
                     .font(.system(size: 16))
-                    .foregroundColor(.orange)
+                    .foregroundStyle(LinearGradient (colors: [Color("cinefillorange"), .red], startPoint: .top, endPoint: .bottom))
                 
-                Text("Toulouse Saint-Alban")
-                    .foregroundColor(.white)
-                    .font(.system(size: 16))
-                    .fontWeight(.semibold)
+            
+                        Text("Toulouse Saint-Alban")
+                            .foregroundColor(.white)
+                            .font(.system(size: 16))
+                        .fontWeight(.semibold)
+                        
+                  
+                    
+                    
+                    }
+                    
+                
+                
+                    
+                    
+                        
+                    }
+            
+           
+                    
+                }
+            
+               
+                
+                
             }
             
         }
-        
-    }
-}
+
+    
+
 
 
 struct HomePageView_Previews: PreviewProvider {
