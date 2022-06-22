@@ -9,9 +9,28 @@ import SwiftUI
 
 struct HomePageView: View {
     var body: some View {
-        Text("Hello, World!")
+        ZStack{
+            
+            Color("backgroundcolorapp")
+            
+            Button {
+                print("Some text")
+            } label: {
+                Image(systemName: "location.fill")
+                    .font(.system(size: 16))
+                    .foregroundColor(.orange)
+                
+                Text("Toulouse Saint-Alban")
+                    .foregroundColor(.white)
+                    .font(.system(size: 16))
+                    .fontWeight(.semibold)
+            }
+            
+        }
+        
     }
 }
+
 
 struct HomePageView_Previews: PreviewProvider {
     static var previews: some View {
