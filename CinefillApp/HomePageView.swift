@@ -132,37 +132,46 @@ struct HomePageView: View {
             
             
             VStack {
-                Button {
-                    print("Something")
-                } label: {
-                    VStack{
-                        Text("Les séances les moins chères")
-                            .foregroundColor(.white)
-                            .fontWeight(.bold)
-                            .offset(x: -50)
-                        Divider()
-                            .frame(width: 240, height: 2)
-                            .background(Color("cinefillorange"))
-                            .offset(x: -50)
-                    }
+                VStack{
+                    Text("Les séances les moins chères")
+                        .foregroundColor(.white)
+                        .fontWeight(.bold)
+                        .offset(x: -50)
+                    Divider()
+                        .frame(width: 240, height: 2)
+                        .background(Color("cinefillorange"))
+                        .offset(x: -50)
                     
+                }
+                ScrollView(.horizontal){
+                    //On affiche la liste de la vue SeanceDiscountView
                 }
                 
                 
             }
             
             
-            }
-            
-            
-            
-            
-            
-            
+        }
+        
+        
+        
+        
+    }
+}
+
+
+struct SeanceDiscountView : View{
+    var theMovie :
+    var body: some View {
+        VStack{
+            Image("image")
+            Text("Nom \n Prix")
         }
     }
-    
-    
+}
+
+
+
 
 
 
