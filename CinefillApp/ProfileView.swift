@@ -11,10 +11,13 @@ struct ProfileView: View {
     var body: some View {
         
         
-        
+        ZStack{
+            
+            Color("backgroundcolor")
+                .edgesIgnoringSafeArea(.bottom)
         
         VStack{
-         
+    
             ZStack{
             Image("zoro")
                 .resizable()
@@ -22,10 +25,11 @@ struct ProfileView: View {
                 .frame(width: 200.0, height: 250.0, alignment: .center)
                 .clipShape(Circle())
                 
-                
+         
                 
             }
                 Text("zoro")
+                .foregroundColor(.white)
           
             VStack{
             Button{
@@ -43,9 +47,10 @@ struct ProfileView: View {
                             .cornerRadius(10)
                         Text("ma carte illimitée")
                             .foregroundColor(.white)
+                       
 
                     }
-                    
+                    Image(systemName: "book")
                 }
                 
             }
@@ -138,7 +143,7 @@ struct ProfileView: View {
         }
         
     }
-    
+    }
 }
 
 
