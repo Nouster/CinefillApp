@@ -46,25 +46,28 @@ struct HomePageView: View {
         ZStack{
             
             Color("BackgroundColorApp")
+                .edgesIgnoringSafeArea(.bottom)
+            // added safearea
             
             VStack {
                 
                 Button {
                     print("Something")
                 } label: {
+                    
+                 //   Label("Toulouse Saint-Alban", systemImage: "location.fill")
+    
                     HStack{
                         Image(systemName: "location.fill")
                             .font(.system(size: 20))
                             .foregroundColor(Color("cinefillorange"))
-                            .offset(x: 90, y: 20)
+                         //   .offset(x: 90, y: 20)
                         Text("Toulouse Saint-Alban")
                             .foregroundColor(.white)
-                            .offset(x: 80, y: 20)
                     }
                     
-                    
-                    
                 }
+                .offset(x: 80, y: 20)
                 
                 Divider()
                     .frame(width: 157, height: 2)
@@ -110,7 +113,7 @@ struct HomePageView: View {
                     } .tabViewStyle(PageTabViewStyle())
                         .clipShape(RoundedRectangle(cornerRadius: 25))
                         .padding()
-                        .frame(width: proxy.size.width, height: proxy.size.height / 1.5)
+                        .frame(width: proxy.size.width, height: proxy.size.height * 1.2 )
                         .onReceive(timer, perform: { _ in
                             next()
                         })
@@ -120,6 +123,19 @@ struct HomePageView: View {
                 
 
                 Text("Les séances les moins chères")
+                    .foregroundColor(.white)
+                    .fontWeight(.bold)
+                    .offset(x: -50)
+                
+                Divider()
+                    .frame(width: 240, height: 2)
+                    .background(Color("cinefillorange"))
+                    .offset(x: -50)
+                
+                
+                SeanceDiscountView(theMovies: moviesArray)
+                
+                Text("Les évènements autour de moi")
                     .foregroundColor(.white)
                     .fontWeight(.bold)
                     .offset(x: -50)
