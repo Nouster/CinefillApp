@@ -47,6 +47,7 @@ struct HomePageView: View {
             
             Color("BackgroundColorApp")
                 .edgesIgnoringSafeArea(.bottom)
+            // added safearea
             
             VStack {
                 
