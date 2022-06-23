@@ -52,10 +52,11 @@ struct HomePageView: View {
                 
                 
                 
-                VStack {
-                    Button {
-                        print("Something")
-                    } label: {
+                
+                Button {
+                    print("Something")
+                } label: {
+                    HStack{
                         Image(systemName: "location.fill")
                             .font(.system(size: 20))
                             .foregroundColor(Color("cinefillorange"))
@@ -63,32 +64,38 @@ struct HomePageView: View {
                         Text("Toulouse Saint-Alban")
                             .foregroundColor(.white)
                             .offset(x: 80, y: 20)
-                        
-                        
-                        
-                        
                     }
                     
-                    Divider()
-                        .frame(width: 157, height: 2)
-                        .background(Color("cinefillorange"))
-                        .offset(x: 97, y: 10)
-                    
-                    Text("Les films à l'affiche")
-                    
-                        .foregroundColor(.white)
-                        .fontWeight(.bold)
-                        .offset(x: -90, y: 20)
-                        .padding()
-                    
-                    
-                    Divider()
-                        .frame(width: 160, height: 2)
-                        .background(Color("cinefillorange"))
-                        .offset(x: -90, y: 5)
                     
                     
                 }
+                
+                Divider()
+                    .frame(width: 157, height: 2)
+                    .background(Color("cinefillorange"))
+                    .offset(x: 97, y: 10)
+                
+                
+                Button {
+                    print("Something")
+                } label: {
+                    VStack{
+                        Text("Les films à l'affiche")
+                        
+                            .foregroundColor(.white)
+                            .fontWeight(.bold)
+                            .offset(x: -90, y: 20)
+                            .padding()
+                        Divider()
+                            .frame(width: 160, height: 2)
+                            .background(Color("cinefillorange"))
+                            .offset(x: -90, y: 5)
+                    }
+                    
+                }
+                
+                
+                
                 
                 
                 
@@ -98,13 +105,14 @@ struct HomePageView: View {
                     
                     
                     TabView (selection: $currentIndex) {
-                    ForEach ( 1..<6) {
+                        ForEach ( 1..<6) {
                             num in Image ("\(num)")
                                 .resizable()
                                 .scaledToFill()
                             
                                 .tag(num)
                         }
+                        
                     } .tabViewStyle(PageTabViewStyle())
                         .clipShape(RoundedRectangle(cornerRadius: 25))
                         .padding()
@@ -115,35 +123,49 @@ struct HomePageView: View {
                     controls
                 }
                 
+                
+                
             }
             
-           
-                
-              
-                    
-                Text("Les séances les moins chères")
-                    .foregroundColor(.white)
-                    .fontWeight(.bold)
-                    .offset(x: -50)
-                Divider()
-                    .frame(width: 240, height: 2)
-                    .background(Color("cinefillorange"))
-                    .offset(x: -50, y: 20)
-                
-          
             
             
-
-
-                
-                
+            
+            
+            VStack {
+                Button {
+                    print("Something")
+                } label: {
+                    VStack{
+                        Text("Les séances les moins chères")
+                            .foregroundColor(.white)
+                            .fontWeight(.bold)
+                            .offset(x: -50)
+                        Divider()
+                            .frame(width: 240, height: 2)
+                            .background(Color("cinefillorange"))
+                            .offset(x: -50)
                     }
+                    
                 }
                 
                 
             }
-        
+            
+            
+            }
+            
+            
+            
+            
+            
+            
+        }
+    }
     
+    
+
+
+
 struct TestView_Previews: PreviewProvider {
     static var previews: some View {
         HomePageView()
