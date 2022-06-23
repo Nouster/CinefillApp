@@ -85,7 +85,7 @@ struct HomePageView: View {
                     Divider()
                         .frame(width: 160, height: 2)
                         .background(Color("cinefillorange"))
-                        .offset(x: -90, y: 10)
+                        .offset(x: -90, y: 5)
                     
                     
                 }
@@ -98,7 +98,7 @@ struct HomePageView: View {
                     
                     
                     TabView (selection: $currentIndex) {
-                    ForEach ( 1..<numberOfImages) {
+                    ForEach ( 1..<6) {
                             num in Image ("\(num)")
                                 .resizable()
                                 .scaledToFill()
@@ -116,7 +116,11 @@ struct HomePageView: View {
                 }
                 
             }
-            VStack{
+            
+           
+                
+              
+                    
                 Text("Les séances les moins chères")
                     .foregroundColor(.white)
                     .fontWeight(.bold)
@@ -124,42 +128,22 @@ struct HomePageView: View {
                 Divider()
                     .frame(width: 240, height: 2)
                     .background(Color("cinefillorange"))
-                    .offset(x: -50)
-                ScrollView(.horizontal){
-                    
-                    HStack{
-                        
-                        Button {
-                            print("someting")
-                        } label: {
-                            Image("jurassic")
-                                .resizable()
-                                .scaledToFit()
-                                .cornerRadius(15)
-                                .frame(width: 100, height: 100)
-                                .offset(x: 10)
-                                
-                        }
-                        Button {
-                            print("someting")
-                        } label: {
-                            Image("jurassic")
-                                .resizable()
-                                .scaledToFit()
-                                .cornerRadius(15)
-                                .frame(width: 150, height: 100) .offset(x: -30)
-                       
-                        
-                        
+                    .offset(x: -50, y: 20)
+                
+          
+            
+            
+
+
+                
+                
                     }
                 }
                 
                 
             }
-        }
-    }
-}
-}
+        
+    
 struct TestView_Previews: PreviewProvider {
     static var previews: some View {
         HomePageView()
