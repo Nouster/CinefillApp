@@ -21,37 +21,33 @@ struct HomePageView: View {
             currentIndex = currentIndex < numberOfImages ? currentIndex + 1 : 0
         }
     }
+    /*
     
     var controls: some View {
         HStack{
             Button {
                 previous()
             } label: {
-                
+                Text("<")
             }
             Spacer()
                 .frame(width: 100)
             Button {
                 next()
             } label: {
+                Text(">")
                 
             }
             
         }.accentColor(.primary)
     }
-    
+    */
     var body: some View {
         ZStack{
             
-            Color("backgroundcolorapp")
+            Color("BackgroundColorApp")
             
             VStack {
-                
-                
-                
-                
-                
-                
                 
                 Button {
                     print("Something")
@@ -94,12 +90,10 @@ struct HomePageView: View {
                     
                 }
                 
+        
                 
                 
-                
-                
-                
-                
+             
                 GeometryReader { proxy in
                     
                     
@@ -116,39 +110,40 @@ struct HomePageView: View {
                     } .tabViewStyle(PageTabViewStyle())
                         .clipShape(RoundedRectangle(cornerRadius: 25))
                         .padding()
-                        .frame(width: proxy.size.width, height: proxy.size.height / 3)
+                        .frame(width: proxy.size.width, height: proxy.size.height / 1.5)
                         .onReceive(timer, perform: { _ in
                             next()
                         })
-                    controls
+                  //  controls
+        
                 }
                 
+
+                Text("Les séances les moins chères")
+                    .foregroundColor(.white)
+                    .fontWeight(.bold)
+                    .offset(x: -50)
+                
+                Divider()
+                    .frame(width: 240, height: 2)
+                    .background(Color("cinefillorange"))
+                    .offset(x: -50)
                 
                 
+                SeanceDiscountView(theMovies: moviesArray)
             }
             
             
             
             
             
-            VStack {
-                VStack{
-                    Text("Les séances les moins chères")
-                        .foregroundColor(.white)
-                        .fontWeight(.bold)
-                        .offset(x: -50)
-                    Divider()
-                        .frame(width: 240, height: 2)
-                        .background(Color("cinefillorange"))
-                        .offset(x: -50)
-                    
-                }
-                ScrollView(.horizontal){
-                    //On affiche la liste de la vue SeanceDiscountView
-                }
+            
+
+                
+               
                 
                 
-            }
+            
             
             
         }
@@ -161,11 +156,25 @@ struct HomePageView: View {
 
 
 struct SeanceDiscountView : View{
-    var theMovie :
+    var theMovies : [Movies]
     var body: some View {
-        VStack{
-            Image("image")
-            Text("Nom \n Prix")
+        ScrollView(.horizontal){
+            HStack{
+                ForEach(theMovies){ movie in
+                    VStack{
+                        Image(movie.posterSmall)
+                            .resizable()
+                            .scaledToFit()
+                            .padding(-5)
+                            .frame(width: 100, height: 150)
+                        Text("\(movie.movieTitle)")
+                            .foregroundColor(.white)
+                        Text("\(movie.movieLong)")
+                            .font(.caption).bold()
+                            .foregroundColor(.white)
+                    }
+                }
+            }
         }
     }
 }
@@ -178,5 +187,6 @@ struct SeanceDiscountView : View{
 struct TestView_Previews: PreviewProvider {
     static var previews: some View {
         HomePageView()
+       // SeanceDiscountView(theMovies: moviesArray)
     }
 }
