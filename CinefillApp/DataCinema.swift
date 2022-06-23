@@ -19,7 +19,7 @@ var cinemasArray = [
     Cinemas( cinemaName:   "ABC"  , cinemaLocation:  "ABC, 13 Rue Saint-Bernard, 31000 Toulouse" ),
     
     Cinemas( cinemaName:     "Pathé Bellecour" , cinemaLocation:    "Pathé Bellecour, 79 Rue de la République, 69002 Lyon"    ),
-    Cinemas( cinemaName:   "UGC Ciné Cité Internationale", cinemaLocation:"UGC Ciné Cité Internationale, Cité Internationale, 80 Quai Charles de Gaulle, 69006 Lyon " ),
+    Cinemas( cinemaName:   "UGC Ciné Cité Internationale"  , cinemaLocation:"UGC Ciné Cité Internationale, Cité Internationale, 80 Quai Charles de Gaulle, 69006 Lyon " ),
     Cinemas( cinemaName:      " UGC Astoria"   , cinemaLocation: "UGC Astoria, 31 Cr Vitton, 69006 Lyon " ),
     Cinemas( cinemaName:  "Comoedia"  , cinemaLocation: "Comoedia, 13 Av. Berthelot, 69007 Lyon"   )
     
