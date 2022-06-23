@@ -19,39 +19,50 @@ struct ProfileView: View {
         VStack{
     
             ZStack{
-            Image("zoro")
+            Image("photo")
                 .resizable()
                 .aspectRatio(contentMode: .fill)
-                .frame(width: 200.0, height: 250.0, alignment: .center)
+                .frame(width: 250.0, height: 250.0, alignment: .center)
                 .clipShape(Circle())
                 
          
                 
             }
-                Text("zoro")
+            Text("Mata Hari").font(.headline).bold().italic()
+//
                 .foregroundColor(.white)
           
             VStack{
             Button{
-                
+               
             } label: {
-                HStack{
+            
+                
+                
+                
+            
                   
                     
                     ZStack{
-                        
+                     
                         Rectangle()
                         
                             .frame(width: 300, height: 40)
                             .foregroundColor(Color.orange)
                             .cornerRadius(10)
-                        Text("ma carte illimitée")
+                        
+                        
+                     
+                        Text("Ma carte illimitée                           ")
+                            .foregroundColor(.white)
+                        + Text(Image(systemName:  "book"))
                             .foregroundColor(.white)
                        
-
+                       
+                           
                     }
-                    Image(systemName: "book")
-                }
+                  
+              
                 
             }
             
@@ -73,16 +84,17 @@ struct ProfileView: View {
                             .frame(width: 300, height: 40)
                             .foregroundColor(Color.orange)
                             .cornerRadius(10)
-                        
-                        Text("mes salles préférées")
+                    
+                        Text("Mes salles préférées                     ")
                             .foregroundColor(.white)
-
-                    }
-                    
+                        + Text(Image(systemName:  "film"))
+                            .foregroundColor(.white)
+                         
+                                        
                 }
                 
             }
-            
+                         }
             .padding()
             
             Button{
@@ -99,7 +111,9 @@ struct ProfileView: View {
                             .foregroundColor(Color.orange)
                             .cornerRadius(10)
                         
-                        Text("mes billets")
+                        Text("Mes billets                                       ")
+                            .foregroundColor(.white)
+                        + Text(Image(systemName:  "qrcode"))
                             .foregroundColor(.white)
 
                     }
@@ -123,7 +137,9 @@ struct ProfileView: View {
                             .frame(width: 300, height: 40)
                             .foregroundColor(Color.orange)
                             .cornerRadius(10)
-                        Text("mes favoris")
+                        Text("Mes favoris                                     ")
+                            .foregroundColor(.white)
+                        + Text(Image(systemName:  "bookmark"))
                             .foregroundColor(.white)
                     }
                
@@ -133,13 +149,17 @@ struct ProfileView: View {
             
             .padding()
             
-            
+                Button{
+                    
+                } label: {
             Text("Déconnexion")
                 .foregroundColor(.orange)
+                }
             Divider()
                 .frame(width: 150, height: 02)
                 .background(.orange)
             }
+          
         }
         
     }
