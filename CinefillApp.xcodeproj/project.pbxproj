@@ -11,6 +11,7 @@
 		5B06A47B2864BFC300E90D96 /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B06A47A2864BFC300E90D96 /* ViewRouter.swift */; };
 		5B06A47D2864BFCC00E90D96 /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B06A47C2864BFCB00E90D96 /* CustomTabBar.swift */; };
 		9F027A652862109A002BE93A /* InviteConnexionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F027A642862109A002BE93A /* InviteConnexionView.swift */; };
+		5BAD5B902860B6C900F45665 /* dataCity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAD5B8F2860B6C900F45665 /* dataCity.swift */; };
 		EC823AF8285CC85F00CDCAB2 /* CinefillAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC823AF7285CC85F00CDCAB2 /* CinefillAppApp.swift */; };
 		EC823AFC285CC85F00CDCAB2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC823AFB285CC85F00CDCAB2 /* Assets.xcassets */; };
 		EC823AFF285CC85F00CDCAB2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC823AFE285CC85F00CDCAB2 /* Preview Assets.xcassets */; };
@@ -22,6 +23,7 @@
 		5B06A47A2864BFC300E90D96 /* ViewRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
 		5B06A47C2864BFCB00E90D96 /* CustomTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
 		9F027A642862109A002BE93A /* InviteConnexionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteConnexionView.swift; sourceTree = "<group>"; };
+		5BAD5B8F2860B6C900F45665 /* dataCity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dataCity.swift; sourceTree = "<group>"; };
 		EC823AF4285CC85F00CDCAB2 /* CinefillApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CinefillApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC823AF7285CC85F00CDCAB2 /* CinefillAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CinefillAppApp.swift; sourceTree = "<group>"; };
 		EC823AFB285CC85F00CDCAB2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -65,6 +67,8 @@
 				4FCD93972864A6D200028DAA /* DataMovieSeance.swift */,
 				ECF165F928635F81004A3A1B /* HomePageView.swift */,
 				9F027A642862109A002BE93A /* InviteConnexionView.swift */,
+				EC823AF9285CC85F00CDCAB2 /* ContentView.swift */,
+				5BAD5B8F2860B6C900F45665 /* dataCity.swift */,
 				EC823AFB285CC85F00CDCAB2 /* Assets.xcassets */,
 				EC823AFD285CC85F00CDCAB2 /* Preview Content */,
 			);
@@ -155,6 +159,7 @@
 				EC823AF8285CC85F00CDCAB2 /* CinefillAppApp.swift in Sources */,
 				5B06A47B2864BFC300E90D96 /* ViewRouter.swift in Sources */,
 				9F027A652862109A002BE93A /* InviteConnexionView.swift in Sources */,
+				5BAD5B902860B6C900F45665 /* dataCity.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
