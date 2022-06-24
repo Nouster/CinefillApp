@@ -50,11 +50,13 @@ struct HomePageView: View {
                     
                 }
                 .offset(x: 80, y: 20)
+                .padding(.bottom)
                 
                 Divider()
                     .frame(width: 120, height: 2)
                     .background(Color("cinefillorange"))
-                    .offset(x: 97, y: 10)
+                    .offset(x: 97)
+                   
                 
                 
            
@@ -112,7 +114,7 @@ struct HomePageView: View {
                     
                     Spacer()
                     
-                } .padding(.top)
+                }.padding(.bottom)
                     
                 
                 HStack{
