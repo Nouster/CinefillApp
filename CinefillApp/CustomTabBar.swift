@@ -183,7 +183,7 @@ struct CartView: View {
     var body: some View{
         ZStack{
             
-            Color("backgroundcolorapp")
+            Color("BackgroundColorApp")
             Text("Car View")
         }
         
@@ -193,7 +193,7 @@ struct FilmView: View {
     var body: some View{
         ZStack{
             
-            Color("backgroundcolorapp")
+            Color("BackgroundColorApp")
             Text("Films View")
         }
         
@@ -203,7 +203,7 @@ struct EventView: View {
     var body: some View{
         ZStack{
             
-            Color("backgroundcolorapp")
+            Color("BackgroundColorApp")
             Text("Events View")
         }
         
