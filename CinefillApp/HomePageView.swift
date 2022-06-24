@@ -95,7 +95,6 @@ struct HomePageView: View {
                             num in Image ("\(num)")
                                 .resizable()
                                 .scaledToFill()
-                            
                                 .tag(num)
                         }
                         
