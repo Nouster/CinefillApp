@@ -15,6 +15,7 @@
 		EC823AFC285CC85F00CDCAB2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC823AFB285CC85F00CDCAB2 /* Assets.xcassets */; };
 		EC823AFF285CC85F00CDCAB2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC823AFE285CC85F00CDCAB2 /* Preview Assets.xcassets */; };
 		ECF165FA28635F81004A3A1B /* HomePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF165F928635F81004A3A1B /* HomePageView.swift */; };
+		ECF9CC1A2861ACD600673E87 /* dataSeances.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF9CC192861ACD600673E87 /* dataSeances.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		EC823AFB285CC85F00CDCAB2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EC823AFE285CC85F00CDCAB2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		ECF165F928635F81004A3A1B /* HomePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageView.swift; sourceTree = "<group>"; };
+		ECF9CC192861ACD600673E87 /* dataSeances.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dataSeances.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				ECF165F928635F81004A3A1B /* HomePageView.swift */,
 				9F027A642862109A002BE93A /* InviteConnexionView.swift */,
 				EC823AF9285CC85F00CDCAB2 /* ContentView.swift */,
+				ECF9CC192861ACD600673E87 /* dataSeances.swift */,
 				EC823AFB285CC85F00CDCAB2 /* Assets.xcassets */,
 				EC823AFD285CC85F00CDCAB2 /* Preview Content */,
 			);
@@ -153,6 +156,8 @@
 				4FCD93982864A6D200028DAA /* DataMovieSeance.swift in Sources */,
 				5B06A47D2864BFCC00E90D96 /* CustomTabBar.swift in Sources */,
 				ECF165FA28635F81004A3A1B /* HomePageView.swift in Sources */,
+				ECF9CC1A2861ACD600673E87 /* dataSeances.swift in Sources */,
+				EC823AFA285CC85F00CDCAB2 /* ContentView.swift in Sources */,
 				EC823AF8285CC85F00CDCAB2 /* CinefillAppApp.swift in Sources */,
 				5B06A47B2864BFC300E90D96 /* ViewRouter.swift in Sources */,
 				9F027A652862109A002BE93A /* InviteConnexionView.swift in Sources */,
