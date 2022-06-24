@@ -8,9 +8,10 @@
 import SwiftUI
 
 struct HomePageView: View {
-    private var numberOfImages: Int = 6
-    private let  timer = Timer.publish(every: 3, on: .main, in: .common).autoconnect()
-    @State private var  currentIndex = 0
+    @StateObject var viewRouter: ViewRouter
+    var numberOfImages: Int = 6
+    let  timer = Timer.publish(every: 3, on: .main, in: .common).autoconnect()
+    @State var  currentIndex = 0
     func previous (){
         withAnimation{
             currentIndex = currentIndex > 0 ? currentIndex - 1 : numberOfImages - 1
@@ -204,7 +205,7 @@ struct SeanceDiscountView : View{
 
 struct TestView_Previews: PreviewProvider {
     static var previews: some View {
-        HomePageView()
+        CustomTabBar()
        // SeanceDiscountView(theMovies: moviesArray)
     }
 }
