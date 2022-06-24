@@ -57,31 +57,34 @@ struct HomePageView: View {
                     .offset(x: 97, y: 10)
                 
                 
-                HStack {
-                    Text("Les films à l'affiche")
-                        .foregroundColor(.white)
-                        .fontWeight(.bold)
-                        .font(.system(size: 16))
-                        .offset(x: 10, y: 10)
-                    Divider()
-                        .frame(width: 150, height: 2)
-                        .background(Color("cinefillorange"))
-                        .offset(x: -145, y: 30)
-                    
-                    Spacer()
-                    
-                    Button {
-                        print("Something")
-                    } label: {
-                        Text("Voir plus")
-                            .font(.system(size: 12))
-                            .foregroundStyle (LinearGradient(colors: [Color("cinefillorange"), .red, .red], startPoint: .top, endPoint: .bottom))
-                            .offset(x: -8, y: 15)
-                    }
-                    
-                }
+           
                 
-                GeometryReader { proxy in
+                Group{
+                    
+                    HStack{
+                        Text("Les films à l'affiche")
+                            .foregroundColor(.white)
+                            .fontWeight(.bold)
+                            
+                        
+                        Spacer()
+                        
+                        Button {
+                            print("Something")
+                        } label: {
+                            Text("Voir plus")
+                                .font(.system(size: 12))
+                                .foregroundStyle (LinearGradient(colors: [Color("cinefillorange"), .red, .red], startPoint: .top, endPoint: .bottom))
+                               
+                        }
+                    } .padding(.horizontal)
+                         Divider()
+                        .frame(width: 155, height: 2)
+                        .background(Color("cinefillorange"))
+                        .offset(x: -100 , y: -20)
+                    
+                    
+                    GeometryReader { proxy in
                     
                     
                     
@@ -97,15 +100,23 @@ struct HomePageView: View {
                     } .tabViewStyle(PageTabViewStyle())
                         .clipShape(RoundedRectangle(cornerRadius: 25))
                         .padding()
-                        .frame(width: proxy.size.width, height: proxy.size.height)
+                        .frame(width: proxy.size.width, height: proxy.size.height*2.3)
+                        
                         .onReceive(timer, perform: { _ in
                             next()
+                                
                         })
                     
                     
                 }
+                    
+                    Spacer()
+                    
+                } .padding(.top)
+                    
                 
                 HStack{
+                    
                     Text("Les séances les moins chères")
                         .foregroundColor(.white)
                         .fontWeight(.bold)
@@ -156,19 +167,6 @@ struct HomePageView: View {
                 
                 SeanceDiscountView(theMovies: moviesArray)
             }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
             
         }
         
