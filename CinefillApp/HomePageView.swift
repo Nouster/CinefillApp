@@ -45,7 +45,7 @@ struct HomePageView: View {
     var body: some View {
         ZStack{
             
-            Color("BackgroundColorApp")
+            Color("backgroundcolorapp")
                 .edgesIgnoringSafeArea(.bottom)
             // added safearea
             
@@ -113,7 +113,7 @@ struct HomePageView: View {
                     } .tabViewStyle(PageTabViewStyle())
                         .clipShape(RoundedRectangle(cornerRadius: 25))
                         .padding()
-                        .frame(width: proxy.size.width, height: proxy.size.height * 1.2 )
+                        .frame(width: proxy.size.width, height: proxy.size.height)
                         .onReceive(timer, perform: { _ in
                             next()
                         })
@@ -182,9 +182,11 @@ struct SeanceDiscountView : View{
                             .resizable()
                             .scaledToFit()
                             .padding(-5)
-                            .frame(width: 100, height: 150)
+                            .frame(width: 100, height: 100)
+                            
                         Text("\(movie.movieTitle)")
                             .foregroundColor(.white)
+                        
                         Text("\(movie.movieLong)")
                             .font(.caption).bold()
                             .foregroundColor(.white)
