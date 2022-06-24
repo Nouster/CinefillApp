@@ -126,7 +126,7 @@ struct HomePageView: View {
                 Text("Les séances les moins chères")
                     .foregroundColor(.white)
                     .fontWeight(.bold)
-                    .offset(x: -50)
+                    .offset(x: -50, y: 5)
                 
                 Divider()
                     .frame(width: 240, height: 2)
@@ -139,7 +139,7 @@ struct HomePageView: View {
                 Text("Les évènements autour de moi")
                     .foregroundColor(.white)
                     .fontWeight(.bold)
-                    .offset(x: -50)
+                    .offset(x: -50, y: 5)
                 
                 Divider()
                     .frame(width: 240, height: 2)
