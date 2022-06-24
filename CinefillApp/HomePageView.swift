@@ -3,7 +3,7 @@
 //  CinefillApp
 //
 //  Created by Mohamed Djebali on 22/06/2022.
-//
+
 
 import SwiftUI
 
@@ -23,33 +23,13 @@ struct HomePageView: View {
             currentIndex = currentIndex < numberOfImages ? currentIndex + 1 : 0
         }
     }
-    /*
     
-    var controls: some View {
-        HStack{
-            Button {
-                previous()
-            } label: {
-                Text("<")
-            }
-            Spacer()
-                .frame(width: 100)
-            Button {
-                next()
-            } label: {
-                Text(">")
-                
-            }
-            
-        }.accentColor(.primary)
-    }
-    */
     var body: some View {
         ZStack{
             
-            Color("BackgroundColorApp")
+            Color("backgroundcolorapp")
                 .edgesIgnoringSafeArea(.bottom)
-            // added safearea
+            
             
             VStack {
                 
@@ -57,48 +37,50 @@ struct HomePageView: View {
                     print("Something")
                 } label: {
                     
-                 //   Label("Toulouse Saint-Alban", systemImage: "location.fill")
-    
-                    HStack{
-                        Image(systemName: "location.fill")
-                            .font(.system(size: 20))
-                            .foregroundColor(Color("cinefillorange"))
-                         //   .offset(x: 90, y: 20)
-                        Text("Toulouse Saint-Alban")
-                            .foregroundColor(.white)
-                    }
+                   
+                    
+                    
+                    Image(systemName: "location.fill")
+                        .font(.system(size: 16))
+                        .foregroundColor(Color("cinefillorange"))
+                    Text("Toulouse Saint-Alban")
+                        .foregroundColor(.white)
+                        .font(.system(size: 12))
+                    
                     
                 }
                 .offset(x: 80, y: 20)
                 
                 Divider()
-                    .frame(width: 157, height: 2)
+                    .frame(width: 120, height: 2)
                     .background(Color("cinefillorange"))
                     .offset(x: 97, y: 10)
                 
                 
-                Button {
-                    print("Something")
-                } label: {
-                    VStack{
-                        Text("Les films à l'affiche")
-                        
-                            .foregroundColor(.white)
-                            .fontWeight(.bold)
-                            .offset(x: -90, y: 20)
-                            .padding()
-                        Divider()
-                            .frame(width: 160, height: 2)
-                            .background(Color("cinefillorange"))
-                            .offset(x: -90, y: 5)
+                HStack {
+                    Text("Les films à l'affiche")
+                        .foregroundColor(.white)
+                        .fontWeight(.bold)
+                        .font(.system(size: 16))
+                        .offset(x: 10, y: 10)
+                    Divider()
+                        .frame(width: 150, height: 2)
+                        .background(Color("cinefillorange"))
+                        .offset(x: -145, y: 30)
+                    
+                    Spacer()
+                    
+                    Button {
+                        print("Something")
+                    } label: {
+                        Text("Voir plus")
+                            .font(.system(size: 12))
+                            .foregroundStyle (LinearGradient(colors: [Color("cinefillorange"), .red, .red], startPoint: .top, endPoint: .bottom))
+                            .offset(x: -8, y: 15)
                     }
                     
                 }
                 
-        
-                
-                
-             
                 GeometryReader { proxy in
                     
                     
@@ -115,37 +97,61 @@ struct HomePageView: View {
                     } .tabViewStyle(PageTabViewStyle())
                         .clipShape(RoundedRectangle(cornerRadius: 25))
                         .padding()
-                        .frame(width: proxy.size.width, height: proxy.size.height * 1.2 )
+                        .frame(width: proxy.size.width, height: proxy.size.height)
                         .onReceive(timer, perform: { _ in
                             next()
                         })
-                  //  controls
-        
+                    
+                    
                 }
                 
-
-                Text("Les séances les moins chères")
-                    .foregroundColor(.white)
-                    .fontWeight(.bold)
-                    .offset(x: -50)
-                
+                HStack{
+                    Text("Les séances les moins chères")
+                        .foregroundColor(.white)
+                        .fontWeight(.bold)
+                        
+                    
+                    Spacer()
+                    
+                    Button {
+                        print("Something")
+                    } label: {
+                        Text("Voir plus")
+                            .font(.system(size: 12))
+                            .foregroundStyle (LinearGradient(colors: [Color("cinefillorange"), .red, .red], startPoint: .top, endPoint: .bottom))
+                           
+                    }
+                } .padding(.horizontal)
                 Divider()
                     .frame(width: 240, height: 2)
                     .background(Color("cinefillorange"))
-                    .offset(x: -50)
+                    .offset(x: -55, y: -5)
                 
                 
                 SeanceDiscountView(theMovies: moviesArray)
                 
-                Text("Les évènements autour de moi")
-                    .foregroundColor(.white)
-                    .fontWeight(.bold)
-                    .offset(x: -50)
+                HStack {
+                    Text("Les évènements autour de moi")
+                        .foregroundColor(.white)
+                        .fontWeight(.bold)
+                       
+                    
+                    Spacer()
+                    
+                    Button {
+                        print("Something")
+                    } label: {
+                        Text("Voir plus")
+                            .font(.system(size: 12))
+                            .foregroundStyle (LinearGradient(colors: [Color("cinefillorange"), .red, .red], startPoint: .top, endPoint: .bottom))
+                           
+                    }
+                } .padding(.horizontal)
                 
                 Divider()
-                    .frame(width: 240, height: 2)
+                    .frame(width: 250, height: 2)
                     .background(Color("cinefillorange"))
-                    .offset(x: -50)
+                    .offset(x: -55, y: -5)
                 
                 
                 SeanceDiscountView(theMovies: moviesArray)
@@ -156,11 +162,11 @@ struct HomePageView: View {
             
             
             
-
-                
-               
-                
-                
+            
+            
+            
+            
+            
             
             
             
@@ -177,16 +183,28 @@ struct SeanceDiscountView : View{
     var theMovies : [Movies]
     var body: some View {
         ScrollView(.horizontal){
-            HStack{
+            HStack(spacing: -20){
                 ForEach(theMovies){ movie in
-                    VStack{
-                        Image(movie.posterSmall)
+                    VStack(spacing: -3){
+                        Image(movie.posterMed)
+                        
                             .resizable()
-                            .scaledToFit()
-                            .padding(-5)
-                            .frame(width: 100, height: 150)
+                           
+                            .scaledToFill()
+                           
+                            .frame(width: 100, height: 100)
+                            
+                           
+                            .cornerRadius(10)
+                            .padding()
+                        
+                        
+        
+                        
                         Text("\(movie.movieTitle)")
                             .foregroundColor(.white)
+                            .font(.system(size: 12))
+                        
                         Text("\(movie.movieLong)")
                             .font(.caption).bold()
                             .foregroundColor(.white)
@@ -205,6 +223,6 @@ struct SeanceDiscountView : View{
 struct TestView_Previews: PreviewProvider {
     static var previews: some View {
         CustomTabBar()
-       // SeanceDiscountView(theMovies: moviesArray)
+        // SeanceDiscountView(theMovies: moviesArray)
     }
 }

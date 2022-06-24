@@ -62,13 +62,15 @@ struct CustomTabBar: View {
                             Circle()
                                 .foregroundColor(.white)
                                 .frame(width: geometry.size.width/7, height: geometry.size.height/7)
-                                .shadow(radius: 4)
+                                .shadow(radius: 8)
                             Image(systemName: "list.dash")
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
                                 .frame(width: geometry.size.width/9-6, height: geometry.size.height/9-6)
                                 .rotationEffect(Angle(degrees: showPopUp ? 360 : 0))
-                                .foregroundColor(showPopUp ? Color("cinefillorange") : Color("BackgroundColorApp"))
+                                .foregroundStyle(showPopUp ? LinearGradient(colors: [Color("cinefillorange"), .red, .red], startPoint: .top, endPoint: .bottom) : LinearGradient(colors: [Color("backgroundcolorapp")], startPoint: .top, endPoint: .bottom) )
+                            
+
                         }
                         .offset(y:-geometry.size.height/16/8)
                         .onTapGesture {
@@ -83,7 +85,7 @@ struct CustomTabBar: View {
                         TabBarIcon(viewRouter: viewRouter, assignedPage: .cart,width: geometry.size.width/5, height: geometry.size.height/28, systemIconName: "cart.fill", tabName: "Panier")
                         Spacer()
                     }
-                    .background(.white)
+                    //                    .background(.white)
                     .frame(width: geometry.size.width, height:  60)
                     
                     
@@ -122,7 +124,7 @@ struct PlusMenu : View {
                     .aspectRatio(contentMode: .fit)
                     .padding(15)
                     .frame(width: widthAndheight, height: widthAndheight)
-                    .foregroundColor(Color("BackgroundColorApp"))
+                    .foregroundColor(Color("backgroundcolorapp"))
                 Text(tabName)
                     .font(.footnote)
                     .padding(.top, -25.0)
@@ -132,8 +134,7 @@ struct PlusMenu : View {
         .onTapGesture {
             viewRouter.currentPage = assignedPage
         }
-        .foregroundColor(viewRouter.currentPage == assignedPage ? Color("cinefillorange") : Color("BackgroundColorApp"))
-        
+        .foregroundStyle(viewRouter.currentPage == assignedPage ? LinearGradient(colors: [Color("cinefillorange"), .red, .red], startPoint: .top, endPoint: .bottom) : LinearGradient(colors: [Color("backgroundcolorapp")], startPoint: .top, endPoint: .bottom) )
         
         
         
@@ -162,7 +163,7 @@ struct TabBarIcon: View {
         .onTapGesture {
             viewRouter.currentPage = assignedPage
         }
-        .foregroundColor(viewRouter.currentPage == assignedPage ? Color("cinefillorange") : Color("BackgroundColorApp"))
+        .foregroundStyle(viewRouter.currentPage == assignedPage ? LinearGradient(colors: [Color("cinefillorange"), .red, .red], startPoint: .top, endPoint: .bottom) : LinearGradient(colors: [Color("backgroundcolorapp")], startPoint: .top, endPoint: .bottom) )
         
     }
 }
@@ -171,7 +172,7 @@ struct ProfilView: View {
     var body: some View{
         ZStack{
             
-            Color("BackgroundColorApp")
+            Color("backgroundcolorapp")
             Text("Profil View")
         }
         
@@ -182,7 +183,7 @@ struct CartView: View {
     var body: some View{
         ZStack{
             
-            Color("BackgroundColorApp")
+            Color("backgroundcolorapp")
             Text("Car View")
         }
         
@@ -192,7 +193,7 @@ struct FilmView: View {
     var body: some View{
         ZStack{
             
-            Color("BackgroundColorApp")
+            Color("backgroundcolorapp")
             Text("Films View")
         }
         
@@ -202,7 +203,7 @@ struct EventView: View {
     var body: some View{
         ZStack{
             
-            Color("BackgroundColorApp")
+            Color("backgroundcolorapp")
             Text("Events View")
         }
         
