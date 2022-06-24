@@ -27,7 +27,7 @@ struct HomePageView: View {
     var body: some View {
         ZStack{
             
-            Color("backgroundcolorapp")
+            Color("BackgroundColorApp")
                 .edgesIgnoringSafeArea(.bottom)
             
             
