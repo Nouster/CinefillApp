@@ -12,6 +12,7 @@ struct HomePageView: View {
     var numberOfImages: Int = 6
     let  timer = Timer.publish(every: 3, on: .main, in: .common).autoconnect()
     @State var  currentIndex = 0
+    
     func previous (){
         withAnimation{
             currentIndex = currentIndex > 0 ? currentIndex - 1 : numberOfImages - 1
