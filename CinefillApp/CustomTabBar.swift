@@ -68,7 +68,7 @@ struct CustomTabBar: View {
                                 .aspectRatio(contentMode: .fit)
                                 .frame(width: geometry.size.width/9-6, height: geometry.size.height/9-6)
                                 .rotationEffect(Angle(degrees: showPopUp ? 360 : 0))
-                                .foregroundStyle(showPopUp ? LinearGradient(colors: [Color("cinefillorange"), .red, .red], startPoint: .top, endPoint: .bottom) : LinearGradient(colors: [Color("backgroundcolorapp")], startPoint: .top, endPoint: .bottom) )
+                                .foregroundStyle(showPopUp ? LinearGradient(colors: [Color("cinefillorange"), .red, .red], startPoint: .top, endPoint: .bottom) : LinearGradient(colors: [Color("BackgroundColorApp")], startPoint: .top, endPoint: .bottom) )
                             
 
                         }
@@ -124,7 +124,7 @@ struct PlusMenu : View {
                     .aspectRatio(contentMode: .fit)
                     .padding(15)
                     .frame(width: widthAndheight, height: widthAndheight)
-                    .foregroundColor(Color("backgroundcolorapp"))
+                    .foregroundColor(Color("BackgroundColorApp"))
                 Text(tabName)
                     .font(.footnote)
                     .padding(.top, -25.0)
@@ -134,7 +134,7 @@ struct PlusMenu : View {
         .onTapGesture {
             viewRouter.currentPage = assignedPage
         }
-        .foregroundStyle(viewRouter.currentPage == assignedPage ? LinearGradient(colors: [Color("cinefillorange"), .red, .red], startPoint: .top, endPoint: .bottom) : LinearGradient(colors: [Color("backgroundcolorapp")], startPoint: .top, endPoint: .bottom) )
+        .foregroundStyle(viewRouter.currentPage == assignedPage ? LinearGradient(colors: [Color("cinefillorange"), .red, .red], startPoint: .top, endPoint: .bottom) : LinearGradient(colors: [Color("BackgroundColorApp")], startPoint: .top, endPoint: .bottom) )
         
         
         
@@ -163,7 +163,7 @@ struct TabBarIcon: View {
         .onTapGesture {
             viewRouter.currentPage = assignedPage
         }
-        .foregroundStyle(viewRouter.currentPage == assignedPage ? LinearGradient(colors: [Color("cinefillorange"), .red, .red], startPoint: .top, endPoint: .bottom) : LinearGradient(colors: [Color("backgroundcolorapp")], startPoint: .top, endPoint: .bottom) )
+        .foregroundStyle(viewRouter.currentPage == assignedPage ? LinearGradient(colors: [Color("cinefillorange"), .red, .red], startPoint: .top, endPoint: .bottom) : LinearGradient(colors: [Color("BackgroundColorApp")], startPoint: .top, endPoint: .bottom) )
         
     }
 }
@@ -172,7 +172,7 @@ struct ProfilView: View {
     var body: some View{
         ZStack{
             
-            Color("backgroundcolorapp")
+            Color("BackgroundColorApp")
             Text("Profil View")
         }
         
@@ -183,7 +183,7 @@ struct CartView: View {
     var body: some View{
         ZStack{
             
-            Color("backgroundcolorapp")
+            Color("BackgroundColorApp")
             Text("Car View")
         }
         
@@ -193,7 +193,7 @@ struct FilmView: View {
     var body: some View{
         ZStack{
             
-            Color("backgroundcolorapp")
+            Color("BackgroundColorApp")
             Text("Films View")
         }
         
@@ -203,7 +203,7 @@ struct EventView: View {
     var body: some View{
         ZStack{
             
-            Color("backgroundcolorapp")
+            Color("BackgroundColorApp")
             Text("Events View")
         }
         
