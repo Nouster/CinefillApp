@@ -36,7 +36,7 @@ struct HomePageView: View {
                     print("Something")
                 } label: {
                     
-                    //   Label("Toulouse Saint-Alban", systemImage: "location.fill")
+                   
                     
                     
                     Image(systemName: "location.fill")
