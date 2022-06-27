@@ -1,12 +1,11 @@
 {
   "images" : [
     {
-      "filename" : "movieFiveMed.jpeg",
+      "filename" : "movieFiveBig.jpg",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "movieFiveMed 2.jpeg",
       "idiom" : "universal",
       "scale" : "2x"
     },
