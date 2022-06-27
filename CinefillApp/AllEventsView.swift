@@ -32,53 +32,59 @@ struct AllEventsView: View {
                     TextField ("Que recherchez-vous ?", text: $searchText)
                         .font(Font.system(size: 16))
                         .padding()
-                        .background(RoundedRectangle(cornerRadius: 50).fill(Color.white))
+                        .background(RoundedRectangle(cornerRadius: 20).fill(Color.white))
                         .foregroundColor(.black)
                         .padding(.top, -50)
-                
+                        .padding()
+                    Text("Les évènement autour de moi")
+                        .foregroundColor(.white)
+                        .fontWeight(.bold)
+                        
+                    
                     ScrollView(.vertical){
-                ForEach(searchResults) { name in
-                    NavigationLink(destination: EventDetail(name: name)) {
-                        HStack{
-                        Image("1")
-                            .resizable()
-                            .scaledToFill()
-                            .frame(width: 150, height: 100)
-                            .padding(.leading, 20)
-                            .padding(.trailing, 20)
-                            Spacer()
-                            VStack{
-                            Text(name.eventsName)
-                                    .foregroundColor(Color("cinefillorange"))
-                                    .font(.system(size: 16))
-                                    .fontWeight(.bold)
-                                .lineLimit(3)
+                        ForEach(searchResults) { name in
+                            NavigationLink(destination: EventDetail(name: name)) {
+                                HStack{
+                                    Image(name.eventsPictures)
+                                        .resizable()
+                                        .scaledToFill()
+                                        .frame(width: 150, height: 100)
+                                        .cornerRadius(10)
+                                        .padding(.leading, 20)
+                                        .padding(.trailing, 20)
+                                    Spacer()
+                                    VStack{
+                                        Text(name.eventsName)
+                                            .foregroundColor(Color("cinefillorange"))
+                                            .font(.system(size: 16))
+                                            .fontWeight(.bold)
+                                            .lineLimit(3)
+                                        
+                                        
+                                        Spacer()
+                                        
+                                        Text(name.eventsDescription)
+                                            .lineLimit(3)
+                                            .font(.footnote)
+                                            .foregroundColor(.white)
+                                            .multilineTextAlignment(.leading)
+                                    }
+                                }.padding(10)
                                 
-                                
-                                Spacer()
-                                
-                            Text(name.eventsDescription)
-                                    .lineLimit(3)
-                                    .font(.footnote)
-                                    .foregroundColor(.white)
-                                    .multilineTextAlignment(.leading)
                             }
-                        }.padding(10)
-                            
+                        }
                     }
-                }
-                    }
-               
                     
                     
+                    
+                    
+                    
+                }.environmentObject(eventGroup)
                 
-                
-            }.environmentObject(eventGroup)
+            }
             
         }
-        
     }
-}
 }
 
 struct AllEventsView_Previews: PreviewProvider {
