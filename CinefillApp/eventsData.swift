@@ -19,8 +19,8 @@ struct Events : Identifiable{
     var eventsCategorie : String
 }
 
-
-var eventsPreviewArray = [
+class eventClass: ObservableObject {
+@Published var eventsPreviewArray = [
     
     Events(eventsName: "Elvis", eventsPictures: "elvis", eventsDescription: "La vie et l'oeuvre musicale d'Elvis Presley à travers le prisme de ses rapports complexes avec son mystérieux manager, le colonel Tom Parker. Le film explorera leurs relations sur une vingtaine d'années, de l'ascension du chanteur à son statut de star inégalé, sur fond de bouleversements culturels et de la découverte par l'Amérique de la fin de l'innocence.", eventsDateStart: nil, eventsDateEnd: nil, eventsLocation: "France",enventsAdress: nil, eventsCategorie: "Avant-Première"),
     
@@ -40,3 +40,4 @@ var eventsPreviewArray = [
     
 ]
 
+}

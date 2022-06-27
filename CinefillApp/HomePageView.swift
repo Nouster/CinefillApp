@@ -91,7 +91,7 @@ struct HomePageView: View {
                     
                     
                     TabView (selection: $currentIndex) {
-                        ForEach ( 1..<6) {
+                        ForEach (1..<6) {
                             num in Image ("\(num)")
                                 .resizable()
                                 .scaledToFill()

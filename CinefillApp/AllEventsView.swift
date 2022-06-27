@@ -8,46 +8,90 @@
 import SwiftUI
 
 struct AllEventsView: View {
-    var searchResults: [String] {
+    @State private var searchText = ""
+    @StateObject var eventGroup = eventClass()
+    
+    var searchResults: [Events] {
         if searchText.isEmpty {
-            return names
+            return eventGroup.eventsPreviewArray
         } else {
-            return names.filter { $0.contains(searchText) }
+            return eventGroup.eventsPreviewArray.filter { event in
+                event.eventsName.lowercased().contains(searchText.lowercased()) || event.eventsCategorie.lowercased().contains(searchText.lowercased())
+            }
         }
     }
-
-    let names = ["Holly", "Josh", "Rhonda", "Ted"]
-      @State private var searchText = ""
-    var body: some View {
-        ZStack{
-            Color("BackgroundColorApp")
-            VStack{
-                NavigationView {
-                           List {
-                               ForEach(searchResults, id: \.self) { name in
-                                   NavigationLink(destination: Text(name)) {
-                                       Text(name)
-                                   }
-                               }
-                           }
-                           .searchable(text: $searchText) {
-                               ForEach(searchResults, id: \.self) { result in
-                                   Text("Are you looking for \(result)?").searchCompletion(result)
-                               }
-                           }
-                           .navigationTitle("Contacts")
-                       }
-                   }
-                    }
-
-                    
-                }
-            }
-        
-
     
+    var body: some View {
+        NavigationView{
+            ZStack{
+                
+                Color("BackgroundColorApp")
+                    .ignoresSafeArea()
+                
+                VStack (spacing: 30){
+                    TextField ("Que recherchez-vous ?", text: $searchText)
+                        .font(Font.system(size: 16))
+                        .padding()
+                        .background(RoundedRectangle(cornerRadius: 50).fill(Color.white))
+                        .foregroundColor(.black)
+                        .padding(.top, -50)
+                
+                    ScrollView(.vertical){
+                ForEach(searchResults) { name in
+                    NavigationLink(destination: EventDetail(name: name)) {
+                        HStack{
+                        Image("1")
+                            .resizable()
+                            .scaledToFill()
+                            .frame(width: 150, height: 100)
+                            .padding(.leading, 20)
+                            .padding(.trailing, 20)
+                            Spacer()
+                            VStack{
+                            Text(name.eventsName)
+                                    .foregroundColor(Color("cinefillorange"))
+                                    .font(.system(size: 16))
+                                    .fontWeight(.bold)
+                                .lineLimit(3)
+                                
+                                
+                                Spacer()
+                                
+                            Text(name.eventsDescription)
+                                    .lineLimit(3)
+                                    .font(.footnote)
+                                    .foregroundColor(.white)
+                                    .multilineTextAlignment(.leading)
+                            }
+                        }.padding(10)
+                            
+                    }
+                }
+                    }
+               
+                    
+                    
+                
+                
+            }.environmentObject(eventGroup)
+            
+        }
+        
+    }
+}
+}
+
 struct AllEventsView_Previews: PreviewProvider {
     static var previews: some View {
         AllEventsView()
+    }
+}
+
+
+
+struct EventDetail: View {
+    var name: Events
+    var body: some View {
+        Text("Test")
     }
 }
