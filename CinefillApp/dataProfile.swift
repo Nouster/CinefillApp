@@ -13,8 +13,8 @@ struct DataProfile: Identifiable{
         var userEmail : String
         var userPassword: String
         var userPicture : String
-        var userSubscriptions: [String]
-        var userEvents: [String]
+        var userSubscriptions: [String]?
+        var userEvents: [String]?
         var userLocation : String
 }
-var profileArray = [DataProfile(userPseudo : "Julie", userEmail : "julie.salvo@gmail.com", userPassword : "juliesalvo", userPicture : "picture", userSubscriptions : ["Pass UGC"], userEvents : ["Like"], userLocation : "Toulouse")]
+var profileArray = [DataProfile(userPseudo : "Julie", userEmail : "julie.salvo@gmail.com", userPassword : "juliesalvo", userPicture : "picture", userSubscriptions : nil, userEvents : nil, userLocation : "Toulouse")]
