@@ -11,14 +11,22 @@ struct AllEventsView: View {
     @State private var searchText = ""
     @StateObject var eventGroup = eventClass()
     
+    
     var searchResults: [Events] {
+        
         if searchText.isEmpty {
             return eventGroup.eventsPreviewArray
-        } else {
+        }
+        
+        
+        else if !searchText.isEmpty {
+            
             return eventGroup.eventsPreviewArray.filter { event in
                 event.eventsName.lowercased().contains(searchText.lowercased()) || event.eventsCategorie.lowercased().contains(searchText.lowercased())
             }
+            
         }
+      
     }
     
     var body: some View {
@@ -52,7 +60,7 @@ struct AllEventsView: View {
                                         .cornerRadius(10)
                                         .padding(.leading, 20)
                                         .padding(.trailing, 20)
-                                    Spacer()
+                                   
                                     VStack{
                                         Text(name.eventsName)
                                             .foregroundColor(Color("cinefillorange"))
@@ -61,7 +69,7 @@ struct AllEventsView: View {
                                             .lineLimit(3)
                                         
                                         
-                                        Spacer()
+                                    
                                         
                                         Text(name.eventsDescription)
                                             .lineLimit(3)
@@ -83,7 +91,7 @@ struct AllEventsView: View {
                 
             }
             
-        }
+        }.accentColor(Color("cinefillorange"))
     }
 }
 
