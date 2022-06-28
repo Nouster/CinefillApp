@@ -8,48 +8,58 @@
 import SwiftUI
 
 struct AllEventsView: View {
+    
     @State private var searchText = ""
     @StateObject var eventGroup = eventClass()
     
     
+    
     var searchResults: [Events] {
-        
         if searchText.isEmpty {
             return eventGroup.eventsPreviewArray
         }
-        
-        
-        else if !searchText.isEmpty {
-            
+        else {
             return eventGroup.eventsPreviewArray.filter { event in
                 event.eventsName.lowercased().contains(searchText.lowercased()) || event.eventsCategorie.lowercased().contains(searchText.lowercased())
             }
-            
         }
-      
     }
     
-    var body: some View {
-        NavigationView{
-            ZStack{
+    
+    
+
+var body: some View {
+    NavigationView{
+        ZStack{
+            
+            Color("BackgroundColorApp")
+                .ignoresSafeArea()
+            
+            VStack (spacing: 30){
+                TextField ("Que recherchez-vous ?", text: $searchText)
+                    .font(Font.system(size: 16))
+                    .padding()
+                    .background(RoundedRectangle(cornerRadius: 20).fill(Color.white))
+                    .foregroundColor(.black)
+                    .padding(.top, -50)
+                    .padding()
+                Text("Les évènements autour de moi")
+                    .foregroundColor(.white)
+                    .fontWeight(.bold)
                 
-                Color("BackgroundColorApp")
-                    .ignoresSafeArea()
                 
-                VStack (spacing: 30){
-                    TextField ("Que recherchez-vous ?", text: $searchText)
-                        .font(Font.system(size: 16))
-                        .padding()
-                        .background(RoundedRectangle(cornerRadius: 20).fill(Color.white))
-                        .foregroundColor(.black)
-                        .padding(.top, -50)
-                        .padding()
-                    Text("Les évènement autour de moi")
-                        .foregroundColor(.white)
-                        .fontWeight(.bold)
-                        
+                ScrollView(.vertical){
+                    if  searchResults.isEmpty {
+                        VStack{
+                        Text("Aucun résultat")
+                            .foregroundColor(Color("cinefillorange"))
+                            .font(.title)
+                            Text("🙈")
+                                .font(.system(size: 112))
+                    }
+                    }
                     
-                    ScrollView(.vertical){
+                    else{
                         ForEach(searchResults) { name in
                             NavigationLink(destination: DetailedView(event: name)) {
                                 HStack{
@@ -60,7 +70,7 @@ struct AllEventsView: View {
                                         .cornerRadius(10)
                                         .padding(.leading, 20)
                                         .padding(.trailing, 20)
-                                   
+                                    
                                     VStack{
                                         Text(name.eventsName)
                                             .foregroundColor(Color("cinefillorange"))
@@ -69,7 +79,7 @@ struct AllEventsView: View {
                                             .lineLimit(3)
                                         
                                         
-                                    
+                                        
                                         
                                         Text(name.eventsDescription)
                                             .lineLimit(3)
@@ -82,17 +92,18 @@ struct AllEventsView: View {
                             }
                         }
                     }
-                    
-                    
-                    
-                    
-                    
-                }.environmentObject(eventGroup)
+                }
                 
-            }
+                
+                
+                
+                
+            } .environmentObject(eventGroup)
             
-        }.accentColor(Color("cinefillorange"))
-    }
+        }
+        
+    }.accentColor(Color("cinefillorange"))
+}
 }
 
 struct AllEventsView_Previews: PreviewProvider {
