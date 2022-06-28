@@ -54,9 +54,9 @@
 			isa = PBXGroup;
 			children = (
 				EC823AF7285CC85F00CDCAB2 /* CinefillAppApp.swift */,
+				7F119A2A2864A77A0037871E /* ProfileView.swift */,
 				EC823AF9285CC85F00CDCAB2 /* ContentView.swift */,
 				EC823AFB285CC85F00CDCAB2 /* Assets.xcassets */,
-				7F119A2A2864A77A0037871E /* ProfileView.swift */,
 				EC823AFD285CC85F00CDCAB2 /* Preview Content */,
 			);
 			path = CinefillApp;
