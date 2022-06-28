@@ -14,9 +14,9 @@
 		7F119A252861B2ED0037871E /* DataCinema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F119A242861B2ED0037871E /* DataCinema.swift */; };
 		7F119A2728620D220037871E /* SubscriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F119A2628620D220037871E /* SubscriptionView.swift */; };
 		9F027A652862109A002BE93A /* InviteConnexionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F027A642862109A002BE93A /* InviteConnexionView.swift */; };
+		9FB1D7572860B39F00A44E0F /* dataProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB1D7562860B39F00A44E0F /* dataProfile.swift */; };
 		EC27A3322861FF5E00E7F7C5 /* LaunchScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC27A3312861FF5E00E7F7C5 /* LaunchScreenView.swift */; };
 		EC4F2D8F2869A75800120BEB /* AllEventsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4F2D8E2869A75800120BEB /* AllEventsView.swift */; };
-		9FB1D7572860B39F00A44E0F /* dataProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB1D7562860B39F00A44E0F /* dataProfile.swift */; };
 		EC823AF8285CC85F00CDCAB2 /* CinefillAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC823AF7285CC85F00CDCAB2 /* CinefillAppApp.swift */; };
 		EC823AFC285CC85F00CDCAB2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC823AFB285CC85F00CDCAB2 /* Assets.xcassets */; };
 		EC823AFF285CC85F00CDCAB2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC823AFE285CC85F00CDCAB2 /* Preview Assets.xcassets */; };
@@ -32,9 +32,9 @@
 		7F119A242861B2ED0037871E /* DataCinema.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCinema.swift; sourceTree = "<group>"; };
 		7F119A2628620D220037871E /* SubscriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionView.swift; sourceTree = "<group>"; };
 		9F027A642862109A002BE93A /* InviteConnexionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteConnexionView.swift; sourceTree = "<group>"; };
+		9FB1D7562860B39F00A44E0F /* dataProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dataProfile.swift; sourceTree = "<group>"; };
 		EC27A3312861FF5E00E7F7C5 /* LaunchScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenView.swift; sourceTree = "<group>"; };
 		EC4F2D8E2869A75800120BEB /* AllEventsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllEventsView.swift; sourceTree = "<group>"; };
-		9FB1D7562860B39F00A44E0F /* dataProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dataProfile.swift; sourceTree = "<group>"; };
 		EC823AF4285CC85F00CDCAB2 /* CinefillApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CinefillApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC823AF7285CC85F00CDCAB2 /* CinefillAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CinefillAppApp.swift; sourceTree = "<group>"; };
 		EC823AFB285CC85F00CDCAB2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -57,10 +57,10 @@
 		5B3B490D286AD8FA006A5DDB /* View */ = {
 			isa = PBXGroup;
 			children = (
+				9F027A642862109A002BE93A /* InviteConnexionView.swift */,
+				7F119A2628620D220037871E /* SubscriptionView.swift */,
 				EC4F2D8E2869A75800120BEB /* AllEventsView.swift */,
 				EC27A3312861FF5E00E7F7C5 /* LaunchScreenView.swift */,
-				7F119A2628620D220037871E /* SubscriptionView.swift */,
-				9F027A642862109A002BE93A /* InviteConnexionView.swift */,
 				ECF165F928635F81004A3A1B /* HomePageView.swift */,
 			);
 			path = View;
