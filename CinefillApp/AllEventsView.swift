@@ -43,7 +43,7 @@ struct AllEventsView: View {
                     
                     ScrollView(.vertical){
                         ForEach(searchResults) { name in
-                            NavigationLink(destination: EventDetail(name: name)) {
+                            NavigationLink(destination: DetailedView(event: name)) {
                                 HStack{
                                     Image(name.eventsPictures)
                                         .resizable()
@@ -95,9 +95,5 @@ struct AllEventsView_Previews: PreviewProvider {
 
 
 
-struct EventDetail: View {
-    var name: Events
-    var body: some View {
-        Text("Test")
-    }
-}
+
+
