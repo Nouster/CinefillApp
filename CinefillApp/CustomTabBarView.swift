@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CustomTabBar: View {
+struct CustomTabBarView: View {
     
     @StateObject var viewRouter = ViewRouter()
     @State var showPopUp = false
@@ -99,7 +99,7 @@ struct CustomTabBar: View {
 
 struct CustomTabBar_Previews: PreviewProvider {
     static var previews: some View {
-        CustomTabBar(viewRouter: ViewRouter())
+        CustomTabBarView(viewRouter: ViewRouter())
     }
 }
 

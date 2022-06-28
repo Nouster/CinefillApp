@@ -221,7 +221,7 @@ struct SeanceDiscountView : View{
 
 struct TestView_Previews: PreviewProvider {
     static var previews: some View {
-        CustomTabBar()
+        CustomTabBarView()
         // SeanceDiscountView(theMovies: moviesArray)
     }
 }

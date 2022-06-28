@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct LaunchScreen: View {
+struct LaunchScreenView: View {
     var body: some View {
         ZStack {
             
@@ -93,6 +93,6 @@ Spacer()
 
 struct LaunchScreen_Previews: PreviewProvider {
     static var previews: some View {
-        LaunchScreen()
+        LaunchScreenView()
     }
 }
