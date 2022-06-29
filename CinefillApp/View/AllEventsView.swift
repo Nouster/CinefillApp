@@ -10,7 +10,8 @@ import SwiftUI
 struct AllEventsView: View {
     
     @State private var searchText = ""
-    @StateObject var eventGroup = eventClass()
+    
+    @StateObject var eventGroup: eventClass
     
     
     
@@ -108,7 +109,7 @@ var body: some View {
 
 struct AllEventsView_Previews: PreviewProvider {
     static var previews: some View {
-        AllEventsView()
+        AllEventsView(eventGroup: eventClass())
     }
 }
 

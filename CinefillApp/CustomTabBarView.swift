@@ -9,6 +9,7 @@ import SwiftUI
 
 struct CustomTabBarView: View {
     
+    @StateObject var eventArray = eventClass()
     @StateObject var viewRouter = ViewRouter()
     @State var showPopUp = false
     
@@ -21,7 +22,7 @@ struct CustomTabBarView: View {
                 Spacer()
                 switch viewRouter.currentPage {
                 case .cinema :
-                    HomePageView(viewRouter: viewRouter)
+                    HomePageView(eventArray: eventArray, viewRouter: viewRouter)
                     
                 case .profile :
                     ProfileView()
@@ -33,7 +34,7 @@ struct CustomTabBarView: View {
                     FilmView()
                     
                 case .events :
-                    AllEventsView()
+                    AllEventsView(eventGroup: eventArray)
                     
                     
                 }

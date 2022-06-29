@@ -10,6 +10,8 @@ import AVKit
 
 
 struct HomePageView: View {
+    
+    @StateObject var eventArray: eventClass
     @StateObject var viewRouter: ViewRouter
     var numberOfImages: Int = 6
     let  timer = Timer.publish(every: 3, on: .main, in: .common).autoconnect()
@@ -60,7 +62,7 @@ struct HomePageView: View {
                         Text("Les films à l'affiche")
                             .foregroundColor(.white)
                             .fontWeight(.bold)
-                            
+                        
                         
                         Spacer()
                         
@@ -70,42 +72,42 @@ struct HomePageView: View {
                             Text("Voir plus")
                                 .font(.system(size: 12))
                                 .foregroundStyle (LinearGradient(colors: [Color("cinefillorange"), .red, .red], startPoint: .top, endPoint: .bottom))
-                               
+                            
                         }
                     } .padding(.horizontal)
-                         Divider()
+                    Divider()
                         .frame(width: 160, height: 2)
                         .background(Color("cinefillorange"))
                         .offset(x: -98, y:5)
-                       
+                    
                     
                     
                     GeometryReader { proxy in
-                                       
-                                       TabView (selection: $currentIndex) {
-                                           //                        ForEach (moviesArray) { aMovie in
-                                           //                            Text("A Movie")
-                                           //
-                                           //
-                                           //                        }
-                                           
-                                           
-                                           ForEach(0..<5){ num in
-                                               
-                                             //  ForEach(moviesArray) { aMovie in
-                                                   PosterOnScreenView(theMovie: moviesArray[num])//theMovie: movieOne).tag(num)
-                                             //  }
-                                           }
-                                           
-                                       } .tabViewStyle(PageTabViewStyle())
-                                           .clipShape(RoundedRectangle(cornerRadius: 25))
-                                           .padding()
-                                           .frame(width: proxy.size.width, height: proxy.size.height * 2.2 )
-                                           .onReceive(timer, perform: { _ in
-                                               next()
-                                           })
-                                       //  controls
-                                       
+                        
+                        TabView (selection: $currentIndex) {
+                            //                        ForEach (moviesArray) { aMovie in
+                            //                            Text("A Movie")
+                            //
+                            //
+                            //                        }
+                            
+                            
+                            ForEach(0..<5){ num in
+                                
+                                //  ForEach(moviesArray) { aMovie in
+                                PosterOnScreenView(theMovie: moviesArray[num])//theMovie: movieOne).tag(num)
+                                //  }
+                            }
+                            
+                        } .tabViewStyle(PageTabViewStyle())
+                            .clipShape(RoundedRectangle(cornerRadius: 25))
+                            .padding()
+                            .frame(width: proxy.size.width, height: proxy.size.height * 2.2 )
+                            .onReceive(timer, perform: { _ in
+                                next()
+                            })
+                        //  controls
+                        
                     }
                     .padding(.bottom, 125)
                     
@@ -138,7 +140,7 @@ struct HomePageView: View {
                     Text("Les évènements autour de moi")
                         .foregroundColor(.white)
                         .fontWeight(.bold)
-                       
+                    
                     
                     Spacer()
                     
@@ -148,7 +150,7 @@ struct HomePageView: View {
                         Text("Voir plus")
                             .font(.system(size: 12))
                             .foregroundStyle (LinearGradient(colors: [Color("cinefillorange"), .red, .red], startPoint: .top, endPoint: .bottom))
-                           
+                        
                     }
                 } .padding(.horizontal)
                 
@@ -156,9 +158,10 @@ struct HomePageView: View {
                     .frame(width: 250, height: 2)
                     .background(Color("cinefillorange"))
                     .offset(x: -55, y: 5)
-                SeanceDiscountView(theMovies: moviesArray)
+                
+                EventScrollView(events: eventArray.eventsPreviewArray)
+                
             }
-            
         }
     }
 }
@@ -184,28 +187,28 @@ struct PosterOnScreenView : View {
 }
 
 struct MyView: View {
-   // @State private var isNotPlaying = true
-   // var theImage : Image
+    // @State private var isNotPlaying = true
+    // var theImage : Image
     @Environment(\.dismiss) var dismiss
     var body: some View {
-            VideoPlayer(player: AVPlayer(url:  URL(string: "https://bit.ly/swswift")!))
+        VideoPlayer(player: AVPlayer(url:  URL(string: "https://bit.ly/swswift")!))
         Button {
-           dismiss()
+            dismiss()
         } label: {
             Image(systemName: "x.circle.fill")
         }
-
+        
         
     }
 }
 struct OpenModalVideoLive: View {
-  //  var theMovie : Movies
+    //  var theMovie : Movies
     // Quand cette variable est true la modal est présente
     
     @State private var modalPresent = false
     var body: some View {
         Button {
-          
+            
             modalPresent.toggle()
         } label: {
             Image(systemName:"play.circle.fill")
@@ -249,7 +252,36 @@ struct SeanceDiscountView : View{
     }
 }
 
-
+struct EventScrollView : View{
+    
+    @EnvironmentObject var eventArray: eventClass
+    var events : [Events]
+    var body: some View {
+        ScrollView(.horizontal){
+            HStack(spacing: -20){
+                
+                ForEach(events){ event in
+                    VStack(spacing: -3){
+                        Image(event.eventsPictures)
+                            .resizable()
+                            .scaledToFill()
+                            .frame(width: 100, height: 100)
+                            .cornerRadius(10)
+                            .padding()
+                        
+                        Text("\(event.eventsName)")
+                            .foregroundColor(.white)
+                            .font(.system(size: 12))
+                        
+                        Text("\(event.eventsCategorie)")
+                            .font(.caption).bold()
+                            .foregroundColor(.white)
+                    }
+                }
+            }
+        }
+    }
+}
 
 
 
