@@ -24,7 +24,7 @@ struct CustomTabBarView: View {
                     HomePageView(viewRouter: viewRouter)
                     
                 case .profile :
-                    ProfilView()
+                    ProfileView()
                     
                 case .cart :
                     CartView()
@@ -168,16 +168,6 @@ struct TabBarIcon: View {
     }
 }
 
-struct ProfilView: View {
-    var body: some View{
-        ZStack{
-            
-            Color("BackgroundColorApp")
-            Text("Profil View")
-        }
-        
-    }
-}
 
 struct CartView: View {
     var body: some View{
@@ -199,13 +189,4 @@ struct FilmView: View {
         
     }
 }
-struct EventView: View {
-    var body: some View{
-        ZStack{
-            
-            Color("BackgroundColorApp")
-            Text("Events View")
-        }
-        
-    }
-}
+
