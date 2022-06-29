@@ -32,7 +32,7 @@ var body: some View {
     NavigationView{
         ZStack{
             
-            Color("BackgroundColorApp")
+            Color("background")
                 .ignoresSafeArea()
             
             VStack (spacing: 30){

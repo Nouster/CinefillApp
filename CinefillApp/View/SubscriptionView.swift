@@ -16,7 +16,7 @@ struct SubscriptionView: View {
         
         
         ZStack{
-            Color("backgoundcolor")
+            Color("background")
                 .edgesIgnoringSafeArea(.bottom)
             VStack{
                 
@@ -32,7 +32,7 @@ struct SubscriptionView: View {
                 ZStack (alignment: .leading){
                     if  username.isEmpty{
                         Text("Identifiant")
-                            .foregroundColor(Color.orange.opacity(0.3))
+                            .foregroundColor(Color("cinefillorange"))
                         
                     }
                     
@@ -45,7 +45,7 @@ struct SubscriptionView: View {
                 VStack{
                 Divider()
                     .frame(width: 350, height: 02)
-                    .background(.orange)
+                    .background(Color("cinefillorange"))
                 
                 }
                 
@@ -54,7 +54,7 @@ struct SubscriptionView: View {
                 ZStack (alignment: .leading){
                     if  password.isEmpty{
                         Text("Mot de passe")
-                            .foregroundColor(Color.orange.opacity(0.3))
+                            .foregroundColor(Color("cinefillorange"))
                         
                     }
                     
@@ -71,13 +71,13 @@ struct SubscriptionView: View {
                     
                 Divider()
                     .frame(width: 350, height: 02)
-                    .background(.orange)
+                    .background(Color("cinefillorange"))
 //
 //
                     ZStack (alignment: .leading){
                         if  checkout.isEmpty{
                             Text("Confirmer le mot de passe ")
-                                .foregroundColor(Color.orange.opacity(0.3))
+                                .foregroundColor(Color("cinefillorange"))
                             
                         }
                         
@@ -99,8 +99,7 @@ struct SubscriptionView: View {
                     
                     Divider()
                         .frame(width: 350, height: 02)
-                        .background(.orange)
-                
+                        .background(Color("cinefillorange"))
 //                        .padding()
                     
                 }
@@ -121,7 +120,7 @@ struct SubscriptionView: View {
                             
                             
                             
-                        } .background(Color.orange)
+                        } .background(Color("cinefillorange"))
                             .cornerRadius(10)
                         
                         
@@ -133,7 +132,7 @@ struct SubscriptionView: View {
                                 Divider()
                                 
                             }.frame(width: 100, height: 02)
-                                .background(.orange)
+                                .background(Color("cinefillorange"))
                             
                             Text("Ou")
                                 .foregroundColor(.white)
@@ -141,7 +140,7 @@ struct SubscriptionView: View {
                                 Divider()
                                 
                             }.frame(width: 100, height: 02)
-                                .background(.orange)
+                                .background(Color("cinefillorange"))
                             
                             
                         }.padding()

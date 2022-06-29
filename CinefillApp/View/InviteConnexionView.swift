@@ -10,8 +10,8 @@ import SwiftUI
 struct InviteConnexionView: View {
     @State var city : String = ""
     @State var loc : String = ""
-    var back = Color("back")
-    var button = Color("button")
+    var back = Color("background")
+    var button = Color("cinefillorange")
     var body: some View {
         
         ZStack{

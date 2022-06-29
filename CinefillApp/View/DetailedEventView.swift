@@ -17,7 +17,7 @@ struct DetailedEventView: View {
     
     var body: some View {
         ZStack{
-            Color("BackgroundColorApp")
+            Color("background")
             ScrollView(.vertical){
                 
                 Text(event.eventsName)

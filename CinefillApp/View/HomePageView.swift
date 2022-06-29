@@ -29,7 +29,7 @@ struct HomePageView: View {
     var body: some View {
         ZStack{
             
-            Color("BackgroundColorApp")
+            Color("background")
                 .edgesIgnoringSafeArea(.bottom)
             
             VStack {

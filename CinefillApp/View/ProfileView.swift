@@ -13,7 +13,7 @@ struct ProfileView: View {
         
         ZStack{
             
-            Color("backgroundcolor")
+            Color("background")
                 .edgesIgnoringSafeArea(.bottom)
         
         VStack{
