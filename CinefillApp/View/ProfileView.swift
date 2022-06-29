@@ -48,7 +48,7 @@ struct ProfileView: View {
                         Rectangle()
                         
                             .frame(width: 300, height: 40)
-                            .foregroundColor(Color.orange)
+                            .foregroundColor(Color("cinefillorange"))
                             .cornerRadius(10)
                         
                         
@@ -82,7 +82,7 @@ struct ProfileView: View {
                         Rectangle()
                         
                             .frame(width: 300, height: 40)
-                            .foregroundColor(Color.orange)
+                            .foregroundColor(Color("cinefillorange"))
                             .cornerRadius(10)
                     
                         Text("Mes salles préférées                     ")
@@ -108,7 +108,7 @@ struct ProfileView: View {
                         Rectangle()
                         
                             .frame(width: 300, height: 40)
-                            .foregroundColor(Color.orange)
+                            .foregroundColor(Color("cinefillorange"))
                             .cornerRadius(10)
                         
                         Text("Mes billets                                       ")
@@ -135,7 +135,7 @@ struct ProfileView: View {
                         Rectangle()
                         
                             .frame(width: 300, height: 40)
-                            .foregroundColor(Color.orange)
+                            .foregroundColor(Color("cinefillorange"))
                             .cornerRadius(10)
                         Text("Mes favoris                                     ")
                             .foregroundColor(.white)
@@ -153,11 +153,11 @@ struct ProfileView: View {
                     
                 } label: {
             Text("Déconnexion")
-                .foregroundColor(.orange)
+                .foregroundColor(Color("cinefillorange"))
                 }
             Divider()
                 .frame(width: 150, height: 02)
-                .background(.orange)
+                .background(Color("cinefillorange"))
             }
           
         }
