@@ -168,6 +168,7 @@ struct HomePageView: View {
                 }
             }
         }
+        .accentColor(Color("cinefillorange"))
     }
 }
 struct PosterOnScreenView : View {
