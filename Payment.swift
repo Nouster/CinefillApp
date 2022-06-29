@@ -30,7 +30,7 @@ struct Payment: View {
                 
                 Divider()
                     .frame(width: 500, height: 5)
-                    .background(.orange)
+                    .background(Color("cinefillorange"))
                 
 //                    .padding()
                 
@@ -48,7 +48,7 @@ struct Payment: View {
                 
                 Divider()
                     .frame(width: 400, height: 5)
-                    .background(.orange)
+                    .background(Color("cinefillorange"))
                 
                 
 //                    .padding()
@@ -76,7 +76,9 @@ struct Payment: View {
                 VStack{
                     TextField("Numero de carte ", text: $credit )
                         .padding()
-                        .background(Color.orange.opacity(0.7).cornerRadius(10))
+                        .background(Color("cinefillorange").opacity(0.7))
+                        
+                        .cornerRadius(10)
                         .foregroundColor(.white)
                   
                         .frame(width: 300, height: 50)
@@ -85,7 +87,8 @@ struct Payment: View {
                     TextField("MM/AA", text: $month )
                         
                         .padding()
-                        .background(Color.orange.opacity(0.7).cornerRadius(10))
+                        .background(Color("cinefillorange").opacity(0.7))
+                        .cornerRadius(10)
                         .foregroundColor(.white)
 //
                         .frame(width: 300, height: 50)
@@ -93,7 +96,8 @@ struct Payment: View {
                     
                     TextField("123", text: $checkout )
                         .padding()
-                        .background(Color.orange.opacity(0.7).cornerRadius(10))
+                        .background(Color("cinefillorange").opacity(0.7))
+                        .cornerRadius(10)
                         .foregroundColor(.white)
                       
                         .frame(width: 300, height: 50)
@@ -113,7 +117,7 @@ struct Payment: View {
                     
                         .frame(width: 300, height: 50)
                     
-                        .foregroundColor(.orange.opacity(0.7))
+                        .foregroundColor(Color("cinefillorange"))
                 
                         .cornerRadius(15)
                         
@@ -123,11 +127,23 @@ struct Payment: View {
                             .foregroundColor(.white)
                     }
                    }.padding()
-                    Text("ANNULER LE PAIMENT ")
-                        .font(.system(size: 14))
+                    
+                    
+                    
+                    Button{
+                   } label: {
+                    ZStack{
+              
+                        
+                        Text("ANNULER LE PAIMENT ")
+                            .font(.system(size: 14))
+                            .foregroundColor(.white)
+                       
+                    }
+                   
                 }.padding()
                 
-                
+                }
             }
         }
     }
