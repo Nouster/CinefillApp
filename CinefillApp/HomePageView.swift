@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+
 struct HomePageView: View {
     @StateObject var viewRouter: ViewRouter
     var numberOfImages: Int = 6
