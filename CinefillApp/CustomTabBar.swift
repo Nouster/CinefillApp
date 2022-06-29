@@ -33,7 +33,7 @@ struct CustomTabBar: View {
                     FilmView()
                     
                 case .events :
-                    EventView()
+                    AllEventsView()
                     
                     
                 }
