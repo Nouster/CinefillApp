@@ -32,15 +32,11 @@ struct HomePageView: View {
             Color("BackgroundColorApp")
                 .edgesIgnoringSafeArea(.bottom)
             
-            
             VStack {
                 
                 Button {
                     print("Something")
                 } label: {
-                    
-                   
-                    
                     
                     Image(systemName: "location.fill")
                         .font(.system(size: 16))
@@ -48,7 +44,6 @@ struct HomePageView: View {
                     Text("Toulouse Saint-Alban")
                         .foregroundColor(.white)
                         .font(.system(size: 12))
-                    
                     
                 }
                 .offset(x: 80, y: 20)
@@ -58,10 +53,6 @@ struct HomePageView: View {
                     .frame(width: 120, height: 2)
                     .background(Color("cinefillorange"))
                     .offset(x: 97)
-                   
-                
-                
-           
                 
                 Group{
                     
@@ -91,8 +82,6 @@ struct HomePageView: View {
                     
                     GeometryReader { proxy in
                                        
-                                       
-                                       
                                        TabView (selection: $currentIndex) {
                                            //                        ForEach (moviesArray) { aMovie in
                                            //                            Text("A Movie")
@@ -121,14 +110,12 @@ struct HomePageView: View {
                     .padding(.bottom, 125)
                     
                 }
-                    
                 
                 HStack{
                     
                     Text("Les séances les moins chères")
                         .foregroundColor(.white)
                         .fontWeight(.bold)
-                        
                     
                     Spacer()
                     
@@ -138,14 +125,12 @@ struct HomePageView: View {
                         Text("Voir plus")
                             .font(.system(size: 12))
                             .foregroundStyle (LinearGradient(colors: [Color("cinefillorange"), .red, .red], startPoint: .top, endPoint: .bottom))
-                           
                     }
                 } .padding(.horizontal)
                 Divider()
                     .frame(width: 240, height: 2)
                     .background(Color("cinefillorange"))
                     .offset(x: -57, y: 5)
-                
                 
                 SeanceDiscountView(theMovies: moviesArray)
                 
@@ -171,16 +156,10 @@ struct HomePageView: View {
                     .frame(width: 250, height: 2)
                     .background(Color("cinefillorange"))
                     .offset(x: -55, y: 5)
-                
-                
                 SeanceDiscountView(theMovies: moviesArray)
             }
             
         }
-        
-        
-        
-        
     }
 }
 
@@ -250,19 +229,11 @@ struct SeanceDiscountView : View{
                 ForEach(theMovies){ movie in
                     VStack(spacing: -3){
                         Image(movie.posterMed)
-                        
                             .resizable()
-                           
                             .scaledToFill()
-                           
                             .frame(width: 100, height: 100)
-                            
-                           
                             .cornerRadius(10)
                             .padding()
-                        
-                        
-        
                         
                         Text("\(movie.movieTitle)")
                             .foregroundColor(.white)
