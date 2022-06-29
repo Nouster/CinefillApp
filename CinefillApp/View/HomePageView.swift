@@ -29,40 +29,96 @@ struct HomePageView: View {
     }
     
     var body: some View {
-        ZStack{
-            
-            Color("background")
-                .edgesIgnoringSafeArea(.bottom)
-            
-            VStack {
+        NavigationView{
+            ZStack{
                 
-                Button {
-                    print("Something")
-                } label: {
+                Color("background")
+                    .edgesIgnoringSafeArea(.bottom)
+                
+                VStack {
                     
-                    Image(systemName: "location.fill")
-                        .font(.system(size: 16))
-                        .foregroundColor(Color("cinefillorange"))
-                    Text("Toulouse Saint-Alban")
-                        .foregroundColor(.white)
-                        .font(.system(size: 12))
+                    Button {
+                        print("Something")
+                    } label: {
+                        
+                        Image(systemName: "location.fill")
+                            .font(.system(size: 16))
+                            .foregroundColor(Color("cinefillorange"))
+                        Text("Toulouse Saint-Alban")
+                            .foregroundColor(.white)
+                            .font(.system(size: 12))
+                        
+                    }
+                    .offset(x: 80, y: 20)
+                    .padding(.bottom)
                     
-                }
-                .offset(x: 80, y: 20)
-                .padding(.bottom)
-                
-                Divider()
-                    .frame(width: 120, height: 2)
-                    .background(Color("cinefillorange"))
-                    .offset(x: 97)
-                
-                Group{
+                    Divider()
+                        .frame(width: 120, height: 2)
+                        .background(Color("cinefillorange"))
+                        .offset(x: 97)
+                    
+                    Group{
+                        
+                        HStack{
+                            Text("Les films à l'affiche")
+                                .foregroundColor(.white)
+                                .fontWeight(.bold)
+                            
+                            
+                            Spacer()
+                            
+                            Button {
+                                print("Something")
+                            } label: {
+                                Text("Voir plus")
+                                    .font(.system(size: 12))
+                                    .foregroundStyle (LinearGradient(colors: [Color("cinefillorange"), .red, .red], startPoint: .top, endPoint: .bottom))
+                                
+                            }
+                        } .padding(.horizontal)
+                        Divider()
+                            .frame(width: 160, height: 2)
+                            .background(Color("cinefillorange"))
+                            .offset(x: -98, y:5)
+                        
+                        
+                        
+                        GeometryReader { proxy in
+                            
+                            TabView (selection: $currentIndex) {
+                                //                        ForEach (moviesArray) { aMovie in
+                                //                            Text("A Movie")
+                                //
+                                //
+                                //                        }
+                                
+                                
+                                ForEach(0..<5){ num in
+                                    
+                                    //  ForEach(moviesArray) { aMovie in
+                                    PosterOnScreenView(theMovie: moviesArray[num])//theMovie: movieOne).tag(num)
+                                    //  }
+                                }
+                                
+                            } .tabViewStyle(PageTabViewStyle())
+                                .clipShape(RoundedRectangle(cornerRadius: 25))
+                                .padding()
+                                .frame(width: proxy.size.width, height: proxy.size.height * 2.2 )
+                                .onReceive(timer, perform: { _ in
+                                    next()
+                                })
+                            //  controls
+                            
+                        }
+                        .padding(.bottom, 125)
+                        
+                    }
                     
                     HStack{
-                        Text("Les films à l'affiche")
+                        
+                        Text("Les séances les moins chères")
                             .foregroundColor(.white)
                             .fontWeight(.bold)
-                        
                         
                         Spacer()
                         
@@ -72,100 +128,48 @@ struct HomePageView: View {
                             Text("Voir plus")
                                 .font(.system(size: 12))
                                 .foregroundStyle (LinearGradient(colors: [Color("cinefillorange"), .red, .red], startPoint: .top, endPoint: .bottom))
-                            
                         }
                     } .padding(.horizontal)
                     Divider()
-                        .frame(width: 160, height: 2)
+                        .frame(width: 240, height: 2)
                         .background(Color("cinefillorange"))
-                        .offset(x: -98, y:5)
+                        .offset(x: -57, y: 5)
                     
+                    SeanceDiscountView(theMovies: moviesArray)
                     
-                    
-                    GeometryReader { proxy in
+                    HStack {
+                        Text("Les évènements autour de moi")
+                            .foregroundColor(.white)
+                            .fontWeight(.bold)
                         
-                        TabView (selection: $currentIndex) {
-                            //                        ForEach (moviesArray) { aMovie in
-                            //                            Text("A Movie")
-                            //
-                            //
-                            //                        }
-                            
-                            
-                            ForEach(0..<5){ num in
-                                
-                                //  ForEach(moviesArray) { aMovie in
-                                PosterOnScreenView(theMovie: moviesArray[num])//theMovie: movieOne).tag(num)
-                                //  }
-                            }
-                            
-                        } .tabViewStyle(PageTabViewStyle())
-                            .clipShape(RoundedRectangle(cornerRadius: 25))
-                            .padding()
-                            .frame(width: proxy.size.width, height: proxy.size.height * 2.2 )
-                            .onReceive(timer, perform: { _ in
-                                next()
-                            })
-                        //  controls
                         
-                    }
-                    .padding(.bottom, 125)
+                        Spacer()
+                        
+                        
+                        NavigationLink {
+                            AllEventsView(eventGroup: eventArray)
+                        } label: {
+                            Text("Voir plus")
+                                .font(.system(size: 12))
+                                .foregroundStyle (LinearGradient(colors: [Color("cinefillorange"), .red, .red], startPoint: .top, endPoint: .bottom))
+                        }
+                        
+                        
+                        
+                    } .padding(.horizontal)
+                    
+                    Divider()
+                        .frame(width: 250, height: 2)
+                        .background(Color("cinefillorange"))
+                        .offset(x: -55, y: 5)
+                    
+                    EventScrollView(events: eventArray.eventsPreviewArray)
                     
                 }
-                
-                HStack{
-                    
-                    Text("Les séances les moins chères")
-                        .foregroundColor(.white)
-                        .fontWeight(.bold)
-                    
-                    Spacer()
-                    
-                    Button {
-                        print("Something")
-                    } label: {
-                        Text("Voir plus")
-                            .font(.system(size: 12))
-                            .foregroundStyle (LinearGradient(colors: [Color("cinefillorange"), .red, .red], startPoint: .top, endPoint: .bottom))
-                    }
-                } .padding(.horizontal)
-                Divider()
-                    .frame(width: 240, height: 2)
-                    .background(Color("cinefillorange"))
-                    .offset(x: -57, y: 5)
-                
-                SeanceDiscountView(theMovies: moviesArray)
-                
-                HStack {
-                    Text("Les évènements autour de moi")
-                        .foregroundColor(.white)
-                        .fontWeight(.bold)
-                    
-                    
-                    Spacer()
-                    
-                    Button {
-                        print("Something")
-                    } label: {
-                        Text("Voir plus")
-                            .font(.system(size: 12))
-                            .foregroundStyle (LinearGradient(colors: [Color("cinefillorange"), .red, .red], startPoint: .top, endPoint: .bottom))
-                        
-                    }
-                } .padding(.horizontal)
-                
-                Divider()
-                    .frame(width: 250, height: 2)
-                    .background(Color("cinefillorange"))
-                    .offset(x: -55, y: 5)
-                
-                EventScrollView(events: eventArray.eventsPreviewArray)
-                
             }
         }
     }
 }
-
 struct PosterOnScreenView : View {
     var theMovie : Movies
     //  var moviesWithTrailerArray = [movieOne,movieTwo]
@@ -278,7 +282,7 @@ struct EventScrollView : View{
                             .foregroundColor(.white)
                     }
                 }
-            }
+            }.navigationBarHidden(true)
         }
     }
 }

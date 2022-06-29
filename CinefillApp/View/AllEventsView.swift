@@ -103,7 +103,9 @@ var body: some View {
             
         }
         
-    }.accentColor(Color("cinefillorange"))
+    }
+     
+     .accentColor(Color("cinefillorange"))
 }
 }
 

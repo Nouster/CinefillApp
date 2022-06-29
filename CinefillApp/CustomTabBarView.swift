@@ -18,7 +18,7 @@ struct CustomTabBarView: View {
         GeometryReader { geometry in
             
             VStack {
-                
+               
                 Spacer()
                 switch viewRouter.currentPage {
                 case .cinema :
@@ -92,9 +92,8 @@ struct CustomTabBarView: View {
                     
                 }
                 
-            }.edgesIgnoringSafeArea(.bottom)
-        }
-        
+            }
+        } .edgesIgnoringSafeArea(.bottom)
     }
 }
 
