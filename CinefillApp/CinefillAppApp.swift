@@ -9,9 +9,10 @@ import SwiftUI
 
 @main
 struct CinefillAppApp: App {
+    @StateObject var viewRouter = ViewRouter()
     var body: some Scene {
         WindowGroup {
-            CustomTabBarView()
+            CustomTabBar(viewRouter: viewRouter)
         }
     }
 }
