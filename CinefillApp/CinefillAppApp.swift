@@ -12,7 +12,7 @@ struct CinefillAppApp: App {
     @StateObject var viewRouter = ViewRouter()
     var body: some Scene {
         WindowGroup {
-            CustomTabBar(viewRouter: viewRouter)
+            CustomTabBarView(viewRouter: viewRouter)
         }
     }
 }
