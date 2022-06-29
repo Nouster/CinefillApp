@@ -39,5 +39,9 @@ class eventClass: ObservableObject {
     Events(eventsName: "L’Été en cinémascope 2022", eventsPictures: "etecinemascope", eventsDescription: "endez-vous estival de l'Institut Lumière depuis plus de 20 ans, les projections en plein air sont l’occasion, dès la nuit tombée, de découvrir un film sur grand écran : classiques, comédies, polars… " , eventsDateStart: "28/06/2022", eventsDateEnd: "30/08/2022", eventsLocation: "Lyon" ,enventsAdress: "Place Ambroise Courtois, Lyon 8e", eventsCategorie: "Festival")
     
 ]
+    
+    @Published  var favoriteEvent: [Events] = []
 
 }
+
+
