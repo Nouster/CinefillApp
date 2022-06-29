@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct DetailedView: View {
+struct DetailedEventView: View {
    
     @State var touchInside: Bool = false
     @Environment(\.dismiss) var dismiss
@@ -75,9 +75,9 @@ struct DetailedView: View {
         }.ignoresSafeArea()
     }
 }
-struct DetailedView_Previews: PreviewProvider {
+struct DetailedEventView_Previews: PreviewProvider {
     static var previews: some View {
-        DetailedView(event:
+        DetailedEventView(event:
                         Events(eventsName: "Yuku et la fleur de l'Himalaya", eventsPictures: "yukuetlafleurdelhimalaya", eventsDescription: "En haut des plus hautes montagnes de la terre vit une plante qui se nourrit de la plus parfaite lumière du soleil. Elle s'appelle… la fleur de l'Himalaya. Yuku quitte sa famille pour partir à la recherche de cette fleur à la lumière éternelle. Elle veut l'offrir à sa grand-mère qui a annoncé qu'elle devra bientôt partir avec la petite taupe aveugle dans les méandres de la terre. Mais pour la trouver, il y a un long voyage à parcourir, semé d'obstacles. Il faut traverser le terrible domaine des rats d'égouts sous le château, la prairie aux corbeaux, cruels et voraces, la forêt enchantée où l'on se perd. Et, surtout, le petit pont de la peur, qui est gardé par le loup ! Mais sur son parcours, grâce à sa musique et à ses chansons, Yuku va se faire beaucoup d'amis. Ils sont le bien le plus précieux pour réussir l'aventure de la vie.", eventsDateStart: "28/08/2022", eventsDateEnd: nil, eventsLocation: "Lyon",enventsAdress: nil, eventsCategorie: "Avant-Première"))
     }
     

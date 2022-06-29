@@ -24,7 +24,7 @@
 		ECAA3CAD286C57E1002F7EA9 /* InviteConnexionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECAA3CAC286C57E1002F7EA9 /* InviteConnexionView.swift */; };
 		ECAA3CAF286C57EC002F7EA9 /* LaunchScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECAA3CAE286C57EC002F7EA9 /* LaunchScreenView.swift */; };
 		ECAA3CB1286C57F3002F7EA9 /* SubscriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECAA3CB0286C57F3002F7EA9 /* SubscriptionView.swift */; };
-		ECACB1E3286AF2D9006EC78F /* DetailedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECACB1E2286AF2D9006EC78F /* DetailedView.swift */; };
+		ECACB1E3286AF2D9006EC78F /* DetailedEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECACB1E2286AF2D9006EC78F /* DetailedEventView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,7 +46,7 @@
 		ECAA3CAC286C57E1002F7EA9 /* InviteConnexionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InviteConnexionView.swift; sourceTree = "<group>"; };
 		ECAA3CAE286C57EC002F7EA9 /* LaunchScreenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchScreenView.swift; sourceTree = "<group>"; };
 		ECAA3CB0286C57F3002F7EA9 /* SubscriptionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubscriptionView.swift; sourceTree = "<group>"; };
-		ECACB1E2286AF2D9006EC78F /* DetailedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedView.swift; sourceTree = "<group>"; };
+		ECACB1E2286AF2D9006EC78F /* DetailedEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedEventView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,7 +66,7 @@
 				ECAA3CA8286C57CB002F7EA9 /* AllEventsView.swift */,
 				ECAA3CB0286C57F3002F7EA9 /* SubscriptionView.swift */,
 				ECAA3CAC286C57E1002F7EA9 /* InviteConnexionView.swift */,
-				ECACB1E2286AF2D9006EC78F /* DetailedView.swift */,
+				ECACB1E2286AF2D9006EC78F /* DetailedEventView.swift */,
 				ECAA3CAA286C57D7002F7EA9 /* HomePageView.swift */,
 				7F119A2A2864A77A0037871E /* ProfileView.swift */,
 				ECAA3CAE286C57EC002F7EA9 /* LaunchScreenView.swift */,
@@ -210,7 +210,7 @@
 				9FB1D7572860B39F00A44E0F /* dataProfile.swift in Sources */,
 				ECAA3CA5286C57AD002F7EA9 /* dataEvent.swift in Sources */,
 				ECAA3CAB286C57D7002F7EA9 /* HomePageView.swift in Sources */,
-				ECACB1E3286AF2D9006EC78F /* DetailedView.swift in Sources */,
+				ECACB1E3286AF2D9006EC78F /* DetailedEventView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

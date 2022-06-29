@@ -61,7 +61,7 @@ var body: some View {
                     
                     else{
                         ForEach(searchResults) { name in
-                            NavigationLink(destination: DetailedView(event: name)) {
+                            NavigationLink(destination: DetailedEventView(event: name)) {
                                 HStack{
                                     Image(name.eventsPictures)
                                         .resizable()
