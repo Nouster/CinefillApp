@@ -168,7 +168,7 @@ struct HomePageView: View {
                 }
                 
             }
-        }
+        }.navigationBarHidden(true)
         }
 }
 struct PosterOnScreenView : View {
