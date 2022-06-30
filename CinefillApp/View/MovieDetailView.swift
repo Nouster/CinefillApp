@@ -104,7 +104,7 @@ struct MovieDetailView: View {
                                 
                                 VStack{
                                     
-                                    Image("1")
+                                    Image(movie.movieActor[person] ?? "1")
                                     
                                         .resizable()
                                     
@@ -116,10 +116,7 @@ struct MovieDetailView: View {
                                     
                                         .foregroundColor(.black)
                                     
-                                    Text(movie.movieActor[person] ?? "Nul" )
                                     
-                                        .font(.footnote)
-                                        .foregroundColor(.gray)
                                     
                                 } .padding(10)
                                 
