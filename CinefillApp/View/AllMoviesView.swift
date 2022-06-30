@@ -10,6 +10,12 @@ import SwiftUI
 
 struct AllMoviesView: View {
     
+    var layout = [
+        GridItem(.fixed(180)),
+        GridItem(.fixed(180))
+    
+    ]
+    
 @StateObject var moviesClass: movieClass
 @State private var searchText = ""
     var searchResults: [Movies] {
@@ -27,6 +33,7 @@ var body: some View {
             ZStack{
                 
             Color("background")
+                    .edgesIgnoringSafeArea(.bottom)
                 
                 VStack {
                     
@@ -35,22 +42,24 @@ var body: some View {
                         RoundedRectangle(cornerRadius: 8)
                             .frame(width: 250, height: 30)
                             .foregroundColor(.white)
-                            .offset(y:-70)
+//                            .offset(y:-70)
                         
                         Image(systemName: "magnifyingglass")
-                            .offset(x: -100, y: -70)
+                            .offset(x: -100)
                         
                         TextField("Search", text: $searchText)
                         .foregroundColor(.black)
-                        .offset(x: 120, y: -70)
-                    }
+                        .offset(x: -120)
+                    }.padding(.top, 80)
                     
                     Text("Tous les films à l'affiche")
                         .fontWeight(.bold)
                         .foregroundColor(.white)
                     
-                    ScrollView(.horizontal) {
-                        HStack(spacing: 40) {
+                    
+                    ScrollView {
+                        LazyVGrid(columns : layout) {
+                        
                             
                             ForEach (searchResults) { movie in
                                 
@@ -63,7 +72,7 @@ var body: some View {
                                         .background(.red)
                                         .cornerRadius(10)
                                 }
-                            }
+                            
                         }
                     }
                     .padding(25)
@@ -76,7 +85,7 @@ var body: some View {
     }
 }
 
-
+}
 struct AllMoviesView_Previews: PreviewProvider {
     static var previews: some View {
         AllMoviesView(moviesClass: movieClass())
