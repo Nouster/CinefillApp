@@ -29,6 +29,7 @@ struct HomePageView: View {
     }
     
     var body: some View {
+        NavigationView{
             ZStack{
                 
                 Color("background")
@@ -66,8 +67,10 @@ struct HomePageView: View {
                             
                             Spacer()
                             
-                            Button {
-                                print("Something")
+                            NavigationLink {
+                                
+                                AllMoviesView(moviesClass: moviesClass)
+                                
                             } label: {
                                 Text("Voir plus")
                                     .font(.system(size: 12))
@@ -121,12 +124,14 @@ struct HomePageView: View {
                         
                         Spacer()
                         
-                        Button {
-                            print("Something")
+                        NavigationLink {
+                            
+                            AllMoviesView(moviesClass: moviesClass)
+                            
                         } label: {
                             Text("Voir plus")
                                 .font(.system(size: 12))
-                                .foregroundStyle (LinearGradient(colors: [Color("cinefillorange"), .red, .red], startPoint: .top, endPoint: .bottom))
+                                .foregroundStyle (LinearGradient(colors: [Color("cinefillorange"), .red, .red], startPoint: .top, endPoint: .bottom)) 
                         }
                     } .padding(.horizontal)
                     Divider()
@@ -143,10 +148,12 @@ struct HomePageView: View {
                            
                         
                         Spacer()
-                        
-                        Button {
-                            print("Something")
-                        } label: {
+                        NavigationLink {
+                            
+                            AllEventsView(eventGroup: eventArray)
+                            
+                        }
+                         label: {
                             Text("Voir plus")
                                 .font(.system(size: 12))
                                 .foregroundStyle (LinearGradient(colors: [Color("cinefillorange"), .red, .red], startPoint: .top, endPoint: .bottom))
@@ -162,6 +169,7 @@ struct HomePageView: View {
                 }
                 
             }
+        }
         }
 }
 struct PosterOnScreenView : View {
