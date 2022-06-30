@@ -42,8 +42,9 @@ enum MovieClassification{
     
 }
 
-
-var moviesArray : [Movies] = [
+class movieClass: ObservableObject {
+    
+@Published var moviesArray : [Movies] = [
 
     Movies(movieTitle: "Irréductible", movieActor: ["Jérôme Commandeur","Pascale Arbillot","Estéban","Christian Clavier","Malik Bentalha","Laetitia Dosch","Gérard Darmon","Michel Crémadès","Anne-Sophie Lapix","Valérie Lemercier","Gérard Depardieu","Nicole Calfan","Eva Darlan","Jean-Marie Winling","Karina Beuthe","Hubert Myon","Karim Wallet"], posterBig: "movieOneBig", posterMed: "movieOneMed", posterSmall: "movieOneSmall", movieSynopsis: "Chargée d'écrémer la Fonction publique, une inspectrice ministérielle un peu trop zélée va utiliser tous les moyens’ en son pouvoir... Mais Vincent Peltier, paisible fonctionnaire aux Eaux et Forêts à Limoges, n'est pas du tout décidé à abandonner son travail, garanti à vie ! La guerre des nerfs ne fait que commencer quand elle le mute dans les pires recoins de France, jusqu'au Pôle Nord..", movieDateOfRelease: "29/06/2022", movieCategory: [.Comédie], movieLong: "1h25m", movieCountry: ["France"], movieDirector: ["Jérôme Commandeur"], movieProduction: ["Jérôme Commandeur, Checco Zalone"], movieClassification: .TousPublics, movieSeanceArray: [ Seances(seanceLocation: "Cinémathèque De Toulousel", seanceMovie: "Top Gun : Maverick", seanceTime: "18h", seanceDate: "21/06/2022", seancePrice: 7.90, seanceLanguageVersion: "VOSTFR", seanceAccessibilityInfos: [AccesibilityInfos(name: "Sous-Titres Sourds et Malentendants", isAvailable: true), AccesibilityInfos(name: "Personnes à mobilité réduite", isAvailable: true)])]),
     Movies(movieTitle: "Decision to leave", movieActor: ["Tang Wei","Park Hae-il","Ko Kyeong-Pyo","Lee Jyung-Hyun","Jeung Hadam","Jung Yi-Seo","Park Yong Woo","Kim Shing Young","Go min -si","Park Jung Min","Teo Yoo","Seo Hyun Woo"], posterBig: "movieTwoBig", posterMed: "movieTwoMed", posterSmall: "movieTwoSmall", movieSynopsis: "Hae-Joon, détective chevronné, enquête sur la mort suspecte d'un homme survenue au sommet d'une montagne. Bientôt, il commence à soupçonner Sore, la femme du défunt, tout en étant déstabilisé par son attirance pour elle.", movieDateOfRelease: "29/06/20022", movieCategory: [.Romance, .Drame, .Thriller, .Policier], movieLong: "2h18m", movieCountry: ["Corée du Sud"], movieDirector: ["Chan-Wook Park"], movieProduction: ["Chan-Wook Park, Jeong Seo-kyeong"], movieClassification: .TousPublics, movieSeanceArray: [Seances(seanceLocation: "Cinémathèque De Toulousel", seanceMovie: "Top Gun : Maverick", seanceTime: "18h", seanceDate: "21/06/2022", seancePrice: 7.90, seanceLanguageVersion: "VOSTFR", seanceAccessibilityInfos: [AccesibilityInfos(name: "Sous-Titres Sourds et Malentendants", isAvailable: true), AccesibilityInfos(name: "Personnes à mobilité réduite", isAvailable: true)])]),
@@ -56,3 +57,4 @@ var moviesArray : [Movies] = [
 
 ]
 
+}

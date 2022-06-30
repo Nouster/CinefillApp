@@ -9,6 +9,7 @@ import SwiftUI
 
 
 struct AllMoviesView: View {
+    
 @State private var searchText = ""
 var body: some View {
             ZStack{
