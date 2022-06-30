@@ -19,7 +19,7 @@ struct ProfileView: View {
         VStack{
     
             ZStack{
-            Image("photo")
+            Image("profile")
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .frame(width: 250.0, height: 250.0, alignment: .center)
@@ -28,7 +28,7 @@ struct ProfileView: View {
          
                 
             }
-            Text("Mata Hari").font(.headline).bold().italic()
+            Text("Angie Stuart").font(.headline).bold().italic()
 //
                 .foregroundColor(.white)
           
