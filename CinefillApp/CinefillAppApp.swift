@@ -12,7 +12,6 @@ struct CinefillAppApp: App {
     var body: some Scene {
         WindowGroup {
             CustomTabBarView(viewRouter:  ViewRouter())
-//            SeanceCalendarView()
         }
     }
 }
