@@ -9,16 +9,14 @@ import Foundation
 import SwiftUI
 
 struct MovieDetailView: View {
-    
-    var back = Color("BackgroundColorApp")
-    
-    var button = Color("Button")
+    @StateObject var moviesClass: movieClass
+    var movie: Movies
     
     var body: some View {
         
         ZStack{
             
-            back
+         Color("background")
             
                 .ignoresSafeArea()
             
@@ -70,7 +68,7 @@ struct MovieDetailView: View {
                         
                         RoundedRectangle(cornerRadius: 10)
                         
-                            .foregroundColor(button)
+                            .foregroundColor(Color("cinefillorange"))
                         
                             .frame(width: 300, height: 40)
                         
@@ -94,7 +92,7 @@ struct MovieDetailView: View {
                     
                     HStack(spacing: 0) {
                         
-                        ForEach (infos) { actor in
+                        ForEach (movie.movieActor, id: \.self) { person in
                             
                             ZStack{
                                 
@@ -106,7 +104,7 @@ struct MovieDetailView: View {
                                 
                                 VStack{
                                     
-                                    Image(actor.image)
+                                    Image("1")
                                     
                                         .resizable()
                                     
@@ -114,14 +112,13 @@ struct MovieDetailView: View {
                                     
                                         .cornerRadius(10)
                                     
-                                    Text(actor.name)
+                                    Text("")
                                     
                                         .foregroundColor(.black)
                                     
-                                    Text(actor.name2)
+                                    Text("")
                                     
                                         .font(.footnote)
-                                    
                                         .foregroundColor(.gray)
                                     
                                 } .padding(10)
@@ -146,7 +143,7 @@ struct MovieDetailView_Previews: PreviewProvider {
     
     static var previews: some View {
         
-        MovieDetailView()
+        MovieDetailView(moviesClass: movieClass(), movie:  Movies(movieTitle: "Irréductible", movieActor: ["Jérôme Commandeur","Pascale Arbillot","Estéban","Christian Clavier","Malik Bentalha","Laetitia Dosch","Gérard Darmon","Michel Crémadès","Anne-Sophie Lapix","Valérie Lemercier","Gérard Depardieu","Nicole Calfan","Eva Darlan","Jean-Marie Winling","Karina Beuthe","Hubert Myon","Karim Wallet"], posterBig: "movieOneBig", posterMed: "movieOneMed", posterSmall: "movieOneSmall", movieSynopsis: "Chargée d'écrémer la Fonction publique, une inspectrice ministérielle un peu trop zélée va utiliser tous les moyens’ en son pouvoir... Mais Vincent Peltier, paisible fonctionnaire aux Eaux et Forêts à Limoges, n'est pas du tout décidé à abandonner son travail, garanti à vie ! La guerre des nerfs ne fait que commencer quand elle le mute dans les pires recoins de France, jusqu'au Pôle Nord..", movieDateOfRelease: "29/06/2022", movieCategory: [.Comédie], movieLong: "1h25m", movieCountry: ["France"], movieDirector: ["Jérôme Commandeur"], movieProduction: ["Jérôme Commandeur, Checco Zalone"], movieClassification: .TousPublics, movieSeanceArray: [ Seances(seanceLocation: "Cinémathèque De Toulousel", seanceMovie: "Top Gun : Maverick", seanceTime: "18h", seanceDate: "21/06/2022", seancePrice: 7.90, seanceLanguageVersion: "VOSTFR", seanceAccessibilityInfos: [AccesibilityInfos(name: "Sous-Titres Sourds et Malentendants", isAvailable: true), AccesibilityInfos(name: "Personnes à mobilité réduite", isAvailable: true)])]))
         
     }
     

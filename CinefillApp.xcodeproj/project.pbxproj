@@ -82,21 +82,20 @@
 			isa = PBXGroup;
 			children = (
 				5B13AD76286DAA36009E5C3D /* AllSeanceView.swift */,
+				5B13AD74286DA93B009E5C3D /* MovieDetailView.swift */,
 				ECC9CE77286DA25800A64D20 /* AllMoviesView.swift */,
 				ECAA3CA8286C57CB002F7EA9 /* AllEventsView.swift */,
 				ECAA3CB0286C57F3002F7EA9 /* SubscriptionView.swift */,
 				ECAA3CAC286C57E1002F7EA9 /* InviteConnexionView.swift */,
-                ECC9CE7B286DA80500A64D20 /* BookingView.swift */,
-				ECACB1E2286AF2D9006EC78F /* DetailedEventView.swift */,
+				ECC9CE7B286DA80500A64D20 /* BookingView.swift */,
 				4FCD9457286C700700028DAA /* SeanceCalendarView.swift */,
-				ECACB1E2286AF2D9006EC78F /* DetailedView.swift */,
-                ECAA3CAA286C57D7002F7EA9 /* HomePageView.swift */,
+				ECACB1E2286AF2D9006EC78F /* DetailedEventView.swift */,
+				ECAA3CAA286C57D7002F7EA9 /* HomePageView.swift */,
 				7F119A2A2864A77A0037871E /* ProfileView.swift */,
 				5B13AD6E286DA534009E5C3D /* TicketView.swift */,
 				ECAA3CAE286C57EC002F7EA9 /* LaunchScreenView.swift */,
 				5B13AD6C286D988D009E5C3D /* LoginPageView.swift */,
 				5B13AD72286DA7CB009E5C3D /* CardView.swift */,
-				5B13AD74286DA93B009E5C3D /* MovieDetailView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";

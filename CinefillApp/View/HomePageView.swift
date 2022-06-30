@@ -123,7 +123,7 @@ struct HomePageView: View {
                         Spacer()
                         
                         NavigationLink {
-                            AllMoviesView(movieClass:)
+                           
                         } label: {
                             Text("Voir plus")
                                 .font(.system(size: 12))
