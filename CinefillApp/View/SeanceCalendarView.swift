@@ -13,7 +13,7 @@ struct SeanceCalendarView: View {
         NavigationView{
         ZStack{
             
-            Color("backgroundcolor")
+            Color("background")
                 .edgesIgnoringSafeArea(.bottom)
             
             VStack{
@@ -94,7 +94,7 @@ struct SeanceCalendarView: View {
                 
                 NavigationLink {
                     
-                    //Nom de la vue paiement
+                    Booking(seanceClass: SeanceClass())
                 } label: {
                     
                     VStack{
