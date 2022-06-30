@@ -8,64 +8,169 @@
 import SwiftUI
 
 struct favorites: View {
-    var back = Color("backgroundcolor")
-  
-    var product: Likes
- 
+
     var body: some View {
+      
         ZStack{
             Color("backgroundcolor")
                 .ignoresSafeArea()
+            VStack{
+                ScrollView{
+                Text("Favoris")
+                
+                    .foregroundColor(.white)
+                Divider()
+                    .frame(width: 300, height: 2)
+                    .background(Color("cinefillapp"))
+                
+                
+
+                    
             HStack{
-                Rectangle()
+             
+//
+                Button{
+
+                } label: {
+
+//                    NavigationLink(destination: validation(),label: {
+
+                ZStack{
+
+                    Image("top")
+                        .resizable()
+                        .frame(width: 130, height: 130)
+                        .cornerRadius(15)
+               
+
+                }
+                }
+//                    })
+                
+                
+                
+                
+                
+                boutonlikes()
+                
+        HStack{
+         
+   
+            
+            Button{
+
+            } label: {
+
+//                    NavigationLink(destination: validation(),label: {
+
+            ZStack{
+
+                Image("top")
+                    .resizable()
                     .frame(width: 130, height: 130)
-                    .foregroundColor(.white)
-                Rectangle()
-                    .frame(width: 130, height: 130)
-                    .foregroundColor(.white)
+                    .cornerRadius(15)
+           
+
             }
-//        ZStack (alignment: .topTrailing){
-//            ZStack(alignment: .bottom){
-//                List{
-//                Image(product.images)
-//                    .resizable()
-//                    .cornerRadius(20)
-//                    .frame(width: 180)
-//                    .scaledToFit()
-//                
-//                
-//                VStack(alignment: .leading){
-//                    Text(product.names)
-//                        .bold()
-//                    
-//                    
-//                }
-//                .padding()
-//                .frame(width: 180, alignment: .leading)
-//                .background(.ultraThickMaterial)
-//                .cornerRadius(20)
-//            }
-//            .frame(width: 180, height: 250)
-//            .shadow(radius: 3)
-//            
-//            Button{
-//                
-//                
-//            } label: {
-//                Image(systemName: "plus")
-//                    .padding()
-//                    .foregroundColor(.white)
-//                    .background(.black)
-//                    .cornerRadius(50)
-//                    .padding()
-//            }
-//            }
-//        }
+            }
+//                    })
+            
+            
+            
+            
+        }
+            boutonlikes()
+            }.padding()
+            HStack{
+                Button{
+
+                } label: {
+
+    //                    NavigationLink(destination: validation(),label: {
+
+                ZStack{
+
+                    Image("top")
+                        .resizable()
+                        .frame(width: 130, height: 130)
+                        .cornerRadius(15)
+               
+
+                }
+                }
+    //                    })
+                
+                boutonlikes()
+                   
+                Button{
+
+                } label: {
+
+    //                    NavigationLink(destination: validation(),label: {
+
+                ZStack{
+
+                    Image("top")
+                        .resizable()
+                        .frame(width: 130, height: 130)
+                        .cornerRadius(15)
+               
+
+                }
+                }
+    //                    })
+                
+                boutonlikes()
+            }.padding()
+            HStack{
+                Button{
+
+                } label: {
+
+    //                    NavigationLink(destination: validation(),label: {
+
+                ZStack{
+
+                    Image("top")
+                        .resizable()
+                        .frame(width: 130, height: 130)
+                        .cornerRadius(15)
+               
+
+                }
+                }
+    //                    })
+                
+                boutonlikes()
+               
+                Button{
+
+                } label: {
+
+    //                    NavigationLink(destination: validation(),label: {
+
+                ZStack{
+
+                    Image("top")
+                        .resizable()
+                        .frame(width: 130, height: 130)
+                        .cornerRadius(15)
+               
+
+                }
+                }
+    //                    })
+                
+                boutonlikes()
+            }.padding()
+            }
+        }
+
     }
 }
 }
 struct favorites_Previews: PreviewProvider {
     static var previews: some View {
-        favorites(product: likey[0])
+        favorites()
     }
 }
