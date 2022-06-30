@@ -10,7 +10,7 @@ import SwiftUI
 struct ProfileView: View {
     var body: some View {
         
-        
+        NavigationView{
         ZStack{
             
             Color("background")
@@ -37,11 +37,6 @@ struct ProfileView: View {
                
             } label: {
             
-                
-                
-                
-            
-                  
                     
                     ZStack{
                      
@@ -51,12 +46,19 @@ struct ProfileView: View {
                             .foregroundColor(Color("cinefillorange"))
                             .cornerRadius(10)
                         
+                        NavigationLink {
+                            CardView()
+                        } label: {
+                            
+                               Text("Ma carte illimitée                           ")
+                                   .foregroundColor(.white)
+                               + Text(Image(systemName:  "book"))
+                                   .foregroundColor(.white)
+                        }
+
+                            
                         
                      
-                        Text("Ma carte illimitée                           ")
-                            .foregroundColor(.white)
-                        + Text(Image(systemName:  "book"))
-                            .foregroundColor(.white)
                        
                        
                            
@@ -110,11 +112,16 @@ struct ProfileView: View {
                             .frame(width: 300, height: 40)
                             .foregroundColor(Color("cinefillorange"))
                             .cornerRadius(10)
+                        NavigationLink {
+                            TicketView()
+                        } label: {
+                            Text("Mes billets                                       ")
+                                .foregroundColor(.white)
+                            + Text(Image(systemName:  "qrcode"))
+                                .foregroundColor(.white)
+                        }
+
                         
-                        Text("Mes billets                                       ")
-                            .foregroundColor(.white)
-                        + Text(Image(systemName:  "qrcode"))
-                            .foregroundColor(.white)
 
                     }
                     
@@ -162,7 +169,8 @@ struct ProfileView: View {
           
         }
         
-    }
+    }.navigationBarHidden(true)
+        }
     }
 }
 

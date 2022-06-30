@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct Booking: View {
-    
+    @StateObject var seanceClass : SeanceClass
+ 
     @State private var rating: Int?
     var body: some View {
         ZStack{
@@ -20,6 +21,7 @@ struct Booking: View {
                 
                 Text("Réservation")
                     .foregroundColor(.white)
+                    .font(.title)
                 
                 Divider()
                 .frame(width: 400, height: 3)
@@ -27,13 +29,9 @@ struct Booking: View {
 
                 
                 VStack(alignment: .leading){
-                Text("Bonjour Mata, ")
+                    Text("Bonjour \(profile.userPseudo)\n Vous avez selectionné le film suivant: ")
                     .foregroundColor(.white)
-                Text("Nous sommes heureux de vous revoir parmis nous")
-                    .foregroundColor(.white)
-                    
-                Text("Vous avez selectionné le film suivant:")
-                    .foregroundColor(.white)
+
                 
                 
                 Image("top")
@@ -99,7 +97,7 @@ struct Booking: View {
         
 struct Booking_Previews: PreviewProvider {
     static var previews: some View {
-        Booking()
+        Booking(seanceClass: SeanceClass())
     }
 }
 

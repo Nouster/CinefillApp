@@ -23,7 +23,7 @@ struct CardView: View {
                 ScrollView{
                 VStack {
                   
-                    Text("Mes abonnements ")
+                    Text("Mes abonnements")
                         .foregroundColor(.white)
                         .font(.title)
                         .padding(.top, -60)
@@ -56,7 +56,7 @@ struct image : View {
     let test: Carte
     var body: some View {
         ZStack{
-            Color("backgroundcolor")
+            Color("background")
                 .edgesIgnoringSafeArea(.all)
         
         VStack{
@@ -103,7 +103,7 @@ struct text : View {
                                .font(.system(size: 21,weight: .medium, design: .default))
                                .foregroundColor(.black)
                                .background(Color("cinefillorange"))
-                               .opacity(0.7)
+                               
                                .cornerRadius(30)
             
 

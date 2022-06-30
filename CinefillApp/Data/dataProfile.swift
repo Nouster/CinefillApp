@@ -17,4 +17,4 @@ struct DataProfile: Identifiable{
         var userEvents: [String]?
         var userLocation : String
 }
-var profileArray = [DataProfile(userPseudo : "Julie", userEmail : "julie.salvo@gmail.com", userPassword : "juliesalvo", userPicture : "picture", userSubscriptions : nil, userEvents : nil, userLocation : "Toulouse")]
+var profile = DataProfile(userPseudo : "Angie Stuart", userEmail : "angie.stuart@gmail.com", userPassword : "angiestuart", userPicture : "picture", userSubscriptions : nil, userEvents : nil, userLocation : "Toulouse")
