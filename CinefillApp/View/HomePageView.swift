@@ -122,13 +122,14 @@ struct HomePageView: View {
                         
                         Spacer()
                         
-                        Button {
-                            print("Something")
+                        NavigationLink {
+                            AllMoviesView(movieClass:)
                         } label: {
                             Text("Voir plus")
                                 .font(.system(size: 12))
                                 .foregroundStyle (LinearGradient(colors: [Color("cinefillorange"), .red, .red], startPoint: .top, endPoint: .bottom))
                         }
+                        
                     } .padding(.horizontal)
                     Divider()
                         .frame(width: 240, height: 2)

@@ -32,7 +32,6 @@
 		ECAA3CB1286C57F3002F7EA9 /* SubscriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECAA3CB0286C57F3002F7EA9 /* SubscriptionView.swift */; };
 		ECACB1E3286AF2D9006EC78F /* DetailedEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECACB1E2286AF2D9006EC78F /* DetailedEventView.swift */; };
 		ECC9CE78286DA25800A64D20 /* AllMoviesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC9CE77286DA25800A64D20 /* AllMoviesView.swift */; };
-		ECC9CE7A286DA57B00A64D20 /* SeanceDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC9CE79286DA57B00A64D20 /* SeanceDetailView.swift */; };
 		ECC9CE7C286DA80500A64D20 /* BookingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC9CE7B286DA80500A64D20 /* BookingView.swift */; };
 /* End PBXBuildFile section */
 
@@ -63,7 +62,6 @@
 		ECAA3CB0286C57F3002F7EA9 /* SubscriptionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubscriptionView.swift; sourceTree = "<group>"; };
 		ECACB1E2286AF2D9006EC78F /* DetailedEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedEventView.swift; sourceTree = "<group>"; };
 		ECC9CE77286DA25800A64D20 /* AllMoviesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllMoviesView.swift; sourceTree = "<group>"; };
-		ECC9CE79286DA57B00A64D20 /* SeanceDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeanceDetailView.swift; sourceTree = "<group>"; };
 		ECC9CE7B286DA80500A64D20 /* BookingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -86,7 +84,6 @@
 				ECAA3CA8286C57CB002F7EA9 /* AllEventsView.swift */,
 				ECAA3CB0286C57F3002F7EA9 /* SubscriptionView.swift */,
 				ECAA3CAC286C57E1002F7EA9 /* InviteConnexionView.swift */,
-				ECC9CE79286DA57B00A64D20 /* SeanceDetailView.swift */,
 				ECC9CE7B286DA80500A64D20 /* BookingView.swift */,
 				ECACB1E2286AF2D9006EC78F /* DetailedEventView.swift */,
 				ECAA3CAA286C57D7002F7EA9 /* HomePageView.swift */,
@@ -238,7 +235,6 @@
 				ECAA3CA3286C57A1002F7EA9 /* dataCity.swift in Sources */,
 				ECAA3CB1286C57F3002F7EA9 /* SubscriptionView.swift in Sources */,
 				7F119A252861B2ED0037871E /* DataCinema.swift in Sources */,
-				ECC9CE7A286DA57B00A64D20 /* SeanceDetailView.swift in Sources */,
 				5B13AD6F286DA534009E5C3D /* TicketView.swift in Sources */,
 				5B13AD71286DA73A009E5C3D /* dataCard.swift in Sources */,
 				ECAA3CAF286C57EC002F7EA9 /* LaunchScreenView.swift in Sources */,
