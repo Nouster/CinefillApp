@@ -13,7 +13,7 @@ struct InviteConnexionView: View {
     var back = Color("background")
     var button = Color("cinefillorange")
     var body: some View {
-        
+        NavigationView{
         ZStack{
             RoundedRectangle(cornerRadius: 0)
                 .foregroundColor(back)
@@ -84,10 +84,7 @@ struct InviteConnexionView: View {
                             
                             .padding(30)
                             
-                            Button {
-                                
-                            } label: {
-                                
+                           
                                 ZStack{
                                     
                                     RoundedRectangle(cornerRadius: 10)
@@ -95,17 +92,22 @@ struct InviteConnexionView: View {
                                         .frame(width: 300, height: 50)
                                    
                                     
-                                    Text("C'EST PARTI !")
-                                        .foregroundColor(.white)
+                                    NavigationLink{
+                                        CustomTabBarView()
+                                    }label: {
+                                        Text("C'EST PARTI !")
+                                            .foregroundColor(.white)
+                                    }
                                     
                                     
                                 
-                            }
+                            
                         }
                     }
                 }
             }
         }
+        }.navigationBarHidden(true)
     }
 }
 

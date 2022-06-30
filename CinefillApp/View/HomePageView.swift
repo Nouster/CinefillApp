@@ -135,7 +135,6 @@ struct HomePageView: View {
                         .offset(x: -57, y: 5)
                     
                     SeanceDiscountView(movie: moviesClass.moviesArray)
-                    
                     HStack {
                         Text("Les évènements autour de moi")
                             .foregroundColor(.white)

@@ -9,6 +9,7 @@ import SwiftUI
 
 struct LaunchScreenView: View {
     var body: some View {
+        NavigationView{
         ZStack {
             
             
@@ -25,8 +26,8 @@ struct LaunchScreenView: View {
                     .padding()
                Spacer()
          
-                Button {
-                    print("Some Text")
+                NavigationLink {
+                    SubscriptionView()
                 } label: {
                     ZStack{
                         
@@ -43,8 +44,8 @@ struct LaunchScreenView: View {
                             .cornerRadius(15)
                     }
                     }
-                    Button {
-                        print("Some Text")
+                NavigationLink {
+                    LoginPageView()
                     } label: {
                         ZStack{
                             
@@ -67,12 +68,12 @@ struct LaunchScreenView: View {
                         
                     }
                 Spacer()
-                Button {
-                    print("Some Text")
-                } label: {
-                    ZStack{
+                
                         
-                        Text("Continuer en tant qu'invité")
+                        NavigationLink{
+                            InviteConnexionView()
+                        }label:{
+                            Text("Continuer en tant qu'invité")
                             .fontWeight(.medium)
                             .frame(width: 280, height: 60)
                             .foregroundColor(.white)
@@ -80,14 +81,15 @@ struct LaunchScreenView: View {
                             .font(.system(size: 16))
                         
                             .cornerRadius(15)
-                        
-                    }
+                        }
+                    
 
-                    }
+                    
     
 Spacer()
                 }
             }
+        }
         }
 }
 

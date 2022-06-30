@@ -20,7 +20,7 @@ struct LoginPageView: View {
     var body: some View {
         
         ZStack{
-            Color("backgroundcolorapp")
+            Color("background")
                 .edgesIgnoringSafeArea(.bottom)
             VStack{
                 
