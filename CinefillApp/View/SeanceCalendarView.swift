@@ -94,7 +94,7 @@ struct SeanceCalendarView: View {
                 
                 NavigationLink {
                     
-                    Booking()
+                    Booking(seanceClass: SeanceClass())
                 } label: {
                     
                     VStack{
