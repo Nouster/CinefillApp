@@ -8,26 +8,37 @@
 import SwiftUI
 
 struct TicketView: View {
+    @State var showShareSheet: Bool = false
     var body: some View {
+        
         ZStack{
             
-            Color("backgroundcolor")
+            Color("background")
                 .edgesIgnoringSafeArea(.bottom)
             
             VStack{
-                Text("Mes Billets   ")
+                HStack{
+                Text("Mes Billets")
                    .foregroundColor(.white)
                    .font(.title)
 //
                 
-                + Text(Image(systemName: "square.and.arrow.up"))
+                Button {
+                    showShareSheet.toggle()
+                } label: {
+                    Image(systemName: "square.and.arrow.up")
+                        .font(.system(size: 24))
+                        .foregroundColor(Color("cinefillorange"))
+                }.sheet(isPresented: $showShareSheet, content:  { ActivityViewController(itemsToShare: [""]) })
+                
                     
                     .foregroundColor(Color("cinefillorange"))
                     .font(.title)
+                }
                     
                 
         Divider()
-                    .frame(width: 350, height: 2)
+                    .frame(width: 175, height: 2)
                     .background(Color("cinefillorange"))
                 
                 Spacer()
@@ -77,3 +88,6 @@ struct Tickets_Previews: PreviewProvider {
         TicketView()
     }
 }
+
+
+
