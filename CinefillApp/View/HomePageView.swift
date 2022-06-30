@@ -31,7 +31,7 @@ struct HomePageView: View {
     var body: some View {
             ZStack{
                 
-                Color("BackgroundColorApp")
+                Color("background")
                     .edgesIgnoringSafeArea(.bottom)
                 
                 VStack {
@@ -289,7 +289,8 @@ struct EventScrollView : View{
 
 struct TestView_Previews: PreviewProvider {
     static var previews: some View {
-        CustomTabBarView(moviesClass: movieClass(), eventArray: eventClass(), viewRouter: ViewRouter(), seancesClass: SeanceClass())
-        // SeanceDiscountView(theMovies: moviesArray)
+//        HomePageView(moviesClass: movieClass(), eventArray: eventClass(), viewRouter: ViewRouter())
+        CustomTabBarView()
+         
     }
 }
