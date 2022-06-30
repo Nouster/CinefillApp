@@ -9,20 +9,18 @@ import SwiftUI
 
 struct AllSeanceView: View {
     @State private var searchText = ""
-    var back = Color("BackgroundColorApp")
-    var button = Color("Button")
     var body: some View {
         
         
         
         ZStack{
             
-            back
+           Color("background")
                 .ignoresSafeArea()
             
             VStack{
                 
-                Text("Les séance les moins chères")
+                Text("Les séances les moins chères")
                     .font(.headline)
                     .fontWeight(.bold)
                     .foregroundColor(.white)
@@ -47,7 +45,7 @@ struct AllSeanceView: View {
                         }
                         Image(systemName: "slider.horizontal.3")
                             .resizable()
-                            .foregroundColor(button)
+                            .foregroundColor(Color("cinefillorange"))
                             .frame(width: 25, height: 25)
                             .offset(x:-50)
                     }

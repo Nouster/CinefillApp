@@ -81,9 +81,10 @@
 		5B3B490D286AD8FA006A5DDB /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5B13AD76286DAA36009E5C3D /* AllSeanceView.swift */,
+				ECC9CE77286DA25800A64D20 /* AllMoviesView.swift */,
 				ECAA3CA8286C57CB002F7EA9 /* AllEventsView.swift */,
 				ECAA3CB0286C57F3002F7EA9 /* SubscriptionView.swift */,
-				ECC9CE77286DA25800A64D20 /* AllMoviesView.swift */,
 				ECAA3CAC286C57E1002F7EA9 /* InviteConnexionView.swift */,
 				ECC9CE79286DA57B00A64D20 /* SeanceDetailView.swift */,
 				ECC9CE7B286DA80500A64D20 /* BookingView.swift */,
@@ -95,7 +96,6 @@
 				5B13AD6C286D988D009E5C3D /* LoginPageView.swift */,
 				5B13AD72286DA7CB009E5C3D /* CardView.swift */,
 				5B13AD74286DA93B009E5C3D /* MovieDetailView.swift */,
-				5B13AD76286DAA36009E5C3D /* AllSeanceView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
