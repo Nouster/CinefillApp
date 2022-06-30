@@ -58,11 +58,10 @@ struct AllSeanceView: View {
                             .fontWeight(.bold)
                             .foregroundColor(.white)
                             
-                            
                         
                         ScrollView(.horizontal) {
                             
-                            HStack(spacing: 40) {
+                            HStack(spacing: 20) {
                                 
                                 ForEach (films) { film in
                                     
@@ -72,13 +71,14 @@ struct AllSeanceView: View {
                                         
                                         Image(film.image)
                                             .resizable()
-                                            .frame(width: 100, height: 110)
-                                            .background(.red)
+                                            .frame(width: 90, height: 100)
                                             .cornerRadius(10)
                                         Text(film.name)
+                                            .font(.footnote)
                                             .foregroundColor(.white)
                                         Text(film.prix)
                                             .foregroundColor(.white)
+                                            .font(.footnote)
                                     }
                                     }
                                 }
@@ -86,6 +86,7 @@ struct AllSeanceView: View {
                         }
                         
                         .padding(25)
+                       
                         
                         
                     }
@@ -99,7 +100,7 @@ struct AllSeanceView: View {
                         
                         ScrollView(.horizontal) {
                             
-                            HStack(spacing: 40) {
+                            HStack(spacing: 20) {
                                 
                                 ForEach (films2) { film2 in
                                     
@@ -109,13 +110,15 @@ struct AllSeanceView: View {
                                         
                                         Image(film2.image)
                                             .resizable()
-                                            .frame(width: 100, height: 130)
+                                            .frame(width: 90, height: 100)
                                             .background(.red)
                                             .cornerRadius(10)
                                         Text(film2.name)
                                             .foregroundColor(.white)
+                                            .font(.footnote)
                                         Text(film2.prix)
                                             .foregroundColor(.white)
+                                            .font(.footnote)
                                     }
                                     }
                                 }
@@ -129,6 +132,7 @@ struct AllSeanceView: View {
                     
                     HStack{
                         VStack{
+                            
                         Text("Documentaires")
                             .fontWeight(.bold)
                         
@@ -136,33 +140,32 @@ struct AllSeanceView: View {
                         
                         ScrollView(.horizontal) {
                             
-                            HStack(spacing: 40) {
+                            HStack(spacing: 20) {
                                 
                                 ForEach (films3) { film3 in
                                     
                                     VStack{
                                         
-                                      
-                                        
                                         Image(film3.image)
                                             .resizable()
-                                            .frame(width: 100, height: 130)
-                                            .background(.red)
+                                            .frame(width: 90, height: 100)
                                             .cornerRadius(10)
+                                        
                                         Text(film3.name)
                                             .foregroundColor(.white)
+                                            .font(.footnote)
+                                        
                                         Text(film3.prix)
                                             .foregroundColor(.white)
+                                            .font(.footnote)
                                     }
                                     }
                                 }
                             }
                         }
                         
-                        .padding(25)
                         
-                        
-                    }
+                    }     .padding()
                 }
             }
         }
