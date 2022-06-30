@@ -33,7 +33,7 @@ var body: some View {
             ZStack{
                 
             Color("background")
-                    .edgesIgnoringSafeArea(.bottom)
+                    .ignoresSafeArea()
                 
                 VStack {
                     
