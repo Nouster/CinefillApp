@@ -63,52 +63,54 @@ struct HomePageView: View {
                             Text("Les films à l'affiche")
                                 .foregroundColor(.white)
                                 .fontWeight(.bold)
-                            
+                                
                             
                             Spacer()
                             
-                            Button {
-                                print("Something")
+                            NavigationLink {
+                                
+                                AllMoviesView(moviesClass: moviesClass)
+                                
                             } label: {
                                 Text("Voir plus")
                                     .font(.system(size: 12))
                                     .foregroundStyle (LinearGradient(colors: [Color("cinefillorange"), .red, .red], startPoint: .top, endPoint: .bottom))
-                                
+                                   
                             }
                         } .padding(.horizontal)
-                        Divider()
+                             Divider()
                             .frame(width: 160, height: 2)
                             .background(Color("cinefillorange"))
                             .offset(x: -98, y:5)
-                        
+                           
                         
                         
                         GeometryReader { proxy in
-                            
-                            TabView (selection: $currentIndex) {
-                                //                        ForEach (moviesArray) { aMovie in
-                                //                            Text("A Movie")
-                                //
-                                //
-                                //                        }
-                                
-                                
-                                ForEach(0..<5){ num in
-                                    
-                                    //  ForEach(moviesArray) { aMovie in
-                                    PosterOnScreenView(theMovie: moviesClass.moviesArray[num])//theMovie: movieOne).tag(num)
-                                    //  }
-                                }
-                                
-                            } .tabViewStyle(PageTabViewStyle())
-                                .clipShape(RoundedRectangle(cornerRadius: 25))
-                                .padding()
-                                .frame(width: proxy.size.width, height: proxy.size.height * 2.2 )
-                                .onReceive(timer, perform: { _ in
-                                    next()
-                                })
-                            //  controls
-                            
+                                           
+                                           TabView (selection: $currentIndex) {
+                                               //                        ForEach (moviesArray) { aMovie in
+                                               //                            Text("A Movie")
+                                               //
+                                               //
+                                               //                        }
+                                               
+                                               
+                                               ForEach(0..<5){ num in
+                                                   
+                                                 //  ForEach(moviesArray) { aMovie in
+                                                   PosterOnScreenView(theMovie: moviesClass.moviesArray[num])//theMovie: movieOne).tag(num)
+                                                 //  }
+                                               }
+                                               
+                                           } .tabViewStyle(PageTabViewStyle())
+                                               .clipShape(RoundedRectangle(cornerRadius: 25))
+                                               .padding()
+                                               .frame(width: proxy.size.width, height: proxy.size.height * 2.2 )
+                                               .onReceive(timer, perform: { _ in
+                                                   next()
+                                               })
+                                           //  controls
+                                           
                         }
                         .padding(.bottom, 125)
                         
@@ -123,13 +125,14 @@ struct HomePageView: View {
                         Spacer()
                         
                         NavigationLink {
-                           
+                            
+                            AllMoviesView(moviesClass: moviesClass)
+                            
                         } label: {
                             Text("Voir plus")
                                 .font(.system(size: 12))
-                                .foregroundStyle (LinearGradient(colors: [Color("cinefillorange"), .red, .red], startPoint: .top, endPoint: .bottom))
+                                .foregroundStyle (LinearGradient(colors: [Color("cinefillorange"), .red, .red], startPoint: .top, endPoint: .bottom)) 
                         }
-                        
                     } .padding(.horizontal)
                     Divider()
                         .frame(width: 240, height: 2)
@@ -137,40 +140,36 @@ struct HomePageView: View {
                         .offset(x: -57, y: 5)
                     
                     SeanceDiscountView(movie: moviesClass.moviesArray)
-                    
                     HStack {
                         Text("Les évènements autour de moi")
                             .foregroundColor(.white)
                             .fontWeight(.bold)
-                        
+                           
                         
                         Spacer()
-                        
-                        
                         NavigationLink {
+                            
                             AllEventsView(eventGroup: eventArray)
-                        } label: {
+                            
+                        }
+                         label: {
                             Text("Voir plus")
                                 .font(.system(size: 12))
                                 .foregroundStyle (LinearGradient(colors: [Color("cinefillorange"), .red, .red], startPoint: .top, endPoint: .bottom))
+                               
                         }
-                        
-                        
-                        
                     } .padding(.horizontal)
                     
                     Divider()
                         .frame(width: 250, height: 2)
                         .background(Color("cinefillorange"))
                         .offset(x: -55, y: 5)
-                    
                     EventScrollView(events: eventArray.eventsPreviewArray)
-                    
                 }
+                
             }
+        }.navigationBarHidden(true)
         }
-        .accentColor(Color("cinefillorange"))
-    }
 }
 struct PosterOnScreenView : View {
     var theMovie : Movies
@@ -297,7 +296,8 @@ struct EventScrollView : View{
 
 struct TestView_Previews: PreviewProvider {
     static var previews: some View {
+//        HomePageView(moviesClass: movieClass(), eventArray: eventClass(), viewRouter: ViewRouter())
         CustomTabBarView()
-        // SeanceDiscountView(theMovies: moviesArray)
+         
     }
 }
