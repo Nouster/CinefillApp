@@ -158,7 +158,7 @@ struct HomePageView: View {
                         .frame(width: 250, height: 2)
                         .background(Color("cinefillorange"))
                         .offset(x: -55, y: 5)
-                    SeanceDiscountView(movie: moviesClass.moviesArray)
+                    EventScrollView(events: eventArray.eventsPreviewArray)
                 }
                 
             }
