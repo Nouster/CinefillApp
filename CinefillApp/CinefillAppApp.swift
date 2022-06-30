@@ -9,11 +9,10 @@ import SwiftUI
 
 @main
 struct CinefillAppApp: App {
-    @StateObject var viewRouter = ViewRouter()
     var body: some Scene {
         WindowGroup {
-            //CustomTabBarView(viewRouter: viewRouter)
-            SeanceCalendarView()
+            CustomTabBarView(viewRouter:  ViewRouter())
+//            SeanceCalendarView()
         }
     }
 }
