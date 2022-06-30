@@ -30,7 +30,7 @@ struct AllEventsView: View {
     
 
 var body: some View {
-   
+    NavigationView{
         ZStack{
             
             Color("background")
@@ -101,6 +101,7 @@ var body: some View {
             } .environmentObject(eventGroup)
             
         }
+    }
         
     
      
