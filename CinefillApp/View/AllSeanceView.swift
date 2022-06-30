@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct AllSeanceView: View {
+    @StateObject var moviesClass: movieClass
     @State private var searchText = ""
     var body: some View {
         
@@ -62,7 +63,7 @@ struct AllSeanceView: View {
                             
                             HStack(spacing: 40) {
                                 
-                                ForEach (films) { film in
+                                ForEach (moviesClass.) { film in
                                     
                                     VStack{
                                         

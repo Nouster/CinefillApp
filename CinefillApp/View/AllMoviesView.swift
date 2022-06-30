@@ -10,6 +10,7 @@ import SwiftUI
 
 struct AllMoviesView: View {
     
+@StateObject var moviesClass: movieClass
 @State private var searchText = ""
 var body: some View {
             ZStack{
