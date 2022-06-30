@@ -17,7 +17,7 @@ struct CardView: View {
         NavigationView{
             
             ZStack{
-                Color("backgroundcolor")
+                Color("background")
                     .ignoresSafeArea()
                    
                 ScrollView{

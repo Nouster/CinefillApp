@@ -13,7 +13,7 @@ struct Booking: View {
     var body: some View {
         ZStack{
             
-          Color("backgroundcolor")
+          Color("background")
           .edgesIgnoringSafeArea(.bottom)
             
             VStack{
