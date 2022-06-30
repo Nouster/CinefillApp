@@ -8,8 +8,19 @@
 import SwiftUI
 
 struct AllSeanceView: View {
-    @StateObject var moviesClass: movieClass
+    @StateObject var seancesClass: SeanceClass
     @State private var searchText = ""
+    var searchResults: [Seances] {
+        if searchText.isEmpty {
+            return seancesClass.seancesArray
+        }
+        else {
+            return seancesClass.seancesArray.filter { seance in
+                seance.seanceMovie.lowercased().contains(searchText.lowercased())
+            }
+        }
+    }
+    
     var body: some View {
         
         
@@ -63,94 +74,13 @@ struct AllSeanceView: View {
                             
                             HStack(spacing: 40) {
                                 
-                                ForEach (moviesClass.) { film in
+                                ForEach (searchResults) { seance in
                                     
                                     VStack{
-                                        
-                                      
-                                        
-                                        Image(film.image)
-                                            .resizable()
-                                            .frame(width: 100, height: 110)
-                                            .background(.red)
-                                            .cornerRadius(10)
-                                        Text(film.name)
+                                     
+                                        Text(seance.seanceMovie)
                                             .foregroundColor(.white)
-                                        Text(film.prix)
-                                            .foregroundColor(.white)
-                                    }
-                                    }
-                                }
-                            }
-                        }
-                        
-                        .padding(25)
-                        
-                        
-                    }
-                    
-                    HStack{
-                        VStack{
-                        Text("Films Français")
-                            .fontWeight(.bold)
-                        
-                            .foregroundColor(.white)
-                        
-                        ScrollView(.horizontal) {
-                            
-                            HStack(spacing: 40) {
-                                
-                                ForEach (films2) { film2 in
-                                    
-                                    VStack{
-                                        
-                                      
-                                        
-                                        Image(film2.image)
-                                            .resizable()
-                                            .frame(width: 100, height: 130)
-                                            .background(.red)
-                                            .cornerRadius(10)
-                                        Text(film2.name)
-                                            .foregroundColor(.white)
-                                        Text(film2.prix)
-                                            .foregroundColor(.white)
-                                    }
-                                    }
-                                }
-                            }
-                        }
-                        
-                        .padding(25)
-                        
-                        
-                    }
-                    
-                    HStack{
-                        VStack{
-                        Text("Documentaires")
-                            .fontWeight(.bold)
-                        
-                            .foregroundColor(.white)
-                        
-                        ScrollView(.horizontal) {
-                            
-                            HStack(spacing: 40) {
-                                
-                                ForEach (films3) { film3 in
-                                    
-                                    VStack{
-                                        
-                                      
-                                        
-                                        Image(film3.image)
-                                            .resizable()
-                                            .frame(width: 100, height: 130)
-                                            .background(.red)
-                                            .cornerRadius(10)
-                                        Text(film3.name)
-                                            .foregroundColor(.white)
-                                        Text(film3.prix)
+                                        Text("\(seance.seancePrice)")
                                             .foregroundColor(.white)
                                     }
                                     }
@@ -170,38 +100,7 @@ struct AllSeanceView: View {
 
 struct AllSeanceView_Previews: PreviewProvider {
     static var previews: some View {
-        AllSeanceView()
+        AllSeanceView(seancesClass: SeanceClass())
     }
 }
 
-struct Movie : Identifiable {
-    
-    var id = UUID()
-    var name : String
-    var image : String
-    var prix : String
-    
-}
-
-var films = [
-    
-    Movie(name: "CGR Blagnac", image: "TENOR2", prix:"6,90€"),
-    Movie(name: "CGR Blagnac", image:"RESPECT", prix: "7,90€"),
-    Movie(name: "UGC La Roquette", image:"ELIZABETH", prix: "7,90€"),
-    Movie(name: "UGC La Roquette", image:"MEDECIN", prix: "7,90€"),
-    
-]
-
-var films2 = [
-    
-    Movie(name: "Le Comédia", image: "MEDECIN", prix:"9,40€"),
-    Movie(name: "Gaumont Wilson", image:"CHAMPAGNE", prix: "7,40€"),
-    Movie(name: "CNP Jaurès", image:"CORPS", prix: "8,98€"),
-    
-]
-
-var films3 = [
-    
-    Movie(name: "CGR Blagnac", image: "143", prix:"6,90€")
-    
-]

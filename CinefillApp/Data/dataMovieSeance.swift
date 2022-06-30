@@ -19,8 +19,8 @@ struct AccesibilityInfos : Identifiable {
     var isAvailable : Bool
 }
 
-
-var seancesArray: [Seances] = [
+class SeanceClass: ObservableObject {
+@Published   var seancesArray: [Seances] = [
     
     Seances(seanceLocation: "Cinémathèque De Toulousel", seanceMovie: "Top Gun : Maverick", seanceTime: "18h", seanceDate: "21/06/2022", seancePrice: 7.90, seanceLanguageVersion: "VOSTFR", seanceAccessibilityInfos: [AccesibilityInfos(name: "Sous-Titres Sourds et Malentendants", isAvailable: true), AccesibilityInfos(name: "Personnes à mobilité réduite", isAvailable: true)]),
     
@@ -48,5 +48,5 @@ var seancesArray: [Seances] = [
     
     Seances(seanceLocation: "Cinémathèque De Toulouse", seanceMovie: "Arthur, malédiction", seanceTime: "20h", seanceDate: "28/06/2022", seancePrice: 9.25, seanceLanguageVersion: "VF", seanceAccessibilityInfos: [AccesibilityInfos(name: "Sous-Titres Sourds et Malentendants", isAvailable: true), AccesibilityInfos(name: "Personnes à mobilité réduite", isAvailable: true)]),
 ]
-
+}
 

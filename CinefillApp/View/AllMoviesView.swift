@@ -12,6 +12,17 @@ struct AllMoviesView: View {
     
 @StateObject var moviesClass: movieClass
 @State private var searchText = ""
+    var searchResults: [Movies] {
+        if searchText.isEmpty {
+            return moviesClass.moviesArray
+        }
+        else {
+            return moviesClass.moviesArray.filter { movie in
+                movie.movieTitle.lowercased().contains(searchText.lowercased())
+            }
+        }
+    }
+    
 var body: some View {
             ZStack{
                 
@@ -41,12 +52,12 @@ var body: some View {
                     ScrollView(.horizontal) {
                         HStack(spacing: 40) {
                             
-                            ForEach (films) { film in
+                            ForEach (searchResults) { movie in
                                 
                                 VStack{
-                                    Text(film.name)
+                                    Text(movie.movieTitle)
                                         .foregroundColor(.white)
-                                    Image(film.image)
+                                    Image(movie.posterMed)
                                         .resizable()
                                         .frame(width: 150, height: 170)
                                         .background(.red)
@@ -58,29 +69,6 @@ var body: some View {
                     .padding(25)
                     
                     
-                    ScrollView(.horizontal) {
-                        
-                        HStack(spacing: 40) {
-                            
-                            ForEach (films2) { film in
-                                
-                                VStack{
-                                    
-                                    Text(film.name2)
-                                        .foregroundColor(.white)
-                                    
-                                    Image(film.image2)
-                                        .resizable()
-                                        .frame(width: 150, height: 170)
-                                        .background(.red)
-                                        .cornerRadius(10)
-                                }
-                                
-                            }
-                            
-                        }
-                    }
-                    .padding(25)
                     
                 }
             } .ignoresSafeArea()
@@ -91,29 +79,8 @@ var body: some View {
 
 struct AllMoviesView_Previews: PreviewProvider {
     static var previews: some View {
-        AllMoviesView()
+        AllMoviesView(moviesClass: movieClass())
     }
 }
 
 
-struct Movie : Identifiable {
-    var id = UUID()
-    var name : String
-    var image : String
-}
-
-var films = [
-    Movie(name: "TOP GUN", image: "TOP"),
-    Movie(name: "JURASSIC WORLD", image:"WORLD")
-]
-
-struct Movie2 : Identifiable {
-    var id = UUID()
-    var name2 : String
-    var image2 : String
-}
-
-var films2 = [
-    Movie2(name2: "SEGPA", image2: "SEGPA"),
-    Movie2(name2: "DOCTOR STRANGE", image2:"DOCTOR")
-]

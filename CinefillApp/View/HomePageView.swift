@@ -10,7 +10,7 @@ import AVKit
 
 
 struct HomePageView: View {
-    
+    @StateObject var moviesClass: movieClass
     @StateObject var eventArray: eventClass
     @StateObject var viewRouter: ViewRouter
     var numberOfImages: Int = 6
@@ -96,7 +96,7 @@ struct HomePageView: View {
                                 ForEach(0..<5){ num in
                                     
                                     //  ForEach(moviesArray) { aMovie in
-                                    PosterOnScreenView(theMovie: moviesArray[num])//theMovie: movieOne).tag(num)
+                                    PosterOnScreenView(theMovie: moviesClass.moviesArray[num])//theMovie: movieOne).tag(num)
                                     //  }
                                 }
                                 
@@ -135,7 +135,7 @@ struct HomePageView: View {
                         .background(Color("cinefillorange"))
                         .offset(x: -57, y: 5)
                     
-                    SeanceDiscountView(theMovies: moviesArray)
+                    SeanceDiscountView(movie: moviesClass.moviesArray)
                     
                     HStack {
                         Text("Les évènements autour de moi")
@@ -230,11 +230,11 @@ struct OpenModalVideoLive: View {
 }
 
 struct SeanceDiscountView : View{
-    var theMovies : [Movies]
+    var movie: [Movies]
     var body: some View {
         ScrollView(.horizontal){
             HStack(spacing: -20){
-                ForEach(theMovies){ movie in
+                ForEach(movie){ movie in
                     VStack(spacing: -3){
                         Image(movie.posterMed)
                             .resizable()

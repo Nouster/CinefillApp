@@ -11,6 +11,7 @@ struct CustomTabBarView: View {
     @StateObject var moviesClass = movieClass()
     @StateObject var eventArray = eventClass()
     @StateObject var viewRouter = ViewRouter()
+    @StateObject var seancesClass = SeanceClass()
     @State var showPopUp = false
     
     var body: some View {
@@ -22,7 +23,7 @@ struct CustomTabBarView: View {
                 Spacer()
                 switch viewRouter.currentPage {
                 case .cinema :
-                    HomePageView(eventArray: eventArray, viewRouter: viewRouter)
+                    HomePageView(moviesClass: moviesClass, eventArray: eventArray, viewRouter: viewRouter)
                     
                 case .profile :
                     ProfileView()
@@ -31,7 +32,7 @@ struct CustomTabBarView: View {
                     CartView()
                     
                 case .films :
-                    AllMoviesView()
+                    AllMoviesView(moviesClass: moviesClass)
                     
                 case .events :
                     AllEventsView(eventGroup: eventArray)
