@@ -10,6 +10,7 @@ import SwiftUI
 
 struct MovieDetailView: View {
     @StateObject var moviesClass: movieClass
+    
     var movie: Movies
     
     var body: some View {
