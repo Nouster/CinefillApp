@@ -7,15 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F0C0555286DC64700C63B70 /* Applepay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0C0554286DC64700C63B70 /* Applepay.swift */; };
 		7FB107BF286AF0000020221C /* Payment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB107BE286AF0000020221C /* Payment.swift */; };
 		7FB107C1286B0AFA0020221C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC823AFB285CC85F00CDCAB2 /* Assets.xcassets */; };
+		7FB107C7286C71860020221C /* validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB107C6286C71860020221C /* validation.swift */; };
 		EC823AF8285CC85F00CDCAB2 /* CinefillAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC823AF7285CC85F00CDCAB2 /* CinefillAppApp.swift */; };
 		EC823AFA285CC85F00CDCAB2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC823AF9285CC85F00CDCAB2 /* ContentView.swift */; };
 		EC823AFF285CC85F00CDCAB2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC823AFE285CC85F00CDCAB2 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7F0C0554286DC64700C63B70 /* Applepay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Applepay.swift; sourceTree = "<group>"; };
 		7FB107BE286AF0000020221C /* Payment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Payment.swift; sourceTree = "<group>"; };
+		7FB107C6286C71860020221C /* validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = validation.swift; sourceTree = "<group>"; };
 		EC823AF4285CC85F00CDCAB2 /* CinefillApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CinefillApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC823AF7285CC85F00CDCAB2 /* CinefillAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CinefillAppApp.swift; sourceTree = "<group>"; };
 		EC823AF9285CC85F00CDCAB2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -38,6 +42,8 @@
 			isa = PBXGroup;
 			children = (
 				7FB107BE286AF0000020221C /* Payment.swift */,
+				7FB107C6286C71860020221C /* validation.swift */,
+				7F0C0554286DC64700C63B70 /* Applepay.swift */,
 				EC823AF6285CC85F00CDCAB2 /* CinefillApp */,
 				EC823AF5285CC85F00CDCAB2 /* Products */,
 			);
@@ -142,7 +148,9 @@
 			files = (
 				EC823AFA285CC85F00CDCAB2 /* ContentView.swift in Sources */,
 				7FB107BF286AF0000020221C /* Payment.swift in Sources */,
+				7FB107C7286C71860020221C /* validation.swift in Sources */,
 				EC823AF8285CC85F00CDCAB2 /* CinefillAppApp.swift in Sources */,
+				7F0C0555286DC64700C63B70 /* Applepay.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

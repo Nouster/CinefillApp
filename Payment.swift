@@ -14,24 +14,27 @@ struct Payment: View {
     @State var checkout: String = ""
     @State private var isSelected: Bool = false
     @State private var iNotSelected: Bool = false
+
     var body: some View {
-        
+      
+
+                NavigationView {
         ZStack{
             
+        
             Color("backgroundcolor")
-                .edgesIgnoringSafeArea(.bottom)
-            
-            
+                .edgesIgnoringSafeArea(.all)
+          
             VStack{
-                
+             
                 Text("UCG Cinéma la roquette")
                     .foregroundColor(.white)
                     .font(.system(size: 20))
-                
+            
                 Divider()
                     .frame(width: 500, height: 5)
                     .background(Color("cinefillorange"))
-                
+               
 //                    .padding()
                 
                 Image("top")
@@ -66,10 +69,28 @@ struct Payment: View {
                         .resizable()
                         .frame(width: 50, height: 40)
                         .cornerRadius(5)
-                    Image( "AP")
-                        .resizable()
-                        .frame(width: 50, height: 40)
-                        .cornerRadius(5)
+                    
+                    
+                    Button{
+                     
+                   } label: {
+                    
+                       NavigationLink(destination: Applepay(),label: {
+//
+                    ZStack{
+                       
+                        Image( "AP")
+                            .resizable()
+                            .frame(width: 50, height: 40)
+                            .cornerRadius(5)
+                    
+                        
+                    }
+                       })
+                   }
+                    
+                    
+                  
                     
                 }.padding()
                 
@@ -101,7 +122,7 @@ struct Payment: View {
                         .foregroundColor(.white)
                       
                         .frame(width: 300, height: 50)
-                    
+           
                     VStack{
                         HStack{
                     Toggle("Enregistrer ma carte ", isOn: $isSelected)
@@ -109,10 +130,15 @@ struct Payment: View {
                         }.padding()
                     }.padding(.horizontal, 65)
                     
-                    
+                  
                     Button{
+                     
                    } label: {
+                    
+                       NavigationLink(destination: validation(),label: {
+                         
                     ZStack{
+                       
                     Rectangle()
                     
                         .frame(width: 300, height: 50)
@@ -125,8 +151,12 @@ struct Payment: View {
                         Text("Payer 7,00€")
                             .font(.system(size: 20))
                             .foregroundColor(.white)
+                       
                     }
-                   }.padding()
+                   
+                       })
+                     
+                   }
                     
                     
                     
@@ -134,21 +164,23 @@ struct Payment: View {
                    } label: {
                     ZStack{
               
+                       
+                       
                         
                         Text("ANNULER LE PAIMENT ")
                             .font(.system(size: 14))
                             .foregroundColor(.white)
-                       
+                          
                     }
-                   
-                }.padding()
-                
+         
+                   }
+                  
                 }
-            }
+            }           .padding()
         }
-    }
+        }
 }
-
+    }
 
 
 
