@@ -14,6 +14,7 @@ struct MovieDetailView: View {
     var movie: Movies
     
     var body: some View {
+        NavigationView{
         
         ZStack{
             
@@ -61,9 +62,10 @@ struct MovieDetailView: View {
                 
                 .padding(30)
                 
-                Button {
-                    
-                } label: {
+                NavigationLink{
+                    SeanceCalendarView()
+                }
+                 label: {
                     
                     ZStack{
                         
@@ -132,7 +134,7 @@ struct MovieDetailView: View {
             }
             
         }
-        
+        }
     }
     
 }
