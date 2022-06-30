@@ -168,6 +168,7 @@ struct HomePageView: View {
                 }
             }
         }
+        .accentColor(Color("cinefillorange"))
     }
 }
 struct PosterOnScreenView : View {
@@ -243,8 +244,9 @@ struct SeanceDiscountView : View{
                             .padding()
                         
                         Text("\(movie.movieTitle)")
-                            .foregroundColor(.white)
+                            
                             .font(.system(size: 12))
+                            .foregroundColor(Color("cinefillorange"))
                         
                         Text("\(movie.movieLong)")
                             .font(.caption).bold()
@@ -274,15 +276,17 @@ struct EventScrollView : View{
                             .padding()
                         
                         Text("\(event.eventsName)")
-                            .foregroundColor(.white)
+                            .foregroundColor(Color("cinefillorange"))
                             .font(.system(size: 12))
                         
                         Text("\(event.eventsCategorie)")
                             .font(.caption).bold()
                             .foregroundColor(.white)
+                            .font(.system(size: 12))
                     }
                 }
             }.navigationBarHidden(true)
+                
         }
     }
 }

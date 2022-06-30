@@ -30,7 +30,7 @@ struct AllEventsView: View {
     
 
 var body: some View {
-    NavigationView{
+   
         ZStack{
             
             Color("background")
@@ -42,7 +42,6 @@ var body: some View {
                     .padding()
                     .background(RoundedRectangle(cornerRadius: 20).fill(Color.white))
                     .foregroundColor(.black)
-                    .padding(.top, -50)
                     .padding()
                 Text("Les évènements autour de moi")
                     .foregroundColor(.white)
@@ -103,9 +102,9 @@ var body: some View {
             
         }
         
-    }
+    
      
-     .accentColor(Color("cinefillorange"))
+     
 }
 }
 
