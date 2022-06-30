@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F0C0557286DDBFD00C63B70 /* cart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0C0556286DDBFD00C63B70 /* cart.swift */; };
 		EC823AF8285CC85F00CDCAB2 /* CinefillAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC823AF7285CC85F00CDCAB2 /* CinefillAppApp.swift */; };
 		EC823AFA285CC85F00CDCAB2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC823AF9285CC85F00CDCAB2 /* ContentView.swift */; };
 		EC823AFC285CC85F00CDCAB2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC823AFB285CC85F00CDCAB2 /* Assets.xcassets */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7F0C0556286DDBFD00C63B70 /* cart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cart.swift; sourceTree = "<group>"; };
 		EC823AF4285CC85F00CDCAB2 /* CinefillApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CinefillApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC823AF7285CC85F00CDCAB2 /* CinefillAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CinefillAppApp.swift; sourceTree = "<group>"; };
 		EC823AF9285CC85F00CDCAB2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -35,6 +37,7 @@
 		EC823AEB285CC85E00CDCAB2 = {
 			isa = PBXGroup;
 			children = (
+				7F0C0556286DDBFD00C63B70 /* cart.swift */,
 				EC823AF6285CC85F00CDCAB2 /* CinefillApp */,
 				EC823AF5285CC85F00CDCAB2 /* Products */,
 			);
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F0C0557286DDBFD00C63B70 /* cart.swift in Sources */,
 				EC823AFA285CC85F00CDCAB2 /* ContentView.swift in Sources */,
 				EC823AF8285CC85F00CDCAB2 /* CinefillAppApp.swift in Sources */,
 			);
