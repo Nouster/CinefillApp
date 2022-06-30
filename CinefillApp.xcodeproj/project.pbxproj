@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F0C055B286DF01300C63B70 /* favorites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0C055A286DF01300C63B70 /* favorites.swift */; };
+		7F0C055D286DF05300C63B70 /* likes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0C055C286DF05300C63B70 /* likes.swift */; };
+		7F17F8A8286E12E5002DEF41 /* fav.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F17F8A7286E12E5002DEF41 /* fav.swift */; };
 		EC823AF8285CC85F00CDCAB2 /* CinefillAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC823AF7285CC85F00CDCAB2 /* CinefillAppApp.swift */; };
 		EC823AFA285CC85F00CDCAB2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC823AF9285CC85F00CDCAB2 /* ContentView.swift */; };
 		EC823AFC285CC85F00CDCAB2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC823AFB285CC85F00CDCAB2 /* Assets.xcassets */; };
@@ -14,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7F0C055A286DF01300C63B70 /* favorites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = favorites.swift; sourceTree = "<group>"; };
+		7F0C055C286DF05300C63B70 /* likes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = likes.swift; sourceTree = "<group>"; };
+		7F17F8A7286E12E5002DEF41 /* fav.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fav.swift; sourceTree = "<group>"; };
 		EC823AF4285CC85F00CDCAB2 /* CinefillApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CinefillApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC823AF7285CC85F00CDCAB2 /* CinefillAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CinefillAppApp.swift; sourceTree = "<group>"; };
 		EC823AF9285CC85F00CDCAB2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -35,6 +41,9 @@
 		EC823AEB285CC85E00CDCAB2 = {
 			isa = PBXGroup;
 			children = (
+				7F0C055A286DF01300C63B70 /* favorites.swift */,
+				7F0C055C286DF05300C63B70 /* likes.swift */,
+				7F17F8A7286E12E5002DEF41 /* fav.swift */,
 				EC823AF6285CC85F00CDCAB2 /* CinefillApp */,
 				EC823AF5285CC85F00CDCAB2 /* Products */,
 			);
@@ -137,7 +146,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F17F8A8286E12E5002DEF41 /* fav.swift in Sources */,
+				7F0C055B286DF01300C63B70 /* favorites.swift in Sources */,
 				EC823AFA285CC85F00CDCAB2 /* ContentView.swift in Sources */,
+				7F0C055D286DF05300C63B70 /* likes.swift in Sources */,
 				EC823AF8285CC85F00CDCAB2 /* CinefillAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
