@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4FCD9458286C700700028DAA /* SeanceCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FCD9457286C700700028DAA /* SeanceCalendarView.swift */; };
 		5B06A47B2864BFC300E90D96 /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B06A47A2864BFC300E90D96 /* ViewRouter.swift */; };
 		5B06A47D2864BFCC00E90D96 /* CustomTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B06A47C2864BFCB00E90D96 /* CustomTabBarView.swift */; };
 		5B13AD6D286D988D009E5C3D /* LoginPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B13AD6C286D988D009E5C3D /* LoginPageView.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4FCD9457286C700700028DAA /* SeanceCalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeanceCalendarView.swift; sourceTree = "<group>"; };
 		5B06A47A2864BFC300E90D96 /* ViewRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
 		5B06A47C2864BFCB00E90D96 /* CustomTabBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabBarView.swift; sourceTree = "<group>"; };
 		5B13AD6C286D988D009E5C3D /* LoginPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageView.swift; sourceTree = "<group>"; };
@@ -84,8 +86,13 @@
 				ECAA3CA8286C57CB002F7EA9 /* AllEventsView.swift */,
 				ECAA3CB0286C57F3002F7EA9 /* SubscriptionView.swift */,
 				ECAA3CAC286C57E1002F7EA9 /* InviteConnexionView.swift */,
+<<<<<<< HEAD
 				ECC9CE7B286DA80500A64D20 /* BookingView.swift */,
 				ECACB1E2286AF2D9006EC78F /* DetailedEventView.swift */,
+=======
+				4FCD9457286C700700028DAA /* SeanceCalendarView.swift */,
+				ECACB1E2286AF2D9006EC78F /* DetailedView.swift */,
+>>>>>>> SeanceCalendarView
 				ECAA3CAA286C57D7002F7EA9 /* HomePageView.swift */,
 				7F119A2A2864A77A0037871E /* ProfileView.swift */,
 				5B13AD6E286DA534009E5C3D /* TicketView.swift */,
@@ -238,6 +245,7 @@
 				5B13AD6F286DA534009E5C3D /* TicketView.swift in Sources */,
 				5B13AD71286DA73A009E5C3D /* dataCard.swift in Sources */,
 				ECAA3CAF286C57EC002F7EA9 /* LaunchScreenView.swift in Sources */,
+				4FCD9458286C700700028DAA /* SeanceCalendarView.swift in Sources */,
 				9FB1D7572860B39F00A44E0F /* dataProfile.swift in Sources */,
 				ECAA3CA5286C57AD002F7EA9 /* dataEvent.swift in Sources */,
 				5BB0A6FA286C740B00796800 /* dataBoxoffice.swift in Sources */,
