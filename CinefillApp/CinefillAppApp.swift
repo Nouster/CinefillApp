@@ -12,7 +12,8 @@ struct CinefillAppApp: App {
     @StateObject var viewRouter = ViewRouter()
     var body: some Scene {
         WindowGroup {
-            CustomTabBarView(viewRouter: viewRouter)
+            //CustomTabBarView(viewRouter: viewRouter)
+            SeanceCalendarView()
         }
     }
 }
