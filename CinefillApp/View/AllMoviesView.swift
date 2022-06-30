@@ -67,8 +67,11 @@ var body: some View {
                                     Text(movie.movieTitle)
                                         .foregroundColor(.white)
                                     Image(movie.posterMed)
+                                        
                                         .resizable()
+                                        .clipped()
                                         .frame(width: 150, height: 170)
+                                      
                                         .background(.red)
                                         .cornerRadius(10)
                                 }
