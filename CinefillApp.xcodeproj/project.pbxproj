@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5B06A47B2864BFC300E90D96 /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B06A47A2864BFC300E90D96 /* ViewRouter.swift */; };
 		5B06A47D2864BFCC00E90D96 /* CustomTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B06A47C2864BFCB00E90D96 /* CustomTabBarView.swift */; };
+		5B13AD6D286D988D009E5C3D /* LoginPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B13AD6C286D988D009E5C3D /* LoginPageView.swift */; };
 		5BB0A6FA286C740B00796800 /* dataBoxoffice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB0A6F9286C740B00796800 /* dataBoxoffice.swift */; };
 		7F119A252861B2ED0037871E /* DataCinema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F119A242861B2ED0037871E /* DataCinema.swift */; };
 		7F119A2B2864A77A0037871E /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F119A2A2864A77A0037871E /* ProfileView.swift */; };
@@ -30,6 +31,7 @@
 /* Begin PBXFileReference section */
 		5B06A47A2864BFC300E90D96 /* ViewRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
 		5B06A47C2864BFCB00E90D96 /* CustomTabBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabBarView.swift; sourceTree = "<group>"; };
+		5B13AD6C286D988D009E5C3D /* LoginPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageView.swift; sourceTree = "<group>"; };
 		5BB0A6F9286C740B00796800 /* dataBoxoffice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dataBoxoffice.swift; sourceTree = "<group>"; };
 		7F119A242861B2ED0037871E /* DataCinema.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCinema.swift; sourceTree = "<group>"; };
 		7F119A2A2864A77A0037871E /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 				ECAA3CAA286C57D7002F7EA9 /* HomePageView.swift */,
 				7F119A2A2864A77A0037871E /* ProfileView.swift */,
 				ECAA3CAE286C57EC002F7EA9 /* LaunchScreenView.swift */,
+				5B13AD6C286D988D009E5C3D /* LoginPageView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -200,6 +203,7 @@
 				ECAA3CAD286C57E1002F7EA9 /* InviteConnexionView.swift in Sources */,
 				ECAA3CA9286C57CB002F7EA9 /* AllEventsView.swift in Sources */,
 				7F119A2B2864A77A0037871E /* ProfileView.swift in Sources */,
+				5B13AD6D286D988D009E5C3D /* LoginPageView.swift in Sources */,
 				EC823AF8285CC85F00CDCAB2 /* CinefillAppApp.swift in Sources */,
 				5B06A47B2864BFC300E90D96 /* ViewRouter.swift in Sources */,
 				ECAA3CA3286C57A1002F7EA9 /* dataCity.swift in Sources */,
