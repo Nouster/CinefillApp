@@ -15,7 +15,7 @@ struct AllMoviesView: View {
         GridItem(.fixed(180))
     
     ]
-    
+    @Environment(\.presentationMode) var presentation
 @StateObject var moviesClass: movieClass
 @State private var searchText = ""
     var searchResults: [Movies] {
@@ -30,6 +30,7 @@ struct AllMoviesView: View {
     }
     
 var body: some View {
+    NavigationView{
             ZStack{
                 
             Color("background")
@@ -86,6 +87,25 @@ var body: some View {
             } .ignoresSafeArea()
      
     }
+    }
+    
+        .navigationBarBackButtonHidden(true)
+            
+            .toolbar(content: {
+               ToolbarItem (placement: .navigation)  {
+                   HStack{
+                  
+                  Image(systemName: "chevron.left")
+                  .foregroundColor(Color("cinefillorange"))
+                       Text("Back")
+                           .foregroundColor(Color("cinefillorange"))
+                   }
+                  .onTapGesture {
+                      // code to dismiss the view
+                      self.presentation.wrappedValue.dismiss()
+                  }
+               }
+            })
 }
 
 }

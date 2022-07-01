@@ -10,6 +10,7 @@ import AVKit
 
 
 struct HomePageView: View {
+    @Environment(\.presentationMode) var presentation
     @StateObject var moviesClass: movieClass
     @StateObject var eventArray: eventClass
     @StateObject var viewRouter: ViewRouter
@@ -168,7 +169,7 @@ struct HomePageView: View {
                 }
                 
             }
-        }.navigationBarHidden(true)
+        }
         }
 }
 struct PosterOnScreenView : View {
