@@ -20,6 +20,7 @@
 		7F119A252861B2ED0037871E /* DataCinema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F119A242861B2ED0037871E /* DataCinema.swift */; };
 		7F119A2B2864A77A0037871E /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F119A2A2864A77A0037871E /* ProfileView.swift */; };
 		9FB1D7572860B39F00A44E0F /* dataProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB1D7562860B39F00A44E0F /* dataProfile.swift */; };
+		7F0C0557286DDBFD00C63B70 /* cart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0C0556286DDBFD00C63B70 /* cart.swift */; };
 		EC823AF8285CC85F00CDCAB2 /* CinefillAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC823AF7285CC85F00CDCAB2 /* CinefillAppApp.swift */; };
 		EC823AFC285CC85F00CDCAB2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC823AFB285CC85F00CDCAB2 /* Assets.xcassets */; };
 		EC823AFF285CC85F00CDCAB2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC823AFE285CC85F00CDCAB2 /* Preview Assets.xcassets */; };
@@ -50,6 +51,7 @@
 		7F119A242861B2ED0037871E /* DataCinema.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCinema.swift; sourceTree = "<group>"; };
 		7F119A2A2864A77A0037871E /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		9FB1D7562860B39F00A44E0F /* dataProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dataProfile.swift; sourceTree = "<group>"; };
+		7F0C0556286DDBFD00C63B70 /* cart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cart.swift; sourceTree = "<group>"; };
 		EC823AF4285CC85F00CDCAB2 /* CinefillApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CinefillApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC823AF7285CC85F00CDCAB2 /* CinefillAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CinefillAppApp.swift; sourceTree = "<group>"; };
 		EC823AFB285CC85F00CDCAB2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 		EC823AEB285CC85E00CDCAB2 = {
 			isa = PBXGroup;
 			children = (
+				7F0C0556286DDBFD00C63B70 /* cart.swift */,
 				EC823AF6285CC85F00CDCAB2 /* CinefillApp */,
 				EC823AF5285CC85F00CDCAB2 /* Products */,
 			);
@@ -233,6 +236,7 @@
 				ECC9CE78286DA25800A64D20 /* AllMoviesView.swift in Sources */,
 				5B13AD6D286D988D009E5C3D /* LoginPageView.swift in Sources */,
 				5B13AD73286DA7CB009E5C3D /* CardView.swift in Sources */,
+				7F0C0557286DDBFD00C63B70 /* cart.swift in Sources */,
 				EC823AF8285CC85F00CDCAB2 /* CinefillAppApp.swift in Sources */,
 				5B06A47B2864BFC300E90D96 /* ViewRouter.swift in Sources */,
 				ECAA3CA3286C57A1002F7EA9 /* dataCity.swift in Sources */,
