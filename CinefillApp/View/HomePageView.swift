@@ -15,7 +15,7 @@ struct HomePageView: View {
     @StateObject var eventArray: eventClass
     @StateObject var viewRouter: ViewRouter
     var numberOfImages: Int = 6
-    let  timer = Timer.publish(every: 3, on: .main, in: .common).autoconnect()
+    let  timer = Timer.publish(every: 30, on: .main, in: .common).autoconnect()
     @State var  currentIndex = 0
     
     func previous (){
