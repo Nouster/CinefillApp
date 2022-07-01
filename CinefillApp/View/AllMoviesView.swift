@@ -30,6 +30,7 @@ struct AllMoviesView: View {
     }
     
 var body: some View {
+    NavigationView{
             ZStack{
                 
             Color("background")
@@ -64,17 +65,22 @@ var body: some View {
                         
                             
                             ForEach (searchResults) { movie in
+                                NavigationLink {
+                                    SeanceCalendarView(seanceClass: SeanceClass())
+                                } label: {
+                                    VStack{
+                                        Text(movie.movieTitle)
+                                            .foregroundColor(Color("cinefillorange"))
+                                            
+                                        Image(movie.posterMed)
+                                            .resizable()
+                                            .clipped()
+                                            .frame(width: 150, height: 170)
+                                            .background(.red)
+                                            .cornerRadius(10)
+                                }
+
                                 
-                                VStack{
-                                    Text(movie.movieTitle)
-                                        .foregroundColor(Color("cinefillorange"))
-                                        
-                                    Image(movie.posterMed)
-                                        .resizable()
-                                        .clipped()
-                                        .frame(width: 150, height: 170)
-                                        .background(.red)
-                                        .cornerRadius(10)
                                 }
                             
                         }
@@ -86,6 +92,7 @@ var body: some View {
                 }
             } .ignoresSafeArea()
      
+    }
     }
 }
 
