@@ -10,6 +10,7 @@ import AVKit
 
 
 struct HomePageView: View {
+    @Environment(\.presentationMode) var presentation
     @StateObject var moviesClass: movieClass
     @StateObject var eventArray: eventClass
     @StateObject var viewRouter: ViewRouter
@@ -36,19 +37,17 @@ struct HomePageView: View {
                     .edgesIgnoringSafeArea(.bottom)
                 
                 VStack {
-                    
-                    Button {
-                        print("Something")
+                    NavigationLink {
+                        InviteConnexionView()
                     } label: {
-                        
                         Image(systemName: "location.fill")
                             .font(.system(size: 16))
                             .foregroundColor(Color("cinefillorange"))
                         Text("Toulouse Saint-Alban")
                             .foregroundColor(.white)
                             .font(.system(size: 12))
-                        
                     }
+
                     .offset(x: 80, y: 20)
                     .padding(.bottom)
                     
@@ -72,7 +71,7 @@ struct HomePageView: View {
                                 AllMoviesView(moviesClass: moviesClass)
                                 
                             } label: {
-                                Text("Voir plus")
+                                Text("Voir plus...")
                                     .font(.system(size: 12))
                                     .foregroundStyle (LinearGradient(colors: [Color("cinefillorange"), .red, .red], startPoint: .top, endPoint: .bottom))
                                    
@@ -129,7 +128,7 @@ struct HomePageView: View {
                             AllMoviesView(moviesClass: moviesClass)
                             
                         } label: {
-                            Text("Voir plus")
+                            Text("Voir plus...")
                                 .font(.system(size: 12))
                                 .foregroundStyle (LinearGradient(colors: [Color("cinefillorange"), .red, .red], startPoint: .top, endPoint: .bottom)) 
                         }
@@ -153,7 +152,7 @@ struct HomePageView: View {
                             
                         }
                          label: {
-                            Text("Voir plus")
+                            Text("Voir plus...")
                                 .font(.system(size: 12))
                                 .foregroundStyle (LinearGradient(colors: [Color("cinefillorange"), .red, .red], startPoint: .top, endPoint: .bottom))
                                
@@ -168,7 +167,8 @@ struct HomePageView: View {
                 }
                 
             }
-        }.navigationBarHidden(true)
+        }
+        .navigationBarHidden(true)
         }
 }
 struct PosterOnScreenView : View {

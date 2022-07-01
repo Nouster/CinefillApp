@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct DetailedEventView: View {
+    @Environment(\.presentationMode) var presentation
    
     @State var touchInside: Bool = false
     @Environment(\.dismiss) var dismiss
@@ -63,6 +64,7 @@ struct DetailedEventView: View {
                             Image(systemName: touchInside ? "heart.fill" : "heart")
                                 .font(.system(size: 24))
                                 .foregroundColor(Color("cinefillorange"))
+                        
                             
                                 
                         }
@@ -73,8 +75,12 @@ struct DetailedEventView: View {
             }
             
         }.ignoresSafeArea()
-            .navigationBarHidden(true)
-    }
+            .navigationBarBackButtonHidden(true)
+           
+                
+                
+                                   
+}
 }
 struct DetailedEventView_Previews: PreviewProvider {
     static var previews: some View {
