@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct cart: View {
+struct CartView: View {
     var body: some View {
         ZStack{
 
@@ -124,6 +124,6 @@ struct cart: View {
 
 struct cart_Previews: PreviewProvider {
     static var previews: some View {
-        cart()
+        CartView()
     }
 }
