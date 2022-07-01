@@ -9,6 +9,7 @@ import SwiftUI
 
 struct AllEventsView: View {
     
+    @Environment(\.presentationMode) var presentation
     @State private var searchText = ""
     
     @StateObject var eventGroup: eventClass
@@ -28,86 +29,104 @@ struct AllEventsView: View {
     
     
     
-
-var body: some View {
-    NavigationView{
-        ZStack{
-            
-            Color("background")
-                .ignoresSafeArea()
-            
-            VStack (spacing: 30){
-                TextField ("Que recherchez-vous ?", text: $searchText)
-                    .font(Font.system(size: 16))
-                    .padding()
-                    .background(RoundedRectangle(cornerRadius: 20).fill(Color.white))
-                    .foregroundColor(.black)
-                    .padding()
-                Text("Les évènements autour de moi")
-                    .foregroundColor(.white)
-                    .fontWeight(.bold)
+    
+    var body: some View {
+        NavigationView{
+            ZStack{
                 
+                Color("background")
+                    .ignoresSafeArea()
                 
-                ScrollView(.vertical){
-                    if  searchResults.isEmpty {
-                        VStack{
-                        Text("Aucun résultat")
-                            .foregroundColor(Color("cinefillorange"))
-                            .font(.title)
-                            Text("🙈")
-                                .font(.system(size: 112))
-                    }
-                    }
+                VStack (spacing: 30){
+                    TextField ("Que recherchez-vous ?", text: $searchText)
+                        .font(Font.system(size: 16))
+                        .padding()
+                        .background(RoundedRectangle(cornerRadius: 20).fill(Color.white))
+                        .foregroundColor(.black)
+                        .padding()
+                    Text("Les évènements autour de moi")
+                        .foregroundColor(.white)
+                        .fontWeight(.bold)
                     
-                    else{
-                        ForEach(searchResults) { name in
-                            NavigationLink(destination: DetailedEventView(event: name)) {
-                                HStack{
-                                    Image(name.eventsPictures)
-                                        .resizable()
-                                        .scaledToFill()
-                                        .frame(width: 150, height: 100)
-                                        .cornerRadius(10)
-                                        .padding(.leading, 20)
-                                        .padding(.trailing, 20)
+                    
+                    ScrollView(.vertical){
+                        if  searchResults.isEmpty {
+                            VStack{
+                                Text("Aucun résultat")
+                                    .foregroundColor(Color("cinefillorange"))
+                                    .font(.title)
+                                Text("🙈")
+                                    .font(.system(size: 112))
+                            }
+                        }
+                        
+                        else{
+                            ForEach(searchResults) { name in
+                                NavigationLink(destination: DetailedEventView(event: name)) {
+                                    HStack{
+                                        Image(name.eventsPictures)
+                                            .resizable()
+                                            .scaledToFill()
+                                            .frame(width: 150, height: 100)
+                                            .cornerRadius(10)
+                                            .padding(.leading, 20)
+                                            .padding(.trailing, 20)
+                                        
+                                        VStack{
+                                            Text(name.eventsName)
+                                                .foregroundColor(Color("cinefillorange"))
+                                                .font(.system(size: 16))
+                                                .fontWeight(.bold)
+                                                .lineLimit(3)
+                                            
+                                            
+                                            
+                                            
+                                            Text(name.eventsDescription)
+                                                .lineLimit(3)
+                                                .font(.footnote)
+                                                .foregroundColor(.white)
+                                                .multilineTextAlignment(.leading)
+                                        }
+                                    }.padding(10)
                                     
-                                    VStack{
-                                        Text(name.eventsName)
-                                            .foregroundColor(Color("cinefillorange"))
-                                            .font(.system(size: 16))
-                                            .fontWeight(.bold)
-                                            .lineLimit(3)
-                                        
-                                        
-                                        
-                                        
-                                        Text(name.eventsDescription)
-                                            .lineLimit(3)
-                                            .font(.footnote)
-                                            .foregroundColor(.white)
-                                            .multilineTextAlignment(.leading)
-                                    }
-                                }.padding(10)
-                                
+                                }
                             }
                         }
                     }
-                }
+                    
+                    
+                    
+                    
+                    
+                } .environmentObject(eventGroup)
+                    .offset(y: -60)
                 
-                
-                
-                
-                
-            } .environmentObject(eventGroup)
-                .offset(y: -60)
+            }
+        }  .navigationBarBackButtonHidden(true)
             
-        }
+            .toolbar(content: {
+               ToolbarItem (placement: .navigation)  {
+                   HStack{
+                  
+                  Image(systemName: "chevron.left")
+                  .foregroundColor(Color("cinefillorange"))
+                       Text("Back")
+                           .foregroundColor(Color("cinefillorange"))
+                   }
+                  .onTapGesture {
+                      // code to dismiss the view
+                      self.presentation.wrappedValue.dismiss()
+                  }
+               }
+            })
+                  
+                    
+                    
+                    
+                    
+                
     }
-        
-    
-     
-     
-}
 }
 
 struct AllEventsView_Previews: PreviewProvider {
