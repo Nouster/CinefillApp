@@ -15,11 +15,11 @@ struct SeanceCalendarView: View {
         ZStack{
             
             Color("background")
-                .edgesIgnoringSafeArea(.bottom)
+                .edgesIgnoringSafeArea(.all)
             
             VStack{
                 
-                Text("Top Gun - Maverick")
+                Text("Irréductible")
                     .font(.title)
                     .padding()
                     .foregroundColor(.white)

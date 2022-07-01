@@ -73,6 +73,7 @@ struct DetailedEventView: View {
             }
             
         }.ignoresSafeArea()
+            .navigationBarHidden(true)
     }
 }
 struct DetailedEventView_Previews: PreviewProvider {
