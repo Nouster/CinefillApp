@@ -14,7 +14,7 @@ struct CardView: View {
         
        
         
-        NavigationView{
+       
             
             ZStack{
                 Color("background")
@@ -26,22 +26,24 @@ struct CardView: View {
                     Text("Mes abonnements")
                         .foregroundColor(.white)
                         .font(.title)
-                        .padding(.top, -60)
-                        
+                    Divider()
+                        .frame(width: 175, height: 2)
+                        .background(Color("cinefillorange"))
+               
             ForEach(cartes) { carte in
-                NavigationLink(destination: image (test: carte)) {
+                
 
                     text(fidelite: carte)
-            }
+            
 
-            }; Spacer()
+            }
                    
 
-                    }.padding()
+                    }
                 }
             }
         }
-    }
+    
 }
 
 struct Cartefidelité_Previews: PreviewProvider {
@@ -55,12 +57,10 @@ struct image : View {
     
     let test: Carte
     var body: some View {
-        ZStack{
-            Color("background")
-                .edgesIgnoringSafeArea(.all)
+    
         
         VStack{
-            Image("code barre").resizable().frame(width: 300,  height: 200, alignment: .trailing)
+            Image("code barre").resizable().frame(width: 100,  height: 200, alignment: .trailing)
                 .cornerRadius(15)
             
             ZStack{
@@ -70,14 +70,12 @@ struct image : View {
                 .opacity(0.2)
                 .cornerRadius(15)
              
-                
-                Text(test.information)
-                .foregroundColor(.white)
+
             }.padding()
        
         }
          
-        }
+        
             
     }
         
@@ -92,22 +90,23 @@ struct text : View {
         
        
         HStack{
-            Image(fidelite.Image)
+            VStack{
+            Text(fidelite.cardName)
+                    .foregroundColor(.white)
+            Image(fidelite.cardImage)
                 .resizable()
-                .frame(width: 300,  height: 220)
+                .frame(width: 150,  height: 100)
+                .cornerRadius(15)
 
-                    .cornerRadius(15)
+           
+            }
+            Text("Valable pendant \(fidelite.cardTime) jours ")
+                .foregroundColor(.white)
             
 
-                               .frame(width: 350, height: 230)
-                               .font(.system(size: 21,weight: .medium, design: .default))
-                               .foregroundColor(.black)
-                               .background(Color("cinefillorange"))
-                               
-                               .cornerRadius(30)
-            
-
-        } .padding()
+        }.padding()
+        
+        
 
        
         

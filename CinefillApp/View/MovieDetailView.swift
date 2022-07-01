@@ -63,7 +63,7 @@ struct MovieDetailView: View {
                 .padding(30)
                 
                 NavigationLink{
-                    SeanceCalendarView()
+                    SeanceCalendarView(seanceClass: SeanceClass())
                 }
                  label: {
                     
