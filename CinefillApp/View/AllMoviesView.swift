@@ -35,6 +35,7 @@ var body: some View {
                 
             Color("background")
                     .edgesIgnoringSafeArea(.all)
+
                 
                 VStack {
                     

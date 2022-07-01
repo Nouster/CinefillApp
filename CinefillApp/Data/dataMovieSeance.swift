@@ -22,31 +22,44 @@ struct AccesibilityInfos : Identifiable {
 class SeanceClass: ObservableObject {
 @Published   var seancesArray: [Seances] = [
     
-    Seances(seanceLocation: "Cinémathèque De Toulousel", seanceMovie: "Top Gun : Maverick", seanceTime: "18h", seanceDate: "21/06/2022", seancePrice: 7.90, seanceLanguageVersion: "VOSTFR", seanceAccessibilityInfos: [AccesibilityInfos(name: "Sous-Titres Sourds et Malentendants", isAvailable: true), AccesibilityInfos(name: "Personnes à mobilité réduite", isAvailable: true)]),
     
-    Seances(seanceLocation: "Gaumont Wilson", seanceMovie: "Top Gun : Maverick", seanceTime: "20h", seanceDate: "21/06/2022", seancePrice: 8.10, seanceLanguageVersion: "VF", seanceAccessibilityInfos: [AccesibilityInfos(name: "Sous-Titres Sourds et Malentendants", isAvailable: true), AccesibilityInfos(name: "Personnes à mobilité réduite", isAvailable: true)]),
+    // Pathé Bellecours
+    Seances(seanceLocation: "UGC Ciné Cité Internationale", seanceMovie: "Decision to leave", seanceTime: "10h", seanceDate: "21/06/2022", seancePrice: 5.90, seanceLanguageVersion: "VOSTFR", seanceAccessibilityInfos: [AccesibilityInfos(name: "Sous-Titres Sourds et Malentendants", isAvailable: true), AccesibilityInfos(name: "Personnes à mobilité réduite", isAvailable: true)]),
+    
+    Seances(seanceLocation: "UGC Ciné Cité Internationale", seanceMovie: "Decision to leave", seanceTime: "14h", seanceDate: "21/06/2022", seancePrice: 7.90, seanceLanguageVersion: "VOSTFR", seanceAccessibilityInfos: [AccesibilityInfos(name: "Sous-Titres Sourds et Malentendants", isAvailable: true), AccesibilityInfos(name: "Personnes à mobilité réduite", isAvailable: true)]),
+    
+    Seances(seanceLocation: "UGC Ciné Cité Internationale", seanceMovie: "Jurassic World", seanceTime: "18h", seanceDate: "21/06/2022", seancePrice: 13.90, seanceLanguageVersion: "VOSTFR", seanceAccessibilityInfos: [AccesibilityInfos(name: "Sous-Titres Sourds et Malentendants", isAvailable: true), AccesibilityInfos(name: "Personnes à mobilité réduite", isAvailable: true)]),
+    
+    Seances(seanceLocation: "UGC Ciné Cité Internationale", seanceMovie: "Jurassic World : Le Monde D'Après", seanceTime: "19h30", seanceDate: "28/06/2022", seancePrice: 9.00, seanceLanguageVersion: "VOSTFR",seanceAccessibilityInfos: [AccesibilityInfos(name: "Sous-Titres Sourds et Malentendants", isAvailable: true), AccesibilityInfos(name: "Personnes à mobilité réduite", isAvailable: true)]),
+    
+    Seances(seanceLocation: "UGC Ciné Cité Internationale", seanceMovie: "Champagne", seanceTime: "16h", seanceDate: "29/06/2022", seancePrice: 14.90, seanceLanguageVersion: "VF",seanceAccessibilityInfos: [AccesibilityInfos(name: "Sous-Titres Sourds et Malentendants", isAvailable: true), AccesibilityInfos(name: "Personnes à mobilité réduite", isAvailable: true)]),
+    
+    Seances(seanceLocation: "UGC Ciné Cité Internationale", seanceMovie: "Champagne", seanceTime: "15h", seanceDate: "29/06/2022", seancePrice: 12.00, seanceLanguageVersion: "VF",seanceAccessibilityInfos: [AccesibilityInfos(name: "Sous-Titres Sourds et Malentendants", isAvailable: true), AccesibilityInfos(name: "Personnes à mobilité réduite", isAvailable: true)]),
+
+
+    
+    
+    
+    //  Gaumont Wilson
+    Seances(seanceLocation: "Gaumont Wilson", seanceMovie: "Elvis", seanceTime: "20h", seanceDate: "21/06/2022", seancePrice: 8.10, seanceLanguageVersion: "VF", seanceAccessibilityInfos: [AccesibilityInfos(name: "Sous-Titres Sourds et Malentendants", isAvailable: true), AccesibilityInfos(name: "Personnes à mobilité réduite", isAvailable: true)]),
     
     Seances(seanceLocation: "Gaumont Wilson", seanceMovie: "Elvis", seanceTime: "13h", seanceDate: "30/06/2022", seancePrice: 6.50, seanceLanguageVersion: "VOSTFR", seanceAccessibilityInfos: [AccesibilityInfos(name: "Sous-Titres Sourds et Malentendants", isAvailable: true), AccesibilityInfos(name: "Personnes à mobilité réduite", isAvailable: true)]),
     
-    Seances(seanceLocation: "UGC Toulouse Montaudran", seanceMovie: "Jurassic World : Le Monde D'Après", seanceTime: "19h30", seanceDate: "28/06/2022", seancePrice: 7.90, seanceLanguageVersion: "VOSTFR",seanceAccessibilityInfos: [AccesibilityInfos(name: "Sous-Titres Sourds et Malentendants", isAvailable: true), AccesibilityInfos(name: "Personnes à mobilité réduite", isAvailable: true)]),
+    Seances(seanceLocation: "Gaumont Wilson", seanceMovie: "Irréductible", seanceTime: "13h", seanceDate: "30/06/2022", seancePrice: 16.50, seanceLanguageVersion: "VOSTFR", seanceAccessibilityInfos: [AccesibilityInfos(name: "Sous-Titres Sourds et Malentendants", isAvailable: true), AccesibilityInfos(name: "Personnes à mobilité réduite", isAvailable: true)]),
     
-    Seances(seanceLocation: "UGC Toulouse Montaudran", seanceMovie: "Champagne", seanceTime: "16h", seanceDate: "29/06/2022", seancePrice: 7.90, seanceLanguageVersion: "VF",seanceAccessibilityInfos: [AccesibilityInfos(name: "Sous-Titres Sourds et Malentendants", isAvailable: true), AccesibilityInfos(name: "Personnes à mobilité réduite", isAvailable: true)]),
+    Seances(seanceLocation: "Gaumont Wilson", seanceMovie: "Irréductible", seanceTime: "17h", seanceDate: "30/06/2022", seancePrice: 7.00, seanceLanguageVersion: "VOSTFR", seanceAccessibilityInfos: [AccesibilityInfos(name: "Sous-Titres Sourds et Malentendants", isAvailable: true), AccesibilityInfos(name: "Personnes à mobilité réduite", isAvailable: true)]),
     
-    Seances(seanceLocation: "Cinémathèque De Toulouse", seanceMovie: "Jurassic World : Le Monde D'Après", seanceTime: "10h", seanceDate: "28/06/2022", seancePrice: 6.20, seanceLanguageVersion: "VF", seanceAccessibilityInfos: [AccesibilityInfos(name: "Sous-Titres Sourds et Malentendants", isAvailable: true), AccesibilityInfos(name: "Personnes à mobilité réduite", isAvailable: true)]),
+    Seances(seanceLocation: "Gaumont Wilson", seanceMovie: "Arthur, malédiction", seanceTime: "10h", seanceDate: "30/06/2022", seancePrice: 8.50, seanceLanguageVersion: "VOSTFR", seanceAccessibilityInfos: [AccesibilityInfos(name: "Sous-Titres Sourds et Malentendants", isAvailable: true), AccesibilityInfos(name: "Personnes à mobilité réduite", isAvailable: true)]),
     
-    Seances(seanceLocation: "Pathé Bellecours", seanceMovie: "Irréductible", seanceTime: "13h30", seanceDate: "25/06/2022", seancePrice: 9.75, seanceLanguageVersion: "VF",seanceAccessibilityInfos: [AccesibilityInfos(name: "Sous-Titres Sourds et Malentendants", isAvailable: true), AccesibilityInfos(name: "Personnes à mobilité réduite", isAvailable: true)]),
-    Seances(seanceLocation: "Cinéma Comoedia", seanceMovie: "Decision To Leave", seanceTime: "20h30", seanceDate: "22/06/2022", seancePrice: 9.85, seanceLanguageVersion: "VOSFR",seanceAccessibilityInfos: [AccesibilityInfos(name: "Sous-Titres Sourds et Malentendants", isAvailable: true), AccesibilityInfos(name: "Personnes à mobilité réduite", isAvailable: true)]),
+    Seances(seanceLocation: "Gaumont Wilson", seanceMovie: "Arthur, malédiction", seanceTime: "19h", seanceDate: "30/06/2022", seancePrice: 11.50, seanceLanguageVersion: "VOSTFR", seanceAccessibilityInfos: [AccesibilityInfos(name: "Sous-Titres Sourds et Malentendants", isAvailable: true), AccesibilityInfos(name: "Personnes à mobilité réduite", isAvailable: true)]),
     
-    Seances(seanceLocation: "Cinema Comoedia", seanceMovie: "En Roue Libre", seanceTime: "16h30", seanceDate: "30/06/2022", seancePrice: 8.10, seanceLanguageVersion: "VF",seanceAccessibilityInfos: [AccesibilityInfos(name: "Sous-Titres Sourds et Malentendants", isAvailable: true), AccesibilityInfos(name: "Personnes à mobilité réduite", isAvailable: true)]),
     
-    Seances(seanceLocation: "UGC Part-Dieu", seanceMovie: "La traversée", seanceTime: "14h30", seanceDate: "30/06/2022", seancePrice: 8.90, seanceLanguageVersion: "VF", seanceAccessibilityInfos: [AccesibilityInfos(name: "Sous-Titres Sourds et Malentendants", isAvailable: true), AccesibilityInfos(name: "Personnes à mobilité réduite", isAvailable: true)]),
     
-    Seances(seanceLocation: "UGC Montparnasse", seanceMovie: "Goodnight Soldier", seanceTime: "15h", seanceDate: "28/06/2022", seancePrice: 8.90, seanceLanguageVersion: "VOSTFR",seanceAccessibilityInfos: [AccesibilityInfos(name: "Sous-Titres Sourds et Malentendants", isAvailable: true), AccesibilityInfos(name: "Personnes à mobilité réduite", isAvailable: true)]),
-    Seances(seanceLocation: "UGC MontParnasse", seanceMovie: "Mastemah", seanceTime: "14h30", seanceDate: "28/06/2022", seancePrice: 6.50, seanceLanguageVersion: "VF", seanceAccessibilityInfos: [AccesibilityInfos(name: "Sous-Titres Sourds et Malentendants", isAvailable: true), AccesibilityInfos(name: "Personnes à mobilité réduite", isAvailable: true)]),
     
-    Seances(seanceLocation: "UGC Ciné Cité Les Halles", seanceMovie: "Cahiers noirs", seanceTime: "21h", seanceDate: "23/06/2022", seancePrice: 9.90, seanceLanguageVersion: "VF", seanceAccessibilityInfos: [AccesibilityInfos(name: "Sous-Titres Sourds et Malentendants", isAvailable: true), AccesibilityInfos(name: "Personnes à mobilité réduite", isAvailable: true)]),
     
-    Seances(seanceLocation: "Cinémathèque De Toulouse", seanceMovie: "Arthur, malédiction", seanceTime: "20h", seanceDate: "28/06/2022", seancePrice: 9.25, seanceLanguageVersion: "VF", seanceAccessibilityInfos: [AccesibilityInfos(name: "Sous-Titres Sourds et Malentendants", isAvailable: true), AccesibilityInfos(name: "Personnes à mobilité réduite", isAvailable: true)]),
+    
+
+    
 ]
 }
 

@@ -15,7 +15,7 @@ struct Booking: View {
         ZStack{
             
           Color("background")
-          .edgesIgnoringSafeArea(.bottom)
+          .ignoresSafeArea()
             
             VStack{
                 
@@ -38,7 +38,7 @@ struct Booking: View {
                     .resizable()
                     .frame(width: 300, height: 150)
                     .padding()
-                    Text("TOP GUN : Maverick")
+                    Text("Irréductible")
                         .foregroundColor(.white)
                      
            

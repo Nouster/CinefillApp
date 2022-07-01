@@ -11,6 +11,7 @@ struct AllSeanceView: View {
     @StateObject var seancesClass: SeanceClass
     @State private var searchText = ""
     var searchResults: [Seances] {
+        
         if searchText.isEmpty {
             return seancesClass.seancesArray
         }

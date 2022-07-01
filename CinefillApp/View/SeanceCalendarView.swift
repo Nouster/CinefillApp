@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct SeanceCalendarView: View {
+    @StateObject var seanceClass: SeanceClass
     @State private var date = Date()
     var body: some View {
         NavigationView{
@@ -163,6 +164,7 @@ struct SeanceCalendarView: View {
                     }
                 }
                 
+                
                 Spacer()
                 
                 
@@ -174,6 +176,6 @@ struct SeanceCalendarView: View {
 
 struct SeanceCalendarView_Previews: PreviewProvider {
     static var previews: some View {
-        SeanceCalendarView()
+        SeanceCalendarView(seanceClass: SeanceClass())
     }
 }
