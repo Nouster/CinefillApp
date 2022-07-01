@@ -33,7 +33,7 @@ var body: some View {
             ZStack{
                 
             Color("background")
-                    .edgesIgnoringSafeArea(.bottom)
+                    .edgesIgnoringSafeArea(.all)
                 
                 VStack {
                     
@@ -42,7 +42,7 @@ var body: some View {
                         RoundedRectangle(cornerRadius: 8)
                             .frame(width: 250, height: 30)
                             .foregroundColor(.white)
-//                            .offset(y:-70)
+
                         
                         Image(systemName: "magnifyingglass")
                             .offset(x: -100)
@@ -55,6 +55,7 @@ var body: some View {
                     Text("Tous les films à l'affiche")
                         .fontWeight(.bold)
                         .foregroundColor(.white)
+                        .padding(.top, 25)
                     
                     
                     ScrollView {
@@ -65,13 +66,12 @@ var body: some View {
                                 
                                 VStack{
                                     Text(movie.movieTitle)
-                                        .foregroundColor(.white)
-                                    Image(movie.posterMed)
+                                        .foregroundColor(Color("cinefillorange"))
                                         
+                                    Image(movie.posterMed)
                                         .resizable()
                                         .clipped()
                                         .frame(width: 150, height: 170)
-                                      
                                         .background(.red)
                                         .cornerRadius(10)
                                 }

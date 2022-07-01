@@ -99,6 +99,7 @@ var body: some View {
                 
                 
             } .environmentObject(eventGroup)
+                .offset(y: -60)
             
         }
     }
