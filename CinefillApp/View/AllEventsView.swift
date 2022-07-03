@@ -88,7 +88,7 @@ struct AllEventsView: View {
                                                 .foregroundColor(.white)
                                                 .multilineTextAlignment(.leading)
                                         }
-                                    }.padding(10)
+                                    }
                                     
                                 }
                             }

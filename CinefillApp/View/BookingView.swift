@@ -9,6 +9,7 @@ import SwiftUI
 
 struct Booking: View {
     @StateObject var seanceClass : SeanceClass
+    var seance: Seances
  
     @State private var rating: Int?
     var body: some View {
@@ -34,11 +35,11 @@ struct Booking: View {
 
                 
                 
-                Image("top")
+                    Image(seance.seanceLargePicture)
                     .resizable()
-                    .frame(width: 300, height: 150)
+                    .frame(width: 300, height: 250)
                     .padding()
-                    Text("Irréductible")
+                    Text(seance.seanceMovie)
                         .foregroundColor(.white)
                      
            
@@ -55,13 +56,13 @@ struct Booking: View {
                             .frame(width: 100, height: 50)
                 }.padding()
 //                VStack(alignment: .leading){
-                    Text("Horaire: 12H30")
+                    Text("Horaire: \(seance.seanceTime)")
                     .foregroundColor(.white)
                   
-                Text("Tarif: 7,00€")
+                    Text("Tarif: \(seance.seancePrice)")
                     .foregroundColor(.white)
                     
-                Text("Lieu: UCG Cinéma la Roquette")
+                    Text("Lieu: \(seance.seanceLocation)")
                     .foregroundColor(.white)
                 
                
@@ -97,7 +98,7 @@ struct Booking: View {
         
 struct Booking_Previews: PreviewProvider {
     static var previews: some View {
-        Booking(seanceClass: SeanceClass())
+        Booking(seanceClass: SeanceClass(), seance: Seances(seanceLocation: "Gaumont Wilson", seanceMovie: "Goodnight Soldier",seanceLargePicture: "movieFiveSmall",seanceSmallPicture: "", seanceTime: "20", seanceDate: "21/06/2022", seancePrice: "10.10", seanceLanguageVersion: "VF", seanceAccessibilityInfos: [AccesibilityInfos(name: "Sous-Titres Sourds et Malentendants", isAvailable: true), AccesibilityInfos(name: "Personnes à mobilité réduite", isAvailable: true)]))
     }
 }
 

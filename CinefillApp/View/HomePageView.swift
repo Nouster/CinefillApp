@@ -14,6 +14,7 @@ struct HomePageView: View {
     @StateObject var moviesClass: movieClass
     @StateObject var eventArray: eventClass
     @StateObject var viewRouter: ViewRouter
+    @StateObject var seanceClass: SeanceClass
     var numberOfImages: Int = 6
     let  timer = Timer.publish(every: 3, on: .main, in: .common).autoconnect()
     @State var  currentIndex = 0
@@ -110,7 +111,7 @@ struct HomePageView: View {
                                            //  controls
                                            
                         }
-                        .padding(.bottom, 125)
+                        .padding(.bottom, 70)
                         
                     }
                     
@@ -124,7 +125,7 @@ struct HomePageView: View {
                         
                         NavigationLink {
                             
-                            AllMoviesView(moviesClass: moviesClass)
+                            AllSeanceView(seancesClass: SeanceClass())
                             
                         } label: {
                             Text("Voir plus...")
@@ -138,7 +139,7 @@ struct HomePageView: View {
                         .background(Color("cinefillorange"))
                         .offset(x: -57, y: 5)
                     
-                    SeanceDiscountView(movie: moviesClass.moviesArray)
+                    SeanceDiscountView(seances: seanceClass.seancesArray)
                     HStack {
                         Text("Les évènements autour de moi")
                             .foregroundColor(.white)
@@ -230,25 +231,25 @@ struct OpenModalVideoLive: View {
 }
 
 struct SeanceDiscountView : View{
-    var movie: [Movies]
+    var seances: [Seances]
     var body: some View {
         ScrollView(.horizontal){
             HStack(spacing: -20){
-                ForEach(movie){ movie in
+                ForEach(seances){ seance in
                     VStack(spacing: -3){
-                        Image(movie.posterMed)
+                        Image(seance.seanceSmallPicture)
                             .resizable()
                             .scaledToFill()
                             .frame(width: 100, height: 100)
                             .cornerRadius(10)
                             .padding()
                         
-                        Text("\(movie.movieTitle)")
+                        Text("\(seance.seanceMovie)")
                             
                             .font(.system(size: 12))
                             .foregroundColor(Color("cinefillorange"))
                         
-                        Text("\(movie.movieLong)")
+                        Text("\(seance.seancePrice) €")
                             .font(.caption).bold()
                             .foregroundColor(.white)
                     }
@@ -278,11 +279,17 @@ struct EventScrollView : View{
                         Text("\(event.eventsName)")
                             .foregroundColor(Color("cinefillorange"))
                             .font(.system(size: 12))
+                            .frame(width: 100)
+                            .padding(.bottom, 10)
+                            
+                            
                         
                         Text("\(event.eventsCategorie)")
                             .font(.caption).bold()
                             .foregroundColor(.white)
                             .font(.system(size: 12))
+                            .padding(.bottom, 10)
+                        
                     }
                 }
             }.navigationBarHidden(true)
