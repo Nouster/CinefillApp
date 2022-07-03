@@ -11,7 +11,7 @@ struct CartView1: View {
     var body: some View {
         ZStack{
 
-        Color("backgroundcolor")
+        Color("background")
 
         .edgesIgnoringSafeArea(.all)
 
@@ -31,9 +31,8 @@ struct CartView1: View {
 
         .background(Color("cinefillorange"))
 
-        //                    .padding()
             HStack{
-        Image("top")
+        Image("irreductible")
                
         .resizable()
         .padding()
@@ -76,15 +75,7 @@ struct CartView1: View {
             .padding()
             
             
-            ZStack{
-            Rectangle()
-                    .frame(width: 250, height: 450)
-                    .foregroundColor(Color("backgroundcolor"))
-                    .background(.orange)
             
-            
-            
-            }
             
             Button{
 
@@ -92,23 +83,7 @@ struct CartView1: View {
 
 //            NavigationLink(destination: payment(),label: {
 
-            ZStack{
-
-            Rectangle()
-
-            .frame(width: 250, height: 50)
-
-            .foregroundColor(Color("cinefillorange"))
-
-            .cornerRadius(15)
-
-            Text("RESERVER MAINTENANT")
-
-            .font(.system(size: 20))
-
-            .foregroundColor(.white)
-
-            }
+            
 
 //            })
 

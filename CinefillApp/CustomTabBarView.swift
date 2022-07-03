@@ -30,7 +30,7 @@ struct CustomTabBarView: View {
                     ProfileView()
                     
                 case .cart :
-                    CartView()
+                    CartView1()
                     
                 case .films :
                     AllMoviesView(moviesClass: moviesClass)

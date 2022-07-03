@@ -83,7 +83,6 @@ struct HomePageView: View {
                             .offset(x: -98, y:5)
                            
                         
-                        
                         GeometryReader { proxy in
                                            
                                            TabView (selection: $currentIndex) {
@@ -104,7 +103,7 @@ struct HomePageView: View {
                                            } .tabViewStyle(PageTabViewStyle())
                                                .clipShape(RoundedRectangle(cornerRadius: 25))
                                                .padding()
-                                               .frame(width: proxy.size.width, height: proxy.size.height * 2.2 )
+                                               .frame(width: proxy.size.width, height: proxy.size.height * 1.5 )
                                                .onReceive(timer, perform: { _ in
                                                    next()
                                                })
@@ -133,6 +132,7 @@ struct HomePageView: View {
                                 .foregroundStyle (LinearGradient(colors: [Color("cinefillorange"), .red, .red], startPoint: .top, endPoint: .bottom)) 
                         }
                     } .padding(.horizontal)
+                 
                     Divider()
                         .frame(width: 240, height: 2)
                         .background(Color("cinefillorange"))
