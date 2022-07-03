@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct SeanceCalendarView: View {
-    @StateObject var seanceClass: SeanceClass
+    @StateObject var movieClass: movieClass
+    var movie : Movies
     @State private var date = Date()
     var body: some View {
         NavigationView{
@@ -19,16 +20,20 @@ struct SeanceCalendarView: View {
             
             VStack{
                 
-                Text("Irréductible")
+                Text(movie.movieTitle)
                     .font(.title)
                     .padding()
                     .foregroundColor(.white)
+                Image(movie.posterBig)
+                    .resizable()
+                    .frame(width: 300, height: 200)
                 
                 
                 
                 VStack(){
                     HStack{
-                        Text("Date").foregroundColor(.white)
+                        Text("Date:")
+                            .foregroundColor(.white)
                         Spacer()
                     }
                     
@@ -55,27 +60,30 @@ struct SeanceCalendarView: View {
                         HStack{
                             ZStack{
                                 Rectangle()
-                                    .frame(width: 200, height: 75)
+                                    .frame(width: 150, height: 75)
                                 .cornerRadius(10)
                                     .foregroundColor(.white)
                                 
                                 Text("Gaumont Wilson").bold()
                                     .foregroundColor(Color("cinefillorange"))
+                                    .frame(width: 150, height: 75)
                             }
                             ZStack{
                                 Rectangle()
                                     .frame(width: 150, height: 75)
                                 .cornerRadius(10)
                                     .foregroundColor(.white)
-                                Text("Gaumont Pathé").bold()
+                                Text("UGC Ciné Cité Internationale")
+                                    .bold()
                                     .foregroundColor(Color("cinefillorange"))
+                                    .frame(width: 150, height: 75)
                             }
                             ZStack{
                                 Rectangle()
                                     .frame(width: 150, height: 75)
                                 .cornerRadius(10)
                                     .foregroundColor(.white)
-                                Text("UGC").bold()
+                                Text("CGR Blagnac").bold()
                                     .foregroundColor(Color("cinefillorange"))
                             }
                         }
@@ -176,6 +184,6 @@ struct SeanceCalendarView: View {
 
 struct SeanceCalendarView_Previews: PreviewProvider {
     static var previews: some View {
-        SeanceCalendarView(seanceClass: SeanceClass())
+        SeanceCalendarView(movieClass: movieClass(), movie: Movies(movieTitle: "La traversée", movieActor: ["Alban Ivanov" ,"Lucien Jean-Baptiste","Audrey Pirault","Moncef Farfar","Thilla Thiam","Lucie Charles-Alfred","Mamari Diarra","Enzo Lemartinet"], posterBig: "movieFourBig", posterMed: "movieFourMed", posterSmall: "movieFourSmall", movieSynopsis: "Éducateurs de quartier, Alex et Stéphanie emmènent cinq ados déscolarisés pour faire une traversée de la Méditerranée et les réinsérer par les valeurs de la mer. Mais arrivés au port, ils tombent sur Riton, leur skippeur, un ancien flic de la BAC, qui a tout quitté pour fuir la banlieue. Ces jeunes, c'est son pire cauchemar. Contraints, ils se retrouvent tous embarqués sur le même bateau pour une virée en mer de quinze jours. Une chose est sûre, après cette Traversée, ils n'auront plus tout à fait la même vision du monde...Éducateurs de quartier, Alex et Stéphanie emmènent cinq ados déscolarisés pour faire une traversée de la Méditerranée et les réinsérer par les valeurs de la mer. Mais arrivés au port, ils tombent sur Riton, leur skippeur, un ancien flic de la BAC, qui a tout quitté pour fuir la banlieue. Ces jeunes, c'est son pire cauchemar. Contraints, ils se retrouvent tous embarqués sur le même bateau pour une virée en mer de quinze jours. Une chose est sûre, après cette Traversée, ils n'auront plus tout à fait la même vision du monde...", movieDateOfRelease: "29/06/2022", movieCategory: [.Comédie], movieLong: "1h45m", movieCountry: ["France"], movieDirector: ["Varante Soudjian"], movieProduction: ["Varante Soudjian, Thomas Pone"], movieClassification: .TousPublics))
     }
 }

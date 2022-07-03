@@ -38,7 +38,10 @@ var body: some View {
 
                 
                 VStack {
-                    
+                    Text("Tous les films à l'affiche")
+                        .fontWeight(.bold)
+                        .foregroundColor(.white)
+                        .padding(.top, 60)
                     ZStack{
                         
                         RoundedRectangle(cornerRadius: 8)
@@ -52,12 +55,9 @@ var body: some View {
                         TextField("Search", text: $searchText)
                         .foregroundColor(.black)
                         .offset(x: -120)
-                    }.padding(.top, 80)
+                    }
                     
-                    Text("Tous les films à l'affiche")
-                        .fontWeight(.bold)
-                        .foregroundColor(.white)
-                        .padding(.top, 25)
+                    
                     
                     
                     ScrollView {
@@ -66,7 +66,7 @@ var body: some View {
                             
                             ForEach (searchResults) { movie in
                                 NavigationLink {
-                                    SeanceCalendarView(seanceClass: SeanceClass())
+                                    SeanceCalendarView(movieClass: movieClass(), movie: movie)
                                 } label: {
                                     VStack{
                                         Text(movie.movieTitle)

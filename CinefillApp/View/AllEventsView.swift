@@ -37,16 +37,19 @@ struct AllEventsView: View {
                 Color("background")
                     .ignoresSafeArea()
                 
-                VStack (spacing: 30){
+                VStack {
+                    Text("Les évènements autour de moi")
+                        .foregroundColor(.white)
+                        .fontWeight(.bold)
+                        .padding(.top, 80)
+                    
                     TextField ("Que recherchez-vous ?", text: $searchText)
                         .font(Font.system(size: 16))
                         .padding()
                         .background(RoundedRectangle(cornerRadius: 20).fill(Color.white))
                         .foregroundColor(.black)
                         .padding()
-                    Text("Les évènements autour de moi")
-                        .foregroundColor(.white)
-                        .fontWeight(.bold)
+                    
                     
                     
                     ScrollView(.vertical){
@@ -100,9 +103,9 @@ struct AllEventsView: View {
                     
                     
                 } .environmentObject(eventGroup)
-                    .offset(y: -60)
+                    .offset(y: -30)
                 
-            }
+            }.ignoresSafeArea()
         }  .navigationBarBackButtonHidden(true)
             
             .toolbar(content: {

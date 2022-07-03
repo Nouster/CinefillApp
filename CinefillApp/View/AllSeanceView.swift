@@ -37,7 +37,7 @@ struct AllSeanceView: View {
         ZStack{
             
            Color("background")
-                .ignoresSafeArea()
+                .edgesIgnoringSafeArea(.all)
             
             VStack{
                 
@@ -45,8 +45,9 @@ struct AllSeanceView: View {
                     .font(.headline)
                     .fontWeight(.bold)
                     .foregroundColor(.white)
+                    .padding(.top, 60)
                 
-                VStack {
+                
                     HStack{
                         ZStack{
                             
@@ -72,11 +73,7 @@ struct AllSeanceView: View {
                     }
                     
                     HStack{
-                        VStack{
-                        Text("Comédies")
-                            .fontWeight(.bold)
-                            .foregroundColor(.white)
-                            
+     
                             
                         
                         ScrollView(.vertical) {
@@ -139,14 +136,12 @@ struct AllSeanceView: View {
                                 //
                                 
                             }
-                        }
-                        
-                        .padding(25)
+                    
                         
                         
                     }
-                }
-            }.padding(.top , -40)
+                
+            }.ignoresSafeArea()
         }
         }
         .navigationBarBackButtonHidden(true)

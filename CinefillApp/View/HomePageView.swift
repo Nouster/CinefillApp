@@ -35,34 +35,54 @@ struct HomePageView: View {
             ZStack{
                 
                 Color("background")
-                    .edgesIgnoringSafeArea(.bottom)
+                    .ignoresSafeArea()
                 
                 VStack {
-                    NavigationLink {
-                        InviteConnexionView()
-                    } label: {
-                        Image(systemName: "location.fill")
-                            .font(.system(size: 16))
-                            .foregroundColor(Color("cinefillorange"))
-                        Text("Toulouse Saint-Alban")
-                            .foregroundColor(.white)
-                            .font(.system(size: 12))
-                    }
-
-                    .offset(x: 80, y: 20)
-                    .padding(.bottom)
                     
-                    Divider()
-                        .frame(width: 120, height: 2)
-                        .background(Color("cinefillorange"))
-                        .offset(x: 97)
+                    
+                        
+                        NavigationLink {
+                            InviteConnexionView()
+                        } label: {
+                            
+                            HStack {
+                                
+                                Spacer()
+                                
+                                Image(systemName: "location.fill")
+                                    .font(.system(size: 16))
+                                .foregroundColor(Color("cinefillorange"))
+                            
+                                VStack {
+//
+                                Text("Toulouse Saint-Alban")
+                                    .foregroundColor(.white)
+                                .font(.system(size: 12))
+//                                Divider()
+//                                    .background(Color("cinefillorange")
+//                                        .frame(width: 120, height: 2))
+                            }
+                            }.padding()
+                        }
+
+
+                    
+                    
+                    
+                    
+//                        .offset(x: 97)
                     
                     Group{
                         
                         HStack{
+                            VStack{
                             Text("Les films à l'affiche")
                                 .foregroundColor(.white)
                                 .fontWeight(.bold)
+                            Divider()
+                                .background(Color("cinefillorange").frame(width: 150, height: 2))
+                            }.padding(.trailing, 120)
+                            
                                 
                             
                             Spacer()
@@ -77,11 +97,11 @@ struct HomePageView: View {
                                     .foregroundStyle (LinearGradient(colors: [Color("cinefillorange"), .red, .red], startPoint: .top, endPoint: .bottom))
                                    
                             }
-                        } .padding(.horizontal)
-                             Divider()
-                            .frame(width: 160, height: 2)
-                            .background(Color("cinefillorange"))
-                            .offset(x: -98, y:5)
+                        }
+//                             Divider()
+//                            .frame(width: 160, height: 2)
+//                            .background(Color("cinefillorange"))
+//                            .offset(x: -98, y:5)
                            
                         
                         GeometryReader { proxy in
@@ -167,7 +187,7 @@ struct HomePageView: View {
                     EventScrollView(events: eventArray.eventsPreviewArray)
                 }
                 
-            }
+            }.ignoresSafeArea()
         }
         .navigationBarHidden(true)
         }
@@ -233,29 +253,39 @@ struct OpenModalVideoLive: View {
 struct SeanceDiscountView : View{
     var seances: [Seances]
     var body: some View {
+        
+            ZStack {
+                Color("background")
         ScrollView(.horizontal){
             HStack(spacing: -20){
                 ForEach(seances){ seance in
-                    VStack(spacing: -3){
-                        Image(seance.seanceSmallPicture)
-                            .resizable()
-                            .scaledToFill()
-                            .frame(width: 100, height: 100)
-                            .cornerRadius(10)
-                            .padding()
-                        
-                        Text("\(seance.seanceMovie)")
+                    
+                        VStack(spacing: -3){
+                            Image(seance.seanceSmallPicture)
+                                .resizable()
+                                .scaledToFill()
+                                .frame(width: 100, height: 100)
+                                .cornerRadius(10)
+                                .padding()
                             
-                            .font(.system(size: 12))
-                            .foregroundColor(Color("cinefillorange"))
-                        
-                        Text("\(seance.seancePrice) €")
-                            .font(.caption).bold()
-                            .foregroundColor(.white)
-                    }
+                            Text("\(seance.seanceMovie)")
+                                
+                                .font(.system(size: 12))
+                                .foregroundColor(Color("cinefillorange"))
+                            
+                            Text("\(seance.seancePrice) €")
+                                .font(.caption).bold()
+                                .foregroundColor(.white)
+                        }
+                    
+
+                    
                 }
             }
         }
+        }.ignoresSafeArea()
+                .navigationBarHidden(true)
+        
     }
 }
 
@@ -264,36 +294,46 @@ struct EventScrollView : View{
     @EnvironmentObject var eventArray: eventClass
     var events : [Events]
     var body: some View {
-        ScrollView(.horizontal){
-            HStack(spacing: -20){
-                
-                ForEach(events){ event in
-                    VStack(spacing: -3){
-                        Image(event.eventsPictures)
-                            .resizable()
-                            .scaledToFill()
-                            .frame(width: 100, height: 100)
-                            .cornerRadius(10)
-                            .padding()
+        NavigationView{
+            ZStack {
+                Color("background")
+                ScrollView(.horizontal){
+                HStack(spacing: -20){
+                    
+                    ForEach(events){ event in
                         
-                        Text("\(event.eventsName)")
-                            .foregroundColor(Color("cinefillorange"))
-                            .font(.system(size: 12))
-                            .frame(width: 100)
-                            .padding(.bottom, 10)
-                            
-                            
+                            VStack(spacing: -3){
+                                Image(event.eventsPictures)
+                                    .resizable()
+                                    .scaledToFill()
+                                    .frame(width: 100, height: 100)
+                                    .cornerRadius(10)
+                                    .padding()
+                                
+                                Text("\(event.eventsName)")
+                                    .foregroundColor(Color("cinefillorange"))
+                                    .font(.system(size: 12))
+                                    .frame(width: 100)
+                                    .padding(.bottom, 10)
+                                    
+                                    
+                                
+                                Text("\(event.eventsCategorie)")
+                                    .font(.caption).bold()
+                                    .foregroundColor(.white)
+                                    .font(.system(size: 12))
+                                    .padding(.bottom, 10)
+                                
+                            }
                         
-                        Text("\(event.eventsCategorie)")
-                            .font(.caption).bold()
-                            .foregroundColor(.white)
-                            .font(.system(size: 12))
-                            .padding(.bottom, 10)
+
                         
                     }
                 }
-            }.navigationBarHidden(true)
-                
+                    
+                }
+            }.ignoresSafeArea()
+                .navigationBarHidden(true)
         }
     }
 }
