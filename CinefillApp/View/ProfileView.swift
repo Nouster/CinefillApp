@@ -156,8 +156,8 @@ struct ProfileView: View {
             
             .padding()
             
-                Button{
-                    
+                NavigationLink{
+                    LaunchScreenView()
                 } label: {
             Text("Déconnexion")
                 .foregroundColor(Color("cinefillorange"))
