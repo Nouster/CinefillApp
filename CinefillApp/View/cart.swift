@@ -10,90 +10,77 @@ import SwiftUI
 struct CartView1: View {
     var body: some View {
         ZStack{
-
-        Color("background")
-
-        .edgesIgnoringSafeArea(.all)
-
-        VStack(alignment: .leading){
-
-        VStack{
-
-        Text("Votre panier")
-
-        .foregroundColor(.white)
-
-        .font(.system(size: 20))
-
-        Divider()
-
-        .frame(width: 500, height: 5)
-
-        .background(Color("cinefillorange"))
-
-            HStack{
-        Image("irreductible")
-               
-        .resizable()
-        .padding()
-        .frame(width: 150, height: 100)
+            
+            Color("background")
+            
+                .edgesIgnoringSafeArea(.all)
+            
+            
+            
+            VStack{
                 
-
-                ZStack{
-
-                VStack(alignment: .leading){
-
-                Text("TOP GUN: Maverick")
-
-                .foregroundColor(.white)
-
-                Text("Ticket: 1 place")
-
-                .foregroundColor(.white)
-                    Text("Tarif: 7,00 €")
-                        .foregroundColor(.white)
-                Text("Lieu: UCG Cinéma La Roquette")
-
-                .foregroundColor(.white)
-                 
                 
-              
-                }
+                Text("Votre panier")
+                
+                    .foregroundColor(.white)
+                
+                    .font(.system(size: 20))
+                
+                Divider()
+                
+                    .frame(width: 500, height: 5)
+                
+                    .background(Color("cinefillorange"))
+                
+                HStack{
+                    Image("movieOneMed")
+                    
+                        .resizable()
+                        .frame(width: 150, height: 100)
+                        .padding()
 
-                }
-
-      
-           
-      
+                    VStack(alignment: .leading){
+                            
+                            Text("Irreductible")
+                            
+                                .foregroundColor(.white)
+                            
+                            Text("Ticket: 1 place")
+                            
+                                .foregroundColor(.white)
+                            Text("Tarif: 7,00 €")
+                                .foregroundColor(.white)
+                            Text("Lieu: UCG Cinéma  La Roquette")
+                            .frame(width: 150)
+                            
+                                .foregroundColor(.white)
+                            
+                            
+                            
+                        }
+                        
+                    
+                    
+                    
+                    
+                    
+                }.padding()
+                Divider()
+                
+                    .frame(width: 200, height: 2)
+                
+                    .background(Color("cinefillorange"))
+                
+                    .padding()
+                
+                
+                
+                Spacer()
+                
+                
             }
-            Divider()
-
-            .frame(width: 200, height: 2)
-
-            .background(Color("cinefillorange"))
             
-            .padding()
-            
-            
-            
-            
-            Button{
-
-            } label: {
-
-//            NavigationLink(destination: payment(),label: {
-
-            
-
-//            })
-
-            }
-            .padding()
-        }.padding()
-        
         }
-        
-}
     }
 }
 
