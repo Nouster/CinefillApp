@@ -28,7 +28,7 @@ struct CartView1: View {
                 
                 Divider()
                 
-                    .frame(width: 500, height: 5)
+                    .frame(width: 350, height: 5)
                 
                     .background(Color("cinefillorange"))
                 

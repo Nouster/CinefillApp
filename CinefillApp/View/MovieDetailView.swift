@@ -134,7 +134,7 @@ struct MovieDetailView: View {
             }
             
         }
-        }
+        }.navigationBarBackButtonHidden(true)
     }
     
 }

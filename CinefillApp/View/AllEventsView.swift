@@ -102,8 +102,7 @@ struct AllEventsView: View {
                     
                     
                     
-                } .environmentObject(eventGroup)
-                    .offset(y: -30)
+                }
                 
             }.ignoresSafeArea()
         }  .navigationBarBackButtonHidden(true)

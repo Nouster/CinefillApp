@@ -178,7 +178,7 @@ struct SeanceCalendarView: View {
                 
             }.padding()
         }.navigationTitle("Séances du film")
-        }
+        }.navigationBarBackButtonHidden(true)
     }
 }
 
