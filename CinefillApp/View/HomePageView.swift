@@ -16,7 +16,7 @@ struct HomePageView: View {
     @StateObject var viewRouter: ViewRouter
     @StateObject var seanceClass: SeanceClass
     var numberOfImages: Int = 6
-    let  timer = Timer.publish(every: 3, on: .main, in: .common).autoconnect()
+    let  timer = Timer.publish(every: 30, on: .main, in: .common).autoconnect()
     @State var  currentIndex = 0
     
     func previous (){
@@ -124,7 +124,7 @@ struct HomePageView: View {
                                            } .tabViewStyle(PageTabViewStyle())
                                                .clipShape(RoundedRectangle(cornerRadius: 25))
                                                .padding()
-                                               .frame(width: proxy.size.width, height: proxy.size.height * 1.5 )
+                                               .frame(width: proxy.size.width, height: proxy.size.height * 1.8 )
                                                .onReceive(timer, perform: { _ in
                                                    next()
                                                })

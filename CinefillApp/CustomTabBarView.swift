@@ -22,7 +22,8 @@ struct CustomTabBarView: View {
                
                 Spacer()
                 switch viewRouter.currentPage {
- 
+                    
+                
                 case .cinema :
                     HomePageView(moviesClass: moviesClass, eventArray: eventArray, viewRouter: viewRouter, seanceClass: seancesClass)
                     

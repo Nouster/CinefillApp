@@ -8,11 +8,12 @@
 import SwiftUI
 
 struct TicketView: View {
+    @Environment(\.presentationMode) var presentation
     @State var showShareSheet: Bool = false
     var body: some View {
         
       
-                
+        NavigationView{
         ZStack{
             
             Color("background")
@@ -83,6 +84,23 @@ struct TicketView: View {
                 Spacer()
             }
         }
+        } .navigationBarBackButtonHidden(true)
+        
+            .toolbar(content: {
+               ToolbarItem (placement: .navigation)  {
+                   HStack{
+                  
+                  Image(systemName: "chevron.left")
+                  .foregroundColor(Color("cinefillorange"))
+                       Text("Back")
+                           .foregroundColor(Color("cinefillorange"))
+                   }
+                  .onTapGesture {
+                      // code to dismiss the view
+                      self.presentation.wrappedValue.dismiss()
+                  }
+               }
+            })
         }
     }
 
