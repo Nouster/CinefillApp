@@ -83,14 +83,14 @@
 		5B3B490D286AD8FA006A5DDB /* View */ = {
 			isa = PBXGroup;
 			children = (
-				5B13AD76286DAA36009E5C3D /* AllSeanceView.swift */,
+				ECACB1E2286AF2D9006EC78F /* DetailedEventView.swift */,
 				5B13AD74286DA93B009E5C3D /* MovieDetailView.swift */,
+				ECC9CE7B286DA80500A64D20 /* BookingView.swift */,
 				7F0C0556286DDBFD00C63B70 /* cart.swift */,
+				5B13AD76286DAA36009E5C3D /* AllSeanceView.swift */,
 				ECC9CE77286DA25800A64D20 /* AllMoviesView.swift */,
 				ECAA3CA8286C57CB002F7EA9 /* AllEventsView.swift */,
-				ECACB1E2286AF2D9006EC78F /* DetailedEventView.swift */,
 				ECAA3CAC286C57E1002F7EA9 /* InviteConnexionView.swift */,
-				ECC9CE7B286DA80500A64D20 /* BookingView.swift */,
 				4FCD9457286C700700028DAA /* SeanceCalendarView.swift */,
 				ECAA3CAA286C57D7002F7EA9 /* HomePageView.swift */,
 				7F119A2A2864A77A0037871E /* ProfileView.swift */,

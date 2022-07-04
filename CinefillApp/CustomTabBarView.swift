@@ -25,7 +25,7 @@ struct CustomTabBarView: View {
                     
                 
                 case .cinema :
-                    HomePageView(moviesClass: moviesClass, eventArray: eventArray, viewRouter: viewRouter)
+                    HomePageView(moviesClass: moviesClass, eventArray: eventArray, viewRouter: viewRouter, seanceClass: seancesClass)
                     
                 case .profile :
                     ProfileView()

@@ -93,7 +93,7 @@ struct InviteConnexionView: View {
                                    
                                     
                                     NavigationLink{
-                                        HomePageView(moviesClass: movieClass(), eventArray: eventClass(), viewRouter: ViewRouter())
+                                        CustomTabBarView(moviesClass: movieClass(), eventArray: eventClass(), viewRouter: ViewRouter(), seancesClass: SeanceClass())
                                     }label: {
                                         Text("C'EST PARTI !")
                                             .foregroundColor(.white)
